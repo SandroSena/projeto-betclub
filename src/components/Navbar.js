@@ -21,12 +21,12 @@ const Navbar = () => {
 
     @media (min-device-width: 768px) and (max-device-width: 1024px) {
       display: none;
-    }
+    } */
 
     @media (max-width: 767px) {
       display: none;
       padding: 0;
-    } */
+    }
   `;
 
   const MenuItem = styled.a`
@@ -43,30 +43,28 @@ const Navbar = () => {
 
   const Logo = styled.img``;
   return (
-    <Row>
-      <NavbarWrapper>
-        <Col className='ml-5' md={1}>
-          <Logo src={LogoPath} />
+    <NavbarWrapper>
+      <Col className='ml-5' md={1}>
+        <Logo src={LogoPath} />
+      </Col>
+      <Col className='d-flex direction-row' md={{ offset: 1, span: 8 }}>
+        <Col>
+          <MenuItem>INÍCIO</MenuItem>
         </Col>
-        <Col className='d-flex direction-row' md={{ offset: 1, span: 8 }}>
-          <Col>
-            <MenuItem>INÍCIO</MenuItem>
-          </Col>
-          <Col>
-            <MenuItem>SOBRE</MenuItem>
-          </Col>
-          <Col>
-            <MenuItem>JOGOS</MenuItem>
-          </Col>
-          <Col>
-            <MenuItem>DEPOIMENTOS</MenuItem>
-          </Col>
-          <Col md={3}>
-            <MenuItem>PERGUNTAS FREQUENTES</MenuItem>
-          </Col>
+        <Col>
+          <MenuItem>SOBRE</MenuItem>
         </Col>
-      </NavbarWrapper>
-    </Row>
+        <Col>
+          <MenuItem>JOGOS</MenuItem>
+        </Col>
+        <Col>
+          <MenuItem>DEPOIMENTOS</MenuItem>
+        </Col>
+        <Col md={3}>
+          <MenuItem>PERGUNTAS FREQUENTES</MenuItem>
+        </Col>
+      </Col>
+    </NavbarWrapper>
   );
 };
 export default Navbar;
