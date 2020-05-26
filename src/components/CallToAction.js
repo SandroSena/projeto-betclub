@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import BackgroundPath from '../images/Rectangle 51.png';
 import { Col, Container } from 'react-bootstrap';
+
 const CallToAction = () => {
+  
   const Background = styled.div`
     display:flex;
     align-items:center;
@@ -24,6 +26,7 @@ const CallToAction = () => {
     color: #fafafa !important;
     text-transform: uppercase;
   `;
+
   const CTAText = styled.p`
     font-family: Montserrat;
     font-weight: 500;
@@ -37,24 +40,25 @@ const CallToAction = () => {
     border: 3px solid yellow;
     text-transform: uppercase;
     padding: 0.5rem;
-    font-weight: bold;  
+    font-weight: bold;
   `;
+
   return (
     <Background>
       <Container fluid>
-        <Col md={{ span: 8, offset: 1 }}>
+        <Col md={{ span: 8, offset: 1 }} xs={12}>
           <CTATitle>
             <NoBreak>Lucre de R$ 1.000,00 a R$ 2.000,00</NoBreak> POR MÊS COM A
             EXPLOSÃO DOS E-SPORTS NO MUNDO
           </CTATitle>
         </Col>
-        <Col md={{ span: 6, offset: 1 }}>
+        <Col md={{ span: 6, offset: 1 }} xs={12}>
           <CTAText>
             O isolamento social está criando uma NOVA ONDA nas Apostas Online
             com a ascensão DEFINITIVA dos Esportes Eletrônicos (eSports).
           </CTAText>
         </Col>
-        <Col md={{ span: 3, offset: 1 }}>
+        <Col md={{ span: 3, offset: 1 }} xs={12}>
           <Button>Saiba Mais</Button>
         </Col>
       </Container>

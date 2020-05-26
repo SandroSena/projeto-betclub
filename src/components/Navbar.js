@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import LogoPath from '../images/image 14.png';
 import { Row, Col } from 'react-bootstrap';
+
 const Navbar = () => {
   const NavbarWrapper = styled.div`
     display: flex;
@@ -12,8 +13,20 @@ const Navbar = () => {
     width: 100%;
     height: 6rem;
     background-color: rgba(0, 0, 0, 0.6);
-    position:fixed;
-    
+    position: fixed;
+
+    /* @media (min-width: 1281px) {
+      display: none;
+    }
+
+    @media (min-device-width: 768px) and (max-device-width: 1024px) {
+      display: none;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+      padding: 0;
+    } */
   `;
 
   const MenuItem = styled.a`
@@ -22,10 +35,9 @@ const Navbar = () => {
 
     &:hover {
       border-bottom: 4px solid rgba(250, 231, 0, 0.5);
-      padding-bottom:5px;
-      border-radius:10%;
+      padding-bottom: 5px;
+      border-radius: 10%;
       cursor: pointer;
-
     }
   `;
 
@@ -36,7 +48,7 @@ const Navbar = () => {
         <Col className='ml-5' md={1}>
           <Logo src={LogoPath} />
         </Col>
-        <Col className='d-flex direction-row' md={{offset:1, span: 8 }}>
+        <Col className='d-flex direction-row' md={{ offset: 1, span: 8 }}>
           <Col>
             <MenuItem>INÍCIO</MenuItem>
           </Col>
