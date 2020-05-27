@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Col, Row } from 'react-bootstrap';
+import { Container, Col } from 'react-bootstrap';
 import eSports from '../images/eSports.svg';
 import security from '../images/security.svg';
 
