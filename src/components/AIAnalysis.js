@@ -15,6 +15,7 @@ const AIAnalysis = () => {
       justify-content: center;
     }
   `;
+
   const CellphoneImg = styled.img`
     margin-top: -15rem;
     width: 40%;
@@ -23,6 +24,7 @@ const AIAnalysis = () => {
       width: 70%;
     }
   `;
+  
   const CTATitle = styled.h3`
     font-family: Montserrat;
     font-weight: 900;

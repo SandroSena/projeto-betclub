@@ -23,7 +23,7 @@ const Tips = () => {
     }
   `;
 
-  const CTATitle = styled.h3`
+  const TipsTitle = styled.h3`
     font-family: Montserrat;
     font-weight: 900;
     font-size: 3rem;
@@ -42,6 +42,11 @@ const Tips = () => {
     height: 540.19px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
     margin: 0 auto;
+
+    @media (max-width: 767px) {
+      width: 20rem;
+      height: 50vh;
+    }
   `;
 
   const WrapImgs = styled.div`
@@ -49,22 +54,22 @@ const Tips = () => {
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-
-    @media (max-width: 767px) {
-      flex-flow: column wrap;
-    }
   `;
 
-  const SvgImg = styled.img``;
+  const SvgImg = styled.img`
+    @media (max-width: 767px) {
+      width: 8rem;
+    }
+  `;
 
   return (
     <Background>
       <Container className='p-0' fluid>
         <Col md={{ span: 10, offset: 1 }} xs={11}>
-          <CTATitle>
+          <TipsTitle>
             Receba dicas
             <br /> de apostas para:
-          </CTATitle>
+          </TipsTitle>
         </Col>
         <ContainerImgs>
           <WrapImgs>

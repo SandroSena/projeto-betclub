@@ -7,6 +7,7 @@ import { Container } from 'react-bootstrap';
 import AIAnalysis from './components/AIAnalysis';
 import RobotSecret from './components/RobotSecret';
 import Tips from './components/Tips';
+import EsportsFuture from './components/EsportsFuture';
 
 const App = () => {
   const GlobalStyle = createGlobalStyle`
@@ -25,6 +26,7 @@ const App = () => {
         <AIAnalysis />
         <RobotSecret />
         <Tips />
+        <EsportsFuture />
       </Container>
     </>
   );
