@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import BackgroundPath from '../images/s4-wallpaper.png';
+import BackgroundPath from '../images/Rectangle 112.png';
 import { Container, Col } from 'react-bootstrap';
 import csgo from '../images/ccsgo.png';
 import dota2 from '../images/dota2.png';
@@ -42,6 +42,10 @@ const Tips = () => {
     height: 540.19px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
     margin: 0 auto;
+    border: 2px solid rgba(252, 255, 44, 0.3);
+
+    box-shadow: 0px 4px 40px rgba(250, 231, 0, 0.2);
+
 
     @media (max-width: 767px) {
       width: 20rem;

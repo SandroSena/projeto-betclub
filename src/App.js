@@ -8,6 +8,7 @@ import AIAnalysis from './components/AIAnalysis';
 import RobotSecret from './components/RobotSecret';
 import Tips from './components/Tips';
 import EsportsFuture from './components/EsportsFuture';
+import Bonus from './components/Bonus';
 
 const App = () => {
   const GlobalStyle = createGlobalStyle`
@@ -27,6 +28,7 @@ const App = () => {
         <RobotSecret />
         <Tips />
         <EsportsFuture />
+        <Bonus/>
       </Container>
     </>
   );
