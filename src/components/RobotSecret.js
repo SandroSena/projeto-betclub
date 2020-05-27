@@ -34,6 +34,7 @@ const RobotSecret = () => {
       font-size: 1rem;
     }
   `;
+  
   const SvgTitle = styled.h3`
     font-family: Montserrat;
     font-weight: 900;
@@ -49,6 +50,10 @@ const RobotSecret = () => {
   const RussianSniper = styled.img`
     width: 20%;
     margin-top: 5rem;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   `;
 
   const CTAText = styled.p`
@@ -89,6 +94,10 @@ const RobotSecret = () => {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+    @media (max-width: 767px) {
+      margin: 1rem;
+    }
   `;
 
   const DataTextInfo = styled.div`

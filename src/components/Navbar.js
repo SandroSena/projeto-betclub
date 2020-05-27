@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import LogoPath from '../images/image 14.png';
-import { Row, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
 const Navbar = () => {
   const NavbarWrapper = styled.div`
@@ -14,14 +14,6 @@ const Navbar = () => {
     height: 6rem;
     background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
-
-    /* @media (min-width: 1281px) {
-      display: none;
-    }
-
-    @media (min-device-width: 768px) and (max-device-width: 1024px) {
-      display: none;
-    } */
 
     @media (max-width: 767px) {
       display: none;

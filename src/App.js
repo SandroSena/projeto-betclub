@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import AIAnalysis from './components/AIAnalysis';
 import RobotSecret from './components/RobotSecret';
+import Tips from './components/Tips';
 
 const App = () => {
   const GlobalStyle = createGlobalStyle`
@@ -23,6 +24,7 @@ const App = () => {
         <CallToAction />
         <AIAnalysis />
         <RobotSecret />
+        <Tips />
       </Container>
     </>
   );
