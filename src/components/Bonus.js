@@ -14,7 +14,9 @@ const Bonus = () => {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+    
     @media (max-width: 767px) {
+      height: 170vh;
       justify-content: center;
     }
   `;
