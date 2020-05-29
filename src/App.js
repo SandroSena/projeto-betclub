@@ -9,6 +9,7 @@ import RobotSecret from './components/RobotSecret';
 import Tips from './components/Tips';
 import EsportsFuture from './components/EsportsFuture';
 import Bonus from './components/Bonus';
+import WhyWeTrust from './components/WhyWeTrust';
 
 const App = () => {
   const GlobalStyle = createGlobalStyle`
@@ -28,7 +29,8 @@ const App = () => {
         <RobotSecret />
         <Tips />
         <EsportsFuture />
-        <Bonus/>
+        <Bonus />
+        <WhyWeTrust />
       </Container>
     </>
   );
