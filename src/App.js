@@ -10,6 +10,7 @@ import Tips from './components/Tips';
 import EsportsFuture from './components/EsportsFuture';
 import Bonus from './components/Bonus';
 import WhyWeTrust from './components/WhyWeTrust';
+import Founder from './components/Founder';
 
 const App = () => {
   const GlobalStyle = createGlobalStyle`
@@ -31,6 +32,7 @@ const App = () => {
         <EsportsFuture />
         <Bonus />
         <WhyWeTrust />
+        <Founder />
       </Container>
     </>
   );
