@@ -11,6 +11,7 @@ import EsportsFuture from './components/EsportsFuture';
 import Bonus from './components/Bonus';
 import WhyWeTrust from './components/WhyWeTrust';
 import Founder from './components/Founder';
+import RegisterTodayOnClub from './components/RegisterTodayOnClub';
 import SevenDaysFree from './components/SevenDaysFree';
 
 const App = () => {
@@ -34,7 +35,8 @@ const App = () => {
         <Bonus />
         <WhyWeTrust />
         <Founder />
-        <SevenDaysFree />Î
+        <RegisterTodayOnClub />
+        <SevenDaysFree />
       </Container>
     </>
   );

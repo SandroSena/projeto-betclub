@@ -13,7 +13,6 @@ const SevenDaysFree = () => {
     width:100%;
     background-repeat: no-repeat;
     background-size: 100%;
-    margin-top:15rem;
     
     @media (max-width: 767px) {
       background-image:none;
