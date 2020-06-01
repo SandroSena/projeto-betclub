@@ -13,6 +13,8 @@ import WhyWeTrust from './components/WhyWeTrust';
 import Founder from './components/Founder';
 import RegisterTodayOnClub from './components/RegisterTodayOnClub';
 import SevenDaysFree from './components/SevenDaysFree';
+import Results from './components/Results';
+import Approval from './components/Approval';
 
 const App = () => {
   const GlobalStyle = createGlobalStyle`
@@ -37,6 +39,8 @@ const App = () => {
         <Founder />
         <RegisterTodayOnClub />
         <SevenDaysFree />
+        <Results/>
+        <Approval/>
       </Container>
     </>
   );

@@ -7,7 +7,6 @@ import GermanPoliceImg from '../images/GermanPolice.png';
 const SevenDaysFree = () => {
   const Background = styled.div`
     display:flex;
-    align-items:center;
     background-image: url('${BackgroundPath}');
     height: 100vh;
     width:100%;

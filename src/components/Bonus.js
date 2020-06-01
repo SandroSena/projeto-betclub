@@ -16,6 +16,7 @@ const Bonus = () => {
     flex-wrap: wrap;
     @media (max-width: 767px) {
       justify-content: center;
+      height:auto;
     }
   `;
 
@@ -99,6 +100,7 @@ const Bonus = () => {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    flex-wrap:wrap;
   `;
   return (
     <Container className='p-0' fluid>
@@ -137,7 +139,7 @@ const Bonus = () => {
               </div>
             </TextContainer>
           </Col>
-          <Col md={{ span: 5 }}>
+          <Col xs={12} md={{ span: 5 }}>
             <BonusContainer>
               <CTATitle>BÔNUS: CURSO INTRODUTÓRIO</CTATitle>
               <CTAText>
