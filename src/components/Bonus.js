@@ -91,8 +91,8 @@ const Bonus = () => {
     text-transform: uppercase;
     padding: 0.5rem;
     font-weight: bold;
-    margin-top:1rem;
-    margin-left:0.1rem;
+    margin-top: 1rem;
+    margin-left: 0.1rem;
   `;
 
   const ContentWrapper = styled.div`
@@ -146,27 +146,27 @@ const Bonus = () => {
                 aproveitamento dentro do club.
               </CTAText>
               <ClassItem>
-                <img src={Checkmark} />
+                <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 1 – Boas Vindas</ClassTitle>
               </ClassItem>
               <ClassItem>
-                <img src={Checkmark} />
+                <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 2 – Bônus de R$ 120,00</ClassTitle>
               </ClassItem>
               <ClassItem>
-                <img src={Checkmark} />
+                <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 3 – Funcionamento das operações</ClassTitle>
               </ClassItem>
               <ClassItem>
-                <img src={Checkmark} />
+                <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 4 – Operando na prática</ClassTitle>
               </ClassItem>
               <ClassItem>
-                <img src={Checkmark} />
+                <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 5 – Dúvidas frequentes</ClassTitle>
               </ClassItem>
               <ClassItem>
-                <img src={Checkmark} />
+                <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 6 – Suporte</ClassTitle>
               </ClassItem>
               <Button>Adquira Agora</Button>
