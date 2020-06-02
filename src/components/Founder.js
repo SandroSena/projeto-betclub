@@ -3,6 +3,11 @@ import { Container, Col, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 import BackgroundPath from '../images/Rectangle 119.png';
 import FounderPath from '../images/RectangleFounder.png';
+import CBN from '../images/cbn.png';
+import Epoca from '../images/epoca.png';
+import Jp from '../images/jp.png';
+import R7 from '../images/r7.png';
+import RadioGlobo from '../images/radioglobo.png';
 
 const Founder = () => {
   const Background = styled.div`
@@ -18,6 +23,7 @@ const Founder = () => {
     align-items:flex-start;
     justify-content: center;
     padding-top:10rem;
+    height: auto;
     @media (max-width: 767px) {
       background-image:none;
       background-color:#000;
@@ -40,6 +46,19 @@ const Founder = () => {
   const FounderImg = styled.img`
     width: 80%;
   `;
+
+  const LogoImg = styled.img``;
+
+  const LogosContainer = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+    width: 100%;
+    padding: 1.5rem;
+  `;
+
   return (
     <Container fluid>
       <Background>
@@ -83,6 +102,13 @@ const Founder = () => {
           </Row>
         </Col>
       </Background>
+      <LogosContainer>
+        <LogoImg src={CBN} />
+        <LogoImg src={Epoca} />
+        <LogoImg src={Jp} />
+        <LogoImg src={R7} />
+        <LogoImg src={RadioGlobo} />
+      </LogosContainer>
     </Container>
   );
 };
