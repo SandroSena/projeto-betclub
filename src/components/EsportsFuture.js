@@ -52,17 +52,19 @@ const EsportsFuture = () => {
     }
   `;
 
+  
+
   return (
     <Background>
       <Container className='p-0' fluid>
         <GeneralWrapper>
-          <Col md={{ span: 7, offset: 1 }} xs={{ span: 10, offset: 1  }}>
+          <Col md={{ span: 7, offset: 1 }} xs={{ span: 10, offset: 1 }}>
             <div className='mb-5 mt-5'>
               <EsportsFutureTitle>
                 E-SPORTS: O FUTURO DAS APOSTAS ONLINE
               </EsportsFutureTitle>
               <EsportsFutureText>
-                Com mais de 90% dos campeonatos de Futebol  cancelados, surgiu
+                Com mais de 90% dos campeonatos de Futebol cancelados, surgiu
                 uma NOVA ONDA nas Apostas Esportivas. Sem a necessidade de
                 encontros presenciais, os Esportes Eletrônicos se tornaram a
                 escolha número 1 dos apostadores que não tem medo de mudanças.
@@ -87,6 +89,7 @@ const EsportsFuture = () => {
             <SvgImg src={security} />
           </Col>
         </GeneralWrapper>
+      
       </Container>
     </Background>
   );

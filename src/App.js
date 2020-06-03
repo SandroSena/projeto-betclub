@@ -9,6 +9,14 @@ import RobotSecret from './components/RobotSecret';
 import Tips from './components/Tips';
 import EsportsFuture from './components/EsportsFuture';
 import Bonus from './components/Bonus';
+import WhyWeTrust from './components/WhyWeTrust';
+import Founder from './components/Founder';
+import RegisterTodayOnClub from './components/RegisterTodayOnClub';
+import SevenDaysFree from './components/SevenDaysFree';
+import Results from './components/Results';
+import Approval from './components/Approval';
+import FAQ from './components/FAQ';
+import Footer from './components/Footer';
 
 const App = () => {
   const GlobalStyle = createGlobalStyle`
@@ -28,7 +36,15 @@ const App = () => {
         <RobotSecret />
         <Tips />
         <EsportsFuture />
-        <Bonus/>
+        <Bonus />
+        <WhyWeTrust />
+        <Founder />
+        <RegisterTodayOnClub />
+        <SevenDaysFree />
+        <Results />
+        <Approval />
+        <FAQ />
+        <Footer />
       </Container>
     </>
   );

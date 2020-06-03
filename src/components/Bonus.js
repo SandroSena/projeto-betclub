@@ -16,6 +16,7 @@ const Bonus = () => {
     flex-wrap: wrap;
     @media (max-width: 767px) {
       justify-content: center;
+      height:auto;
     }
   `;
 
@@ -48,13 +49,11 @@ const Bonus = () => {
     flex-direction: column;
     justify-content: space-around;
   `;
-
   const CTASuperText = styled.p`
     font-family: Montserrat;
     font-weight: 500;
     font-size: 1.5rem;
     color: #fafafa;
-    margin-bottom: 3rem;
 
     @media (max-width: 767px) {
       font-size: 0.8rem;
@@ -65,7 +64,6 @@ const Bonus = () => {
     font-weight: 500;
     font-size: 1.2rem;
     color: #fafafa;
-    margin-bottom: 3rem;
 
     @media (max-width: 767px) {
       font-size: 0.8rem;
@@ -102,11 +100,7 @@ const Bonus = () => {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-
-    @media (max-width: 767px) {
-      display: flex;
-      flex-flow: column wrap;
-    }
+    flex-wrap:wrap;
   `;
   return (
     <Container className='p-0' fluid>
@@ -145,7 +139,7 @@ const Bonus = () => {
               </div>
             </TextContainer>
           </Col>
-          <Col md={{ span: 5 }} xs={12}>
+          <Col xs={12} md={{ span: 5 }}>
             <BonusContainer>
               <CTATitle>BÔNUS: CURSO INTRODUTÓRIO</CTATitle>
               <CTAText>
@@ -154,27 +148,27 @@ const Bonus = () => {
                 aproveitamento dentro do club.
               </CTAText>
               <ClassItem>
-                <img src={Checkmark} alt='Boas Vindas' />
+                <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 1 – Boas Vindas</ClassTitle>
               </ClassItem>
               <ClassItem>
-                <img src={Checkmark} alt='Bônus de R$ 120,00' />
+                <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 2 – Bônus de R$ 120,00</ClassTitle>
               </ClassItem>
               <ClassItem>
-                <img src={Checkmark} alt='Funcionamento das operações' />
+                <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 3 – Funcionamento das operações</ClassTitle>
               </ClassItem>
               <ClassItem>
-                <img src={Checkmark} alt='Operando na prática' />
+                <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 4 – Operando na prática</ClassTitle>
               </ClassItem>
               <ClassItem>
-                <img src={Checkmark} alt='Dúvidas frequentes' />
+                <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 5 – Dúvidas frequentes</ClassTitle>
               </ClassItem>
               <ClassItem>
-                <img src={Checkmark} alt='Suporte' />
+                <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 6 – Suporte</ClassTitle>
               </ClassItem>
               <Button>Adquira Agora</Button>
