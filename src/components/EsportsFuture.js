@@ -82,7 +82,7 @@ const EsportsFuture = () => {
               </EsportsFutureText>
             </div>
           </Col>
-          <Col md={{ span: 2, offset: 1 }} xs={11}>
+          <Col md={{ span: 2}} xs={11}>
             <SvgImg src={eSports} />
             <SvgImg src={security} />
           </Col>

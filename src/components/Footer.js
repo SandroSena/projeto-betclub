@@ -35,7 +35,7 @@ const Footer = () => {
 
   return (
     <FooterWrapper>
-      <Col className='ml-5' md={1}>
+      <Col className='ml-3' md={1}>
         <Logo src={LogoPath} />
       </Col>
       <Col className='h-100' xs={12} md={{ offset: 1, span: 8 }}>

@@ -86,14 +86,14 @@ const FAQ = () => {
     },
   ];
   return (
-    <Container className='p-0' fluid>
+    <Container className='p-0 pt-5' fluid>
       <Background>
-        <Col md={{ offset: 1, span: 11 }}>
+        <Col md={{ offset: 1, span: 11 }} className='pt-5'>
           <CTASuperTitle>Perguntas Frequentes</CTASuperTitle>
         </Col>
-        <Col md={{offset:1, span: 11}}>
+        <Col md={{ offset: 1, span: 11 }}>
           <QuestionsContainer>
-            {questionsData.map(question => {
+            {questionsData.map((question) => {
               return (
                 <QuestionWrapper>
                   <Col md={1}>

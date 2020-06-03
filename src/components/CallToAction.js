@@ -29,7 +29,7 @@ const CallToAction = () => {
   const CTATitle = styled.h3`
     font-family: Montserrat;
     font-weight: 900;
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: #fafafa !important;
     text-transform: uppercase;
 

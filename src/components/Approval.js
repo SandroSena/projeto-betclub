@@ -42,9 +42,9 @@ const Results = () => {
     object-fit: scale-down;
   `;
   return (
-    <Container className='p-0' fluid>
+    <Container className='p-0 pt-5' fluid>
       <Background>
-        <Col md={{ offset: 4, span: 4 }}>
+        <Col md={{ offset: 4, span: 4 }} className='pt-5'>
           <CTASuperTitle>QUEM JÁ FAZ PARTE DO CLUBE APROVA</CTASuperTitle>
         </Col>
         <Row className='d-flex pt-5 justify-content-center w-100'>

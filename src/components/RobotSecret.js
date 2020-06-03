@@ -116,7 +116,7 @@ const RobotSecret = () => {
 
   return (
     <Background>
-      <Container className='p-0' fluid>
+      <Container className='p-0 pb-5' fluid>
         <Col md={{ span: 10, offset: 1 }} xs={11}>
           <CTATitle>
             O SEGREDO DO NOSSO ROBÔ: INTELIGÊNCIA, AUTOMAÇÃO E SUPERVISÃO
