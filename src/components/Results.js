@@ -56,7 +56,6 @@ const Results = () => {
       padding: 2rem;
     }
   `;
-
   const Button = styled.button`
     width: 567px;
     height: 79.38px;
@@ -71,14 +70,13 @@ const Results = () => {
     line-height: 46px;
     text-transform: uppercase;
     color: #ffffff;
-
     @media (max-width: 767px) {
-      width: 10rem;
-      height: 3rem;
-      font-size: 7px;
+      width: auto;
+      height: auto;
+      white-space: nowrap;
+      font-size: 0.8rem;
     }
   `;
-
   return (
     <Container className='p-0' fluid>
       <Background>

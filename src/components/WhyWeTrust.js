@@ -93,6 +93,7 @@ const WhyWeTrust = () => {
     justify-content: center;
     align-self: center;
     width: 15%;
+    padding:2rem;
     @media (max-width: 767px) {
       width: auto;
     }
@@ -102,6 +103,30 @@ const WhyWeTrust = () => {
     font-weight: bold;
     font-size: 1rem;
     color: #fafafa;
+  `;
+
+  const Button = styled.button`
+    width: 567px;
+    height: 79.38px;
+    background: #00c27b;
+    border: 1px solid #00c27b;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px #00c27b;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 27px;
+    line-height: 46px;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: relative;
+    bottom:-3.7rem;
+    @media (max-width: 767px) {
+      width: auto;
+      height: auto;
+      white-space:nowrap;
+      font-size:.8rem
+      }
   `;
   return (
     <Container className='pt-5 d-flex flex-column align-items-center' fluid>
@@ -170,6 +195,8 @@ const WhyWeTrust = () => {
           <DataLabel>jogos analisados</DataLabel>
         </EachInfoContainer>
       </InfoContainer>
+
+      <Button>Teste Grátis por 7 dias</Button>
     </Container>
   );
 };
