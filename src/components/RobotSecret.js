@@ -20,6 +20,7 @@ const RobotSecret = () => {
     @media (max-width: 767px) {
       background-image:none;
       background-color:#000;
+      height: auto;
     }
   `;
 
@@ -34,7 +35,7 @@ const RobotSecret = () => {
       font-size: 1rem;
     }
   `;
-  
+
   const SvgTitle = styled.h3`
     font-family: Montserrat;
     font-weight: 900;

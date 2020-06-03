@@ -20,6 +20,7 @@ const Tips = () => {
     @media (max-width: 767px) {
       background-image:none;
       background-color:#000;
+      height: auto;
     }
   `;
 
@@ -45,7 +46,6 @@ const Tips = () => {
     border: 2px solid rgba(252, 255, 44, 0.3);
 
     box-shadow: 0px 4px 40px rgba(250, 231, 0, 0.2);
-
 
     @media (max-width: 767px) {
       width: 20rem;

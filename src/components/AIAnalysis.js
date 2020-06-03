@@ -13,6 +13,7 @@ const AIAnalysis = () => {
     flex-wrap: wrap;
     @media (max-width: 767px) {
       justify-content: center;
+      height: auto;
     }
   `;
 
@@ -20,11 +21,11 @@ const AIAnalysis = () => {
     margin-top: -15rem;
     width: 40%;
     @media (max-width: 767px) {
-      margin:auto;
+      margin: auto;
       width: 70%;
     }
   `;
-  
+
   const CTATitle = styled.h3`
     font-family: Montserrat;
     font-weight: 900;

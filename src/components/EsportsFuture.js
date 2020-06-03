@@ -14,6 +14,7 @@ const EsportsFuture = () => {
     flex-wrap: wrap;
     @media (max-width: 767px) {
       justify-content: center;
+      height: auto;
     }
   `;
 
@@ -52,8 +53,6 @@ const EsportsFuture = () => {
     }
   `;
 
-  
-
   return (
     <Background>
       <Container className='p-0' fluid>
@@ -89,7 +88,6 @@ const EsportsFuture = () => {
             <SvgImg src={security} />
           </Col>
         </GeneralWrapper>
-      
       </Container>
     </Background>
   );
