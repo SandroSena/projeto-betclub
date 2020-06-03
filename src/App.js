@@ -15,6 +15,8 @@ import RegisterTodayOnClub from './components/RegisterTodayOnClub';
 import SevenDaysFree from './components/SevenDaysFree';
 import Results from './components/Results';
 import Approval from './components/Approval';
+import FAQ from './components/FAQ';
+import Footer from './components/Footer';
 
 const App = () => {
   const GlobalStyle = createGlobalStyle`
@@ -39,8 +41,10 @@ const App = () => {
         <Founder />
         <RegisterTodayOnClub />
         <SevenDaysFree />
-        <Results/>
-        <Approval/>
+        <Results />
+        <Approval />
+        <FAQ />
+        <Footer />
       </Container>
     </>
   );

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Col, Container, Row } from 'react-bootstrap';
-import Reaper from '../images/Rectangle 122.png';
 import feedback from '../images/feedback.png';
 import feedback1 from '../images/feedback1.png';
 import feedback2 from '../images/feedback2.png';

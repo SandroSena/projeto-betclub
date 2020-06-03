@@ -9,7 +9,6 @@ const Founder = () => {
     display:flex;
     align-items:center;
     background-image: url('${BackgroundPath}');
-    height: 100vh;
     width:100%;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -18,6 +17,7 @@ const Founder = () => {
     align-items:flex-start;
     justify-content: center;
     padding-top:10rem;
+    height: auto;
     @media (max-width: 767px) {
       background-image:none;
       background-color:#000;
@@ -30,18 +30,24 @@ const Founder = () => {
     font-size: 3rem;
     color: #fafafa;
     font-weight: 900;
+    @media (max-width: 767px) {
+      font-size: 1.5rem;
+    }
   `;
 
   const FounderText = styled.p`
     font-weight: 500;
     font-size: 1.5rem;
     color: #fafafa;
+    @media (max-width: 767px) {
+      font-size: 1rem;
+    }
   `;
   const FounderImg = styled.img`
     width: 80%;
   `;
   return (
-    <Container fluid>
+    <Container className='p-5' fluid>
       <Background>
         <Col className='px-0' md={{ span: 10, offset: 1 }}>
           <Row>
