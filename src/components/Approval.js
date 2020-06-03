@@ -1,14 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Col, Container, Row } from 'react-bootstrap';
-import feedback from '../images/feedback.png';
+import Carousel from '../components/Carousel';
 import feedback1 from '../images/feedback1.png';
 import feedback2 from '../images/feedback2.png';
+import feedback3 from '../images/feedback3.png';
+import feedback4 from '../images/feedback4.png';
+import feedback5 from '../images/feedback5.png';
+import feedback6 from '../images/feedback6.png';
 
 const Results = () => {
   const Background = styled.div`
     background-color: #000;
-    height: 100vh;
+    height: 130vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -48,21 +52,18 @@ const Results = () => {
           <CTASuperTitle>QUEM JÁ FAZ PARTE DO CLUBE APROVA</CTASuperTitle>
         </Col>
         <Row className='d-flex pt-5 justify-content-center w-100'>
-          <Col className='d-flex justify-content-center' md={3}>
-            <ImgWrapper style={{ objectFit: 'scale-down' }}>
-              <GainImg src={feedback} />
-            </ImgWrapper>
-          </Col>
-          <Col className='d-flex justify-content-center' md={3}>
-            <ImgWrapper style={{ objectFit: 'scale-down' }}>
-              <GainImg src={feedback1} />
-            </ImgWrapper>
-          </Col>
-          <Col className='d-flex justify-content-center' md={3}>
-            <ImgWrapper style={{ objectFit: 'scale-down' }}>
-              <GainImg src={feedback2} />
-            </ImgWrapper>
-          </Col>
+          <Carousel
+            carouselItems={[
+              <GainImg src={feedback1} />,
+              <GainImg src={feedback2} />,
+              <GainImg src={feedback3} />,
+              <GainImg src={feedback4} />,
+              <GainImg src={feedback5} />,
+              <GainImg src={feedback6} />,
+            ]}
+            time={999999}
+            itemsDisplayed={3}
+          />
         </Row>
       </Background>
     </Container>

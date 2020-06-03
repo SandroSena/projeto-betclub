@@ -2,9 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { Col, Container, Row } from 'react-bootstrap';
 import Reaper from '../images/Rectangle 122.png';
+import Carousel from '../components/Carousel';
 import lucro from '../images/lucro.png';
 import lucro2 from '../images/lucro2.png';
 import lucro3 from '../images/lucro3.png';
+import lucro4 from '../images/lucro2.png';
+import lucro5 from '../images/lucro3.png';
 
 const Results = () => {
   const Background = styled.div`
@@ -78,29 +81,25 @@ const Results = () => {
     }
   `;
   return (
-    <Container className='p-0' fluid>
+    <Container className='p-0 pt-5' fluid>
       <Background>
         <Col md={{ offset: 3, span: 6 }}>
-          <CTASuperTitle>
+          <CTASuperTitle className='pt-5'>
             RESULTADOS DO CLUB NO MERCADO DE APOSTAS{' '}
           </CTASuperTitle>
         </Col>
         <Row className='d-flex pt-5 justify-content-center w-100'>
-          <Col className='d-flex justify-content-center' md={3}>
-            <ImgWrapper style={{ objectFit: 'scale-down' }}>
-              <GainImg src={lucro} />
-            </ImgWrapper>
-          </Col>
-          <Col className='d-flex justify-content-center' md={3}>
-            <ImgWrapper style={{ objectFit: 'scale-down' }}>
-              <GainImg src={lucro2} />
-            </ImgWrapper>
-          </Col>
-          <Col className='d-flex justify-content-center' md={3}>
-            <ImgWrapper style={{ objectFit: 'scale-down' }}>
-              <GainImg src={lucro3} />
-            </ImgWrapper>
-          </Col>
+          <Carousel
+            carouselItems={[
+              <GainImg src={lucro} />,
+              <GainImg src={lucro2} />,
+              <GainImg src={lucro3} />,
+              <GainImg src={lucro4} />,
+              <GainImg src={lucro5} />,
+            ]}
+            time={999999}
+            itemsDisplayed={3}
+          />
         </Row>
         <WrapperButton>
           <Button>EU QUERO FAZER PARTE DO CLUB</Button>

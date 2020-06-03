@@ -61,28 +61,22 @@ const FAQ = () => {
 
   const questionsData = [
     {
-      question:
-        'O que eu preciso entender do mercado de apostas esportivas para seguir estas análises?',
+      question: 'Quanto preciso para começar?',
     },
     {
-      question:
-        'O que eu preciso entender do mercado de apostas esportivas para seguir estas análises?',
+      question: 'Quantas análises vou receber por dia?',
     },
     {
-      question:
-        'O que eu preciso entender do mercado de apostas esportivas para seguir estas análises?',
+      question: 'Preciso assistir o jogo ao vivo para fazer a minha aposta?',
     },
     {
-      question:
-        'O que eu preciso entender do mercado de apostas esportivas para seguir estas análises?',
+      question: 'Assinando agora, quando eu começo a receber as análises?',
     },
     {
-      question:
-        'O que eu preciso entender do mercado de apostas esportivas para seguir estas análises?',
+      question: 'Se eu não gostar, posso cancelar?',
     },
     {
-      question:
-        'O que eu preciso entender do mercado de apostas esportivas para seguir estas análises?',
+      question: 'Vocês garantem lucros todos os meses?',
     },
   ];
   return (
