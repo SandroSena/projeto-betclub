@@ -13,14 +13,14 @@ const Footer = () => {
       height: auto;
       flex-direction: column;
       padding: 1rem;
-      justify-content:center;
+      justify-content: center;
     }
   `;
   const Warning = styled.span`
     text-align: justify;
     font-size: 1rem;
     color: #fafafa;
-    font-size: 1.5rem;
+    font-size: 1rem;
     @media (max-width: 767px) {
       font-size: 0.7rem;
     }
@@ -31,12 +31,14 @@ const Footer = () => {
     height: 100%;
     justify-content: space-around;
   `;
+  const Logo = styled.img``;
+
   return (
     <FooterWrapper>
-      <Col xs={6} md={2}>
-        <img src={LogoPath} />
+      <Col className='ml-5' md={1}>
+        <Logo src={LogoPath} />
       </Col>
-      <Col className='h-100' xs={12} md={8}>
+      <Col className='h-100' xs={12} md={{ offset: 1, span: 8 }}>
         <WarningWrapper>
           <Warning>
             * Lucros passados não são garantia de lucros futuros e oscilações
