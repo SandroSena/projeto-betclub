@@ -14,7 +14,6 @@ const CallToAction = () => {
     background-size: 100%;
 
     @media (max-width: 767px) {
-      height: auto;
       background-image:none;
       background-color:#000;
     }

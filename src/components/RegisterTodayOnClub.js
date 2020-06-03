@@ -70,7 +70,7 @@ const RegisterTodayOnClub = () => {
     text-shadow: 0px 4px 40px rgba(252, 255, 44, 0.6);
 
     @media (max-width: 767px) {
-      font-size: 1rem;
+      font-size: 1.32rem;
     }
   `;
 

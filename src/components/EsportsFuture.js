@@ -14,7 +14,6 @@ const EsportsFuture = () => {
     flex-wrap: wrap;
     @media (max-width: 767px) {
       justify-content: center;
-      height: auto;
     }
   `;
 
