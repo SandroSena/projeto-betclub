@@ -2,20 +2,28 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Left from '../images/left.png';
 import Right from '../images/right.png';
+import Bolinha from '../images/bolinha.png';
 
 const Carousel = ({ time, carouselItems, itemsDisplayed }) => {
   const [items, setItems] = useState(carouselItems);
   const [itemsToDisplay, setItemsToDisplay] = useState([]);
+  const [bolinhaAcesa, setBolinhaAcesa] = useState(0);
 
   const rotateLeft = () => {
     const array = [...items];
     array.push(array.shift());
+    bolinhaAcesa >= items.length - 1
+      ? setBolinhaAcesa(items.length - 1)
+      : setBolinhaAcesa(bolinhaAcesa - 1);
     setItems(array);
   };
 
   const rotateRight = () => {
     const array = [...items];
     array.unshift(array.pop());
+    bolinhaAcesa >= items.length - 1
+      ? setBolinhaAcesa(0)
+      : setBolinhaAcesa(bolinhaAcesa + 1);
     setItems(array);
   };
 
@@ -36,6 +44,13 @@ const Carousel = ({ time, carouselItems, itemsDisplayed }) => {
   const ItemsWrapper = styled.div`
     width: 100%;
     padding: 0.5rem;
+  `;
+
+  const CarouselContainer = styled.div`
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
   `;
 
   const ItemContainer = styled.div`
@@ -60,17 +75,47 @@ const Carousel = ({ time, carouselItems, itemsDisplayed }) => {
     }
   `;
 
+  const BolinhaContainer = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 6rem;
+  `;
+
+  const ImgBolinha = styled.img`
+    width: 11px;
+    height: 11px;
+  `;
+
+  const ImgBolinhaAmarela = styled.img`
+    width: 11px;
+    height: 11px;
+    background: #fae700;
+    box-shadow: 0px 0px 20px rgba(250, 231, 0, 0.5);
+    border-radius: 50%;
+  `;
+
   return (
     <>
-      <ItemContainer>
-        <Arrow src={Left} onClick={rotateLeft} />
-        {itemsToDisplay &&
-          itemsToDisplay.length > 0 &&
-          itemsToDisplay.map((item, index) => (
-            <ItemsWrapper key={index}>{item}</ItemsWrapper>
-          ))}
-        <Arrow src={Right} onClick={rotateRight} />
-      </ItemContainer>
+      <CarouselContainer>
+        <ItemContainer>
+          <Arrow src={Left} onClick={rotateLeft} />
+          {itemsToDisplay &&
+            itemsToDisplay.length > 0 &&
+            itemsToDisplay.map((item, index) => (
+              <ItemsWrapper key={index}>{item}</ItemsWrapper>
+            ))}
+          <Arrow src={Right} onClick={rotateRight} />
+        </ItemContainer>
+        <BolinhaContainer>
+          {[...Array(items.length)].map((bolinha, indice) => {
+            if (indice === bolinhaAcesa) {
+              return <ImgBolinhaAmarela src={ImgBolinha} key={indice} />;
+            }
+            return <ImgBolinha src={Bolinha} key={indice} />;
+          })}
+        </BolinhaContainer>
+      </CarouselContainer>
     </>
   );
 };
