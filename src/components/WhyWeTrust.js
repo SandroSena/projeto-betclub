@@ -33,20 +33,26 @@ const WhyWeTrust = () => {
 
   const WhyWeTrustText = styled.p`
     font-family: Montserrat;
-    font-size: 1.5rem;
-    color: #fafafa !important;
-
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #ffffff;
     @media (max-width: 767px) {
       font-size: 1rem;
     }
   `;
 
   const WhyWeTrustSpanRed = styled.span`
-    color: rgba(255, 70, 91, 0.65);
+    color: #ff465b;
+    font-weight: bolder;
+    text-shadow: 0px 4px 40px #ff465b;
   `;
 
   const WhyWeTrustSpanGreen = styled.span`
-    color: rgba(0, 194, 123, 0.65);
+    color: #00c27b;
+    font-weight: bolder;
+    text-shadow: 0px 4px 40px #00c27b;
   `;
 
   const ContainerTextImgs = styled.div`
@@ -83,6 +89,7 @@ const WhyWeTrust = () => {
     color: #fcff2c;
     font-weight: bold;
     font-size: 4.4rem;
+    text-shadow: 0px 4px 40px rgba(252, 255, 44, 0.6);
     @media (max-width: 767px) {
       font-size: 2rem;
     }
@@ -93,7 +100,7 @@ const WhyWeTrust = () => {
     justify-content: center;
     align-self: center;
     width: 15%;
-    padding:2rem;
+    padding: 2rem;
     @media (max-width: 767px) {
       width: auto;
     }
@@ -107,7 +114,7 @@ const WhyWeTrust = () => {
 
   const Button = styled.button`
     width: 567px;
-    height: 79.38px;
+    height: 100.38px;
     background: #00c27b;
     border: 1px solid #00c27b;
     box-sizing: border-box;
@@ -120,13 +127,32 @@ const WhyWeTrust = () => {
     text-transform: uppercase;
     color: #ffffff;
     position: relative;
-    bottom:-3.7rem;
+    bottom: -3.7rem;
     @media (max-width: 767px) {
       width: auto;
       height: auto;
-      white-space:nowrap;
-      font-size:.8rem
-      }
+      white-space: nowrap;
+      font-size: 0.8rem;
+    }
+  `;
+  const SmallText = styled.span`
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+
+    /* identical to box height, or 200% */
+
+    text-align: center;
+
+    color: #ffffff;
+  `;
+  const NoBreak = styled.span`
+    white-space: nowrap;
+    @media (max-width: 767px) {
+      white-space: pre-wrap;
+    }
   `;
   return (
     <Container className='pt-5 d-flex flex-column align-items-center' fluid>
@@ -159,13 +185,14 @@ const WhyWeTrust = () => {
           className='h-75 p-1 d-flex flex-column justify-content-between'
         >
           <WhyWeTrustText>
-            Ao contrário dos analistas humanos, a NICE é imune a erros
-            emocionais. Seus critérios são puramente matemáticos.
+            Ao contrário dos analistas humanos, a <strong>NICE</strong> é imune
+            a erros emocionais. Seus critérios são puramente matemáticos.
           </WhyWeTrustText>
           <WhyWeTrustText>
             Baseada em algoritmos de análise criados por Juliano Fontes, o mais
-            respeitado Trader Esportivo do Brasil, a NICE analisa TODOS os jogos
-            disponíveis e indica as melhores oportunidades do mercado.
+            respeitado Trader Esportivo do Brasil, a <strong>NICE</strong>{' '}
+            analisa <strong>TODOS</strong> os jogos disponíveis e indica as
+            melhores oportunidades do mercado.
           </WhyWeTrustText>
           <WhyWeTrustText>
             Criada inicialmente para analisar jogos de Futebol, foi atualizada
@@ -173,7 +200,7 @@ const WhyWeTrust = () => {
             crescimento acelerado com o período de isolamento social pelo mundo.
           </WhyWeTrustText>
           <WhyWeTrustText className='pb-4'>
-            Confira alguns números da NICE:
+            Confira alguns números da <strong>NICE</strong>:
           </WhyWeTrustText>
         </Col>
       </Background>
@@ -188,7 +215,10 @@ const WhyWeTrust = () => {
         </EachInfoContainer>
         <EachInfoContainer>
           <DataInfo>24/7</DataInfo>
-          <DataLabel>análises 24 horas por dia, 7 dias por semana</DataLabel>
+          <DataLabel>
+            <NoBreak>análises 24 horas por</NoBreak>
+            <NoBreak> dia, 7 dias por semana</NoBreak>
+          </DataLabel>
         </EachInfoContainer>
         <EachInfoContainer>
           <DataInfo>2355</DataInfo>
@@ -196,7 +226,11 @@ const WhyWeTrust = () => {
         </EachInfoContainer>
       </InfoContainer>
 
-      <Button>Teste Grátis por 7 dias</Button>
+      <Button>
+        Teste Grátis por 7 dias
+        <br />
+        <SmallText>plano mensal cancele quando quiser</SmallText>
+      </Button>
     </Container>
   );
 };

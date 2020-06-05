@@ -18,8 +18,8 @@ const AIAnalysis = () => {
   `;
 
   const CellphoneImg = styled.img`
-    margin-top: -15rem;
-    width: 40%;
+    width: 483px;
+    height: 974px;
     @media (max-width: 767px) {
       margin: auto;
       width: 70%;
@@ -57,14 +57,15 @@ const AIAnalysis = () => {
             <CTATitle>Análises utilizando inteligência artificial</CTATitle>
             <CTAText>
               Deixe todo o trabalho pesado nas mãos de especialistas com mais de
-              10 anos de experiência no mercado e mais de R$ 670.000,00 em lucro
-              nos últimos 12 meses.
+              10 anos de experiência no mercado e mais de{' '}
+              <strong>R$ 670.000,00</strong> em lucro nos últimos
+              <strong> 12 meses.</strong>
             </CTAText>
             <CTAText>
-              Se você tem disciplina para COPIAR E COLAR as recomendações dos
-              nossos analistas de forma consistente, logo você será capaz de
-              tirar seu sustento e realizar os seus sonhos através deste
-              negócio.
+              Se você tem disciplina para <strong>COPIAR E COLAR</strong> as
+              recomendações dos nossos analistas de forma consistente, logo você
+              será capaz de tirar seu sustento e realizar os seus sonhos através
+              deste negócio.
             </CTAText>
           </TextContainer>
         </Col>

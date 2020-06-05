@@ -12,7 +12,7 @@ const FAQ = () => {
     flex-wrap: wrap;
     background-image: url('${BackgroundPath}');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
     @media (max-width: 767px) {
       justify-content: center;
       height: auto;
@@ -87,7 +87,7 @@ const FAQ = () => {
         </Col>
         <Col md={{ offset: 1, span: 11 }}>
           <QuestionsContainer>
-            {questionsData.map((question) => {
+            {questionsData.map(question => {
               return (
                 <QuestionWrapper>
                   <Col md={1}>

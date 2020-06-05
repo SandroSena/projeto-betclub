@@ -5,7 +5,7 @@ import { Col } from 'react-bootstrap';
 
 const Footer = () => {
   const FooterWrapper = styled.div`
-    height: 10rem;
+    height: 20rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,10 +17,15 @@ const Footer = () => {
     }
   `;
   const Warning = styled.span`
-    text-align: justify;
-    font-size: 1rem;
-    color: #fafafa;
-    font-size: 1rem;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 27px;
+    /* or 169% */
+
+    color: #ffffff;
+
     @media (max-width: 767px) {
       font-size: 0.7rem;
     }
@@ -29,7 +34,7 @@ const Footer = () => {
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-around;
+    justify-content: center;
   `;
   const Logo = styled.img``;
 

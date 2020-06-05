@@ -1,18 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import BackgroundPath from '../images/s9bg.png';
+import BackgroundPath from '../images/Baron.png';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const RegisterTodayOnClub = () => {
   const Background = styled.div`
     display:flex;
     align-items:center;
+    height:100vh;
     background-image: url('${BackgroundPath}');
     width:100%;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
     
     @media (max-width: 767px) {
+      height:auto;
       background-image:none;
       background-color:#000;
     }
@@ -45,7 +47,6 @@ const RegisterTodayOnClub = () => {
     display: flex;
     flex-flow: column wrap;
     width: 814px;
-    height: 447px;
     padding: 3rem;
 
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
@@ -81,6 +82,7 @@ const RegisterTodayOnClub = () => {
     font-size: 32px;
     line-height: 46px;
     color: #fff;
+    padding-left: 1rem;
 
     @media (max-width: 767px) {
       padding: 0;
@@ -104,21 +106,21 @@ const RegisterTodayOnClub = () => {
         </Col>
         <Col md={{ span: 7, offset: 1 }} xs={11}>
           <ContainerText>
-            <Row>
-              <Number>1.</Number>
-              <NumberText>CURSO INTRODUTÓRIO</NumberText>
+            <Row className='d-flex align-items-baseline'>
+              <Number>1. </Number>
+              <NumberText> CURSO INTRODUTÓRIO</NumberText>
             </Row>
-            <Row className='pt-5'>
-              <Number>2.</Number>
-              <NumberText>BÔNUS DE R$ 120,00 PARA COMEÇAR</NumberText>
+            <Row className='pt-5 d-flex align-items-baseline'>
+              <Number>2. </Number>
+              <NumberText> BÔNUS DE R$ 120,00 PARA COMEÇAR</NumberText>
             </Row>
-            <Row className='pt-5'>
-              <Number>3.</Number>
-              <NumberText>ACESSO ÀS ANÁLISES DA NICE</NumberText>
+            <Row className='pt-5 d-flex align-items-baseline'>
+              <Number>3. </Number>
+              <NumberText> ACESSO ÀS ANÁLISES DA NICE</NumberText>
             </Row>
-            <Row className='pt-5'>
-              <Number>4.</Number>
-              <NumberText>SUPORTE ESPECIALIZADO</NumberText>
+            <Row className='pt-5 d-flex align-items-baseline'>
+              <Number>4. </Number>
+              <NumberText> SUPORTE ESPECIALIZADO</NumberText>
             </Row>
           </ContainerText>
         </Col>

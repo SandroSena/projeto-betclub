@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Col, Container, Row } from 'react-bootstrap';
-import Reaper from '../images/Rectangle 122.png';
+import Reaper from '../images/Reaper.png';
 import Carousel from '../components/Carousel';
 import lucro from '../images/lucro.png';
 import lucro2 from '../images/lucro2.png';
@@ -15,7 +15,7 @@ const Results = () => {
     height: 100vh;
     display: flex;
     background-image: url('${Reaper}');
-    background-repeat:round;
+    background-size: 100% 100%;
     flex-direction: row;
     flex-wrap: wrap;
     align-content:center;

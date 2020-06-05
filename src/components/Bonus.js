@@ -7,10 +7,10 @@ import Fortnite from '../images/s4-wallpaper.png';
 const Bonus = () => {
   const Background = styled.div`
     background-color: #000;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     background-image: url('${Fortnite}');
-
+  background-size:100% 100%;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
@@ -100,7 +100,7 @@ const Bonus = () => {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
   `;
   return (
     <Container className='p-0' fluid>

@@ -25,11 +25,15 @@ const RobotSecret = () => {
   `;
 
   const CTATitle = styled.h3`
-    font-family: Montserrat;
+    font-style: normal;
     font-weight: 900;
-    font-size: 3rem;
-    color: #fafafa !important;
-    text-transform: uppercase;
+    font-size: 42px;
+    line-height: 46px;
+    /* or 111% */
+
+    text-transform: uppercase !important;
+
+    color: #ffffff !important;
 
     @media (max-width: 767px) {
       font-size: 1rem;
@@ -37,11 +41,13 @@ const RobotSecret = () => {
   `;
 
   const SvgTitle = styled.h3`
-    font-family: Montserrat;
-    font-weight: 900;
-    font-size: 1rem;
-    color: #fafafa !important;
-    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
+    text-transform:uppercase;
+    color: #ffffff !important;
 
     @media (max-width: 767px) {
       font-size: 1rem;
@@ -58,10 +64,11 @@ const RobotSecret = () => {
   `;
 
   const CTAText = styled.p`
-    font-family: Montserrat;
+    font-style: normal;
     font-weight: 500;
-    font-size: 1.5rem;
-    color: #fafafa;
+    font-size: 24px;
+    line-height: 32px;
+    color: #fafafa !important;
 
     @media (max-width: 767px) {
       font-size: 0.8rem;
@@ -69,10 +76,13 @@ const RobotSecret = () => {
   `;
 
   const SVGText = styled.p`
-    font-family: Montserrat;
-    font-weight: 500;
-    font-size: 0.8rem;
-    color: #fafafa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    /* or 178% */
+
+    color: #ffffff;
 
     @media (max-width: 767px) {
       font-size: 0.8rem;

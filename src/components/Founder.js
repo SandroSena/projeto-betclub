@@ -55,6 +55,9 @@ const Founder = () => {
   const LogoImg = styled.img``;
 
   const LogosContainer = styled.div`
+    border-top: 2px solid rgba(252, 255, 44, 0.3);
+    border-bottom: 2px solid rgba(252, 255, 44, 0.3);
+    height: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -65,7 +68,7 @@ const Founder = () => {
   `;
 
   return (
-    <Container className='p-5' fluid>
+    <Container className='pt-5 px-5' fluid>
       <Background>
         <Col className='px-0' md={{ span: 10, offset: 1 }}>
           <Row>

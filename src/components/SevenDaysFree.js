@@ -61,7 +61,10 @@ const SevenDaysFree = () => {
       <Container className='p-0' fluid>
         <Wrapper>
           <Col md={{ span: 7, offset: 1 }} xs={11} className='pt-5'>
-            <SevenDaysTitle>TESTE SEM COMPROMISSO POR 7 DIAS</SevenDaysTitle>
+            <SevenDaysTitle>
+              TESTE SEM COMPROMISSO
+              <br /> POR 7 DIAS
+            </SevenDaysTitle>
           </Col>
           <Col md={{ span: 7, offset: 1 }} xs={11} className='pt-5'>
             <SevenDaysText>

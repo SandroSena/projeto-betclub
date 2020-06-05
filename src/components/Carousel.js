@@ -12,7 +12,7 @@ const Carousel = ({ time, carouselItems, itemsDisplayed }) => {
   const rotateLeft = () => {
     const array = [...items];
     array.push(array.shift());
-    bolinhaAcesa >= items.length - 1
+    bolinhaAcesa <= 0
       ? setBolinhaAcesa(items.length - 1)
       : setBolinhaAcesa(bolinhaAcesa - 1);
     setItems(array);

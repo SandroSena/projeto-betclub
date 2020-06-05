@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import BackgroundPath from '../images/Rectangle 51.png';
+import BackgroundPath from '../images/Group 531.png';
 import { Col, Container } from 'react-bootstrap';
 
 const CallToAction = () => {
@@ -27,10 +27,11 @@ const CallToAction = () => {
   `;
 
   const CTATitle = styled.h3`
-    font-family: Montserrat;
+    font-style: normal;
     font-weight: 900;
-    font-size: 3.5rem;
-    color: #fafafa !important;
+    font-size: 48px;
+    line-height: 65px;
+    color: #ffffff !important;
     text-transform: uppercase;
 
     @media (max-width: 767px) {
@@ -39,10 +40,12 @@ const CallToAction = () => {
   `;
 
   const CTAText = styled.p`
-    font-family: Montserrat;
+    font-style: normal;
     font-weight: 500;
-    font-size: 2rem;
-    color: #fafafa;
+    font-size: 24px;
+    line-height: 32px;
+
+    color: #ffffff !important;
 
     @media (max-width: 767px) {
       font-size: 0.8rem;
@@ -51,7 +54,7 @@ const CallToAction = () => {
 
   const Button = styled.button`
     background-color: transparent;
-    color: yellow;
+    color: rgb(250, 231, 0) !important;
     border: 3px solid yellow;
     text-transform: uppercase;
     padding: 0.5rem;
@@ -63,18 +66,26 @@ const CallToAction = () => {
       <Container className='p-0' fluid>
         <Col md={{ span: 8, offset: 1 }} xs={11}>
           <CTATitle>
-            <NoBreak>Lucre de R$ 1.000,00 a R$ 2.000,00</NoBreak> POR MÊS COM A
-            EXPLOSÃO DOS E-SPORTS NO MUNDO
+            <NoBreak>Lucre de R$ 1.000,00 a R$ 2.000,00</NoBreak>
+            <NoBreak>
+              {' '}
+              POR MÊS COM A EXPLOSÃO
+              <br /> DOS
+            </NoBreak>{' '}
+            E-SPORTS.
           </CTATitle>
         </Col>
         <Col md={{ span: 6, offset: 1 }} xs={11}>
           <CTAText>
-            O isolamento social está criando uma NOVA ONDA nas Apostas Online
-            com a ascensão DEFINITIVA dos Esportes Eletrônicos (eSports).
+            <NoBreak>
+              Invista na modalidade que mais cresce no mundo das
+            </NoBreak>{' '}
+            <br />
+            apostas online.
           </CTAText>
         </Col>
         <Col md={{ span: 3, offset: 1 }} xs={12}>
-          <Button>Saiba Mais</Button>
+          <Button>Investir Agora</Button>
         </Col>
       </Container>
     </Background>

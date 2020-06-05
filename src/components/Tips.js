@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import BackgroundPath from '../images/Rectangle 112.png';
+import BackgroundPath from '../images/Group 532.png';
 import { Container, Col } from 'react-bootstrap';
 import csgo from '../images/ccsgo.png';
 import dota2 from '../images/dota2.png';
@@ -15,7 +15,7 @@ const Tips = () => {
     height: 100vh;
     width:100%;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
 
     @media (max-width: 767px) {
       background-image:none;
