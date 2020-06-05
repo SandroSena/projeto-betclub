@@ -78,14 +78,14 @@ const CallToAction = () => {
         <Col md={{ span: 6, offset: 1 }} xs={11}>
           <CTAText>
             <NoBreak>
-              Invista na modalidade que mais cresce no mundo das
+              Com apenas 15 minutos por dia invista na modalidade que mais cresce no mundo das
             </NoBreak>{' '}
             <br />
             apostas online.
           </CTAText>
         </Col>
         <Col md={{ span: 3, offset: 1 }} xs={12}>
-          <Button>Investir Agora</Button>
+          <Button>Adquira Já</Button>
         </Col>
       </Container>
     </Background>

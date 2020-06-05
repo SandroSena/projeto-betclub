@@ -227,7 +227,7 @@ const WhyWeTrust = () => {
       </InfoContainer>
 
       <Button>
-        Teste Grátis por 7 dias
+        ADQUIRA POR APENAS R$ 49/MÊS
         <br />
         <SmallText>plano mensal cancele quando quiser</SmallText>
       </Button>

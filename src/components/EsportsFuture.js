@@ -14,6 +14,7 @@ const EsportsFuture = () => {
     flex-wrap: wrap;
     @media (max-width: 767px) {
       justify-content: center;
+      height: 125vh;
     }
   `;
 
@@ -91,7 +92,7 @@ const EsportsFuture = () => {
               </EsportsFutureText>
             </div>
           </Col>
-          <Col md={{ span: 2, offset:1 }} xs={11}>
+          <Col md={{ span: 2, offset: 1 }} xs={11}>
             <SvgImg src={eSports} />
             <SvgImg src={security} />
           </Col>

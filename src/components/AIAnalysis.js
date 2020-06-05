@@ -20,16 +20,19 @@ const AIAnalysis = () => {
   const CellphoneImg = styled.img`
     width: 483px;
     height: 974px;
+    /* margin-top: -20rem; */
+
     @media (max-width: 767px) {
       margin: auto;
       width: 70%;
+      height: 100%;
     }
   `;
 
   const CTATitle = styled.h3`
     font-family: Montserrat;
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 42px;
     color: #fafafa !important;
     text-transform: uppercase;
 
@@ -41,7 +44,6 @@ const AIAnalysis = () => {
   const TextContainer = styled.div``;
   const CTAText = styled.p`
     font-family: Montserrat;
-    font-weight: 500;
     font-size: 1.5rem;
     color: #fafafa;
 

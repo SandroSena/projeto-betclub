@@ -45,6 +45,39 @@ const Results = () => {
   const ImgWrapper = styled.div`
     object-fit: scale-down;
   `;
+
+  const WrapperButton = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 2.5rem;
+
+    @media (max-width: 767px) {
+      padding: 2rem;
+    }
+  `;
+  const Button = styled.button`
+    width: 567px;
+    height: 79.38px;
+    background: #00c27b;
+    border: 1px solid #00c27b;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px #00c27b;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 27px;
+    line-height: 46px;
+    text-transform: uppercase;
+    color: #ffffff;
+    @media (max-width: 767px) {
+      width: auto;
+      height: auto;
+      white-space: nowrap;
+      font-size: 0.8rem;
+    }
+  `;
   return (
     <Container className='p-0 pt-5' fluid>
       <Background>
@@ -65,6 +98,9 @@ const Results = () => {
             itemsDisplayed={3}
           />
         </Row>
+        <WrapperButton>
+          <Button>EU QUERO FAZER PARTE DO CLUB</Button>
+        </WrapperButton>
       </Background>
     </Container>
   );

@@ -43,10 +43,10 @@ const RobotSecret = () => {
   const SvgTitle = styled.h3`
     font-style: normal;
     font-weight: 800;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 32px;
     /* identical to box height, or 133% */
-    text-transform:uppercase;
+    text-transform: uppercase;
     color: #ffffff !important;
 
     @media (max-width: 767px) {
@@ -65,10 +65,9 @@ const RobotSecret = () => {
 
   const CTAText = styled.p`
     font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
+    font-size: 23px;
     line-height: 32px;
-    color: #fafafa !important;
+    color: #fff !important;
 
     @media (max-width: 767px) {
       font-size: 0.8rem;
@@ -115,7 +114,7 @@ const RobotSecret = () => {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 50%;
+    width: 60%;
   `;
 
   const SvgImg = styled.img`
@@ -136,8 +135,9 @@ const RobotSecret = () => {
           <CTAText>
             A utilização de um programa avançado de Inteligência Artificial tem
             inúmeras vantagens sobre a análise humana. Inteligência, Automação e
-            Supervisão são 3 (três) dos maiores diferencias da NICE – o único
-            programa de análise de eSports da América Latina.
+            Supervisão são 3 (três) dos maiores diferencias da{' '}
+            <strong>NICE</strong> – o único programa de análise de eSports da
+            América Latina.
           </CTAText>
         </Col>
         <ContentContainer>

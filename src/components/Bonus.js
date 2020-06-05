@@ -7,7 +7,6 @@ import Fortnite from '../images/s4-wallpaper.png';
 const Bonus = () => {
   const Background = styled.div`
     background-color: #000;
-    height: 80vh;
     display: flex;
     background-image: url('${Fortnite}');
   background-size:100% 100%;
@@ -16,7 +15,8 @@ const Bonus = () => {
     flex-wrap: wrap;
     @media (max-width: 767px) {
       justify-content: center;
-      height:auto;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   `;
 
@@ -24,8 +24,9 @@ const Bonus = () => {
     font-family: Montserrat;
     font-weight: 900;
     font-size: 3rem;
-    color: #fafafa !important;
+    color: #fff !important;
     text-transform: uppercase;
+    margin-top: 5rem;
 
     @media (max-width: 767px) {
       font-size: 1rem;
@@ -51,9 +52,10 @@ const Bonus = () => {
   `;
   const CTASuperText = styled.p`
     font-family: Montserrat;
-    font-weight: 500;
-    font-size: 1.5rem;
-    color: #fafafa;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
 
     @media (max-width: 767px) {
       font-size: 0.8rem;
@@ -61,9 +63,9 @@ const Bonus = () => {
   `;
   const CTAText = styled.p`
     font-family: Montserrat;
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: #fafafa;
+    font-size: 18px;
+    line-height: 32px;
+    color: #fff;
 
     @media (max-width: 767px) {
       font-size: 0.8rem;
@@ -103,7 +105,7 @@ const Bonus = () => {
     flex-wrap: wrap;
   `;
   return (
-    <Container className='p-0' fluid>
+    <Container className='p-0 pb-5' fluid>
       <Background>
         <Col md={{ offset: 1, span: 10 }}>
           <CTASuperTitle>
@@ -115,21 +117,25 @@ const Bonus = () => {
             <TextContainer>
               <CTASuperText>
                 Membros iniciantes nas Apostas Online ganharão um pacote de
-                boas-vindas com TUDO que precisam para começar hoje mesmo. Por
-                outro lado, se familiarizado com o Mercado, conte com análises
-                automáticas diariamente.
+                boas-vindas com <strong>TUDO</strong> que precisam para começar
+                hoje mesmo. Por outro lado, se familiarizado com o Mercado,
+                conte com análises automáticas diariamente.˝
               </CTASuperText>
               <div>
-                <CTATitle>DEZENAS DE ANÁLISES POR MÊS</CTATitle>
+                <CTATitle className='pt-3'>
+                  DEZENAS DE ANÁLISES POR MÊS
+                </CTATitle>
                 <CTAText>
-                  Se você tem disciplina para COPIAR E COLAR as recomendações
-                  dos nossos analistas de forma consistente, logo você será
-                  capaz de tirar seu sustento e realizar os seus sonhos através
-                  deste negócio.
+                  Com cerca de 4 análises de jogos por dia, você terá um número
+                  de oportunidades fora da curva para multiplicar os seus
+                  investimentos. Um volume de indicações ideal para você não
+                  deixar nenhuma oportunidade passar.
                 </CTAText>
               </div>
               <div>
-                <CTATitle>COMECE COM MENOS DE R$ 100 </CTATitle>
+                <CTATitle className='pt-3'>
+                  COMECE COM MENOS DE R$ 100{' '}
+                </CTATitle>
                 <CTAText>
                   Não existe um limite mínimo de dinheiro para ingressar nesse
                   mercado. Nossa recomendação é investir R$ 500 a R$ 1.000 para
@@ -141,7 +147,7 @@ const Bonus = () => {
           </Col>
           <Col xs={12} md={{ span: 5 }}>
             <BonusContainer>
-              <CTATitle>BÔNUS: CURSO INTRODUTÓRIO</CTATitle>
+              <CTATitle className='pb-5'>BÔNUS: CURSO INTRODUTÓRIO</CTATitle>
               <CTAText>
                 40 rápidos minutos que vão te permitir entender os conceitos
                 chaves do negócio, além de pontos importantes para garantir seu

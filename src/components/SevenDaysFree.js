@@ -58,7 +58,7 @@ const SevenDaysFree = () => {
 
   return (
     <Background>
-      <Container className='p-0' fluid>
+      <Container className='p-0 pt-5' fluid>
         <Wrapper>
           <Col md={{ span: 7, offset: 1 }} xs={11} className='pt-5'>
             <SevenDaysTitle>
