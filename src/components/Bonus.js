@@ -116,7 +116,7 @@ const Bonus = () => {
     @media (max-width: 767px) {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: baseline;
     }
   `;
 
