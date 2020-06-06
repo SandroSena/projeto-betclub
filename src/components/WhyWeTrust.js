@@ -27,7 +27,16 @@ const WhyWeTrust = () => {
     text-transform: uppercase;
 
     @media (max-width: 767px) {
-      font-size: 1rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 26px;
+      /* or 108% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
 
@@ -39,7 +48,16 @@ const WhyWeTrust = () => {
     line-height: 30px;
     color: #ffffff;
     @media (max-width: 767px) {
-      font-size: 1rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      /* or 137% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
 
@@ -47,12 +65,36 @@ const WhyWeTrust = () => {
     color: #ff465b;
     font-weight: bolder;
     text-shadow: 0px 4px 40px #ff465b;
+    @media (max-width: 767px) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      /* or 137% */
+
+      text-align: center;
+
+      color: #ffffff;
+    }
   `;
 
   const WhyWeTrustSpanGreen = styled.span`
     color: #00c27b;
     font-weight: bolder;
     text-shadow: 0px 4px 40px #00c27b;
+    @media (max-width: 767px) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      /* or 137% */
+
+      text-align: center;
+
+      color: #ffffff;
+    }
   `;
 
   const ContainerTextImgs = styled.div`
@@ -61,6 +103,10 @@ const WhyWeTrust = () => {
     align-items: center;
     justify-content: space-between;
     width: 80%;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+    }
   `;
 
   const SvgImg = styled.img`
@@ -91,7 +137,13 @@ const WhyWeTrust = () => {
     font-size: 4.4rem;
     text-shadow: 0px 4px 40px rgba(252, 255, 44, 0.6);
     @media (max-width: 767px) {
-      font-size: 2rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 80px;
+      line-height: 32px;
+      margin-bottom: 2rem;
+      /* identical to box height, or 40% */
     }
   `;
   const EachInfoContainer = styled.div`
@@ -110,6 +162,16 @@ const WhyWeTrust = () => {
     font-weight: bold;
     font-size: 1rem;
     color: #fafafa;
+    @media (max-width: 767px) {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 24px;
+      /* identical to box height, or 133% */
+
+      color: #ffffff;
+    }
   `;
 
   const Button = styled.button`
@@ -129,10 +191,18 @@ const WhyWeTrust = () => {
     position: relative;
     bottom: -3.7rem;
     @media (max-width: 767px) {
-      width: auto;
-      height: auto;
-      white-space: nowrap;
-      font-size: 0.8rem;
+      font-family: Montserrat;
+      width: 90%;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 30px;
+      /* identical to box height, or 169% */
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #ffffff;
     }
   `;
   const SmallText = styled.span`
@@ -159,12 +229,9 @@ const WhyWeTrust = () => {
       <Background>
         <Col
           md={{ offset: 1, span: 5 }}
-          className='h-75 p-1 d-flex flex-column justify-content-between'
+          className='h-75 p-1 d-flex flex-column align-items-center justify-content-between'
         >
-          <WhyWeTrustTitle>
-            POR QUE CONFIAMOS <br />
-            NA NICE...
-          </WhyWeTrustTitle>
+          <WhyWeTrustTitle>POR QUE CONFIAMOS NA NICE...</WhyWeTrustTitle>
           <ContainerTextImgs>
             <SvgImg src={perda} />
             <WhyWeTrustText>
@@ -205,6 +272,7 @@ const WhyWeTrust = () => {
         </Col>
       </Background>
       <InfoContainer>
+        <div id='info-container' />
         <EachInfoContainer>
           <DataInfo>65%</DataInfo>
           <DataLabel>taxa de acerto</DataLabel>

@@ -36,7 +36,16 @@ const Founder = () => {
     color: #fafafa;
     font-weight: 900;
     @media (max-width: 767px) {
-      font-size: 1.5rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 26px;
+      /* or 108% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
 
@@ -45,11 +54,21 @@ const Founder = () => {
     font-size: 1.5rem;
     color: #fafafa;
     @media (max-width: 767px) {
-      font-size: 0.8rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      /* or 137% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
   const FounderImg = styled.img`
     width: 80%;
+    position: relative;
   `;
 
   const LogoImg = styled.img``;
@@ -109,7 +128,11 @@ const Founder = () => {
                 Além disso, foi o maior investidor da Betfair no mundo em 2014.
               </FounderText>
             </Col>
-            <Col md={{ span: 6, offset: 1 }}>
+            <Col
+              className='d-flex justify-content-center'
+              xs={12}
+              md={{ span: 6, offset: 1 }}
+            >
               <FounderImg src={FounderPath} />
             </Col>
           </RowContainer>

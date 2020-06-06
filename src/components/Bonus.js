@@ -29,7 +29,16 @@ const Bonus = () => {
     margin-top: 5rem;
 
     @media (max-width: 767px) {
-      font-size: 1rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 26px;
+      /* or 108% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
   const CTATitle = styled.h3`
@@ -40,7 +49,16 @@ const Bonus = () => {
     text-transform: uppercase;
 
     @media (max-width: 767px) {
-      font-size: 1rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 26px;
+      /* or 130% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
 
@@ -58,7 +76,16 @@ const Bonus = () => {
     color: #fff;
 
     @media (max-width: 767px) {
-      font-size: 0.8rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      /* or 137% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
   const CTAText = styled.p`
@@ -68,7 +95,16 @@ const Bonus = () => {
     color: #fff;
 
     @media (max-width: 767px) {
-      font-size: 0.8rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      /* or 137% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
 
@@ -77,6 +113,11 @@ const Bonus = () => {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88));
     border: 2px solid rgba(252, 255, 44, 0.3);
     box-shadow: 0px 4px 40px rgba(250, 231, 0, 0.2);
+    @media (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   `;
 
   const ClassTitle = styled.span`
@@ -86,16 +127,24 @@ const Bonus = () => {
 
   const ClassItem = styled.div`
     margin: 1rem 0;
+
+    @media (max-width: 767px) {
+      margin: 0.5rem;
+    }
   `;
-  const Button = styled.button`
+  const Button = styled.a`
     background-color: transparent;
-    color: yellow;
+    color: rgb(250, 231, 0) !important;
     border: 3px solid yellow;
     text-transform: uppercase;
     padding: 0.5rem;
     font-weight: bold;
-    margin-top: 1rem;
-    margin-left: 0.1rem;
+    cursor: pointer;
+
+    @media (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   `;
 
   const ContentWrapper = styled.div`
@@ -177,7 +226,7 @@ const Bonus = () => {
                 <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 6 – Suporte</ClassTitle>
               </ClassItem>
-              <Button>Adquira Agora</Button>
+              <Button href='#info-container'>Adquira Agora</Button>
             </BonusContainer>
           </Col>
         </ContentWrapper>

@@ -14,6 +14,8 @@ const Navbar = () => {
     height: 6rem;
     background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
+    z-index: 2;
+
 
     @media (max-width: 767px) {
       display: none;
@@ -24,6 +26,7 @@ const Navbar = () => {
   const MenuItem = styled.a`
     color: white !important;
     font-weight: bold;
+    z-index: 2;
 
     &:hover {
       border-bottom: 4px solid rgba(250, 231, 0, 0.5);
@@ -41,19 +44,19 @@ const Navbar = () => {
       </Col>
       <Col className='d-flex direction-row' md={{ offset: 1, span: 8 }}>
         <Col>
-          <MenuItem>INÍCIO</MenuItem>
+          <MenuItem href='#callToAction'>INÍCIO</MenuItem>
         </Col>
         <Col>
-          <MenuItem>SOBRE</MenuItem>
+          <MenuItem href='#aIAnalysis'>SOBRE</MenuItem>
         </Col>
         <Col>
-          <MenuItem>JOGOS</MenuItem>
+          <MenuItem href='#tips'>JOGOS</MenuItem>
         </Col>
         <Col>
-          <MenuItem>DEPOIMENTOS</MenuItem>
+          <MenuItem href='#approval'>DEPOIMENTOS</MenuItem>
         </Col>
         <Col md={3}>
-          <MenuItem>PERGUNTAS FREQUENTES</MenuItem>
+          <MenuItem href='#faq'>PERGUNTAS FREQUENTES</MenuItem>
         </Col>
       </Col>
     </NavbarWrapper>

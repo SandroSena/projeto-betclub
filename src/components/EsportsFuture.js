@@ -14,7 +14,7 @@ const EsportsFuture = () => {
     flex-wrap: wrap;
     @media (max-width: 767px) {
       justify-content: center;
-      height: 125vh;
+      height: auto;
     }
   `;
 
@@ -31,7 +31,17 @@ const EsportsFuture = () => {
     text-align: left;
 
     @media (max-width: 767px) {
-      font-size: 1rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 26px;
+      /* or 108% */
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #ffffff;
     }
   `;
 
@@ -46,7 +56,16 @@ const EsportsFuture = () => {
     color: #ffffff;
 
     @media (max-width: 767px) {
-      font-size: 0.8rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 150% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
 

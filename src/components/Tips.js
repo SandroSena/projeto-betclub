@@ -68,6 +68,8 @@ const Tips = () => {
 
   return (
     <Background>
+      <div id='tips'/>
+
       <Container className='p-0' fluid>
         <Col md={{ span: 10, offset: 1 }} xs={11}>
           <TipsTitle className='pb-5'>

@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import Left from '../images/left.png';
 import Right from '../images/right.png';
 import Bolinha from '../images/bolinha.png';
-
+import useWindowSIze from '../hooks/useWindowSize';
 const Carousel = ({ time, carouselItems, itemsDisplayed }) => {
   const [items, setItems] = useState(carouselItems);
   const [itemsToDisplay, setItemsToDisplay] = useState([]);
   const [bolinhaAcesa, setBolinhaAcesa] = useState(0);
-
+  const size = useWindowSIze();
   const rotateLeft = () => {
     const array = [...items];
     array.push(array.shift());
@@ -28,7 +28,13 @@ const Carousel = ({ time, carouselItems, itemsDisplayed }) => {
   };
 
   useEffect(() => {
-    setItemsToDisplay([...items.slice(0, itemsDisplayed)]);
+    console.log(
+      'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    );
+    console.log(size);
+    size.width > 767
+      ? setItemsToDisplay([...items.slice(0, itemsDisplayed)])
+      : setItemsToDisplay([...items.slice(0, 1)]);
   }, [items, itemsDisplayed]);
 
   useEffect(() => {

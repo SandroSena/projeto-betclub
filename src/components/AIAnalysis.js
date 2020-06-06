@@ -37,7 +37,16 @@ const AIAnalysis = () => {
     text-transform: uppercase;
 
     @media (max-width: 767px) {
-      font-size: 1rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 26px;
+      /* or 108% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
 
@@ -48,11 +57,21 @@ const AIAnalysis = () => {
     color: #fafafa;
 
     @media (max-width: 767px) {
-      font-size: 0.8rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 150% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
   return (
     <Container className='p-0' fluid>
+      <div id='aIAnalysis' />
       <Background>
         <Col xs={12} md={{ span: 6, offset: 1 }}>
           <TextContainer>

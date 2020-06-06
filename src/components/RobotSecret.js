@@ -36,7 +36,17 @@ const RobotSecret = () => {
     color: #ffffff !important;
 
     @media (max-width: 767px) {
-      font-size: 1rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 26px;
+      /* or 108% */
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #ffffff;
     }
   `;
 
@@ -50,7 +60,16 @@ const RobotSecret = () => {
     color: #ffffff !important;
 
     @media (max-width: 767px) {
-      font-size: 1rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 32px;
+      /* identical to box height, or 133% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
 
@@ -70,7 +89,16 @@ const RobotSecret = () => {
     color: #fff !important;
 
     @media (max-width: 767px) {
-      font-size: 0.8rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 150% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
 
@@ -84,7 +112,16 @@ const RobotSecret = () => {
     color: #ffffff;
 
     @media (max-width: 767px) {
-      font-size: 0.8rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 150% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
 
@@ -106,6 +143,8 @@ const RobotSecret = () => {
     justify-content: space-around;
 
     @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
       margin: 1rem;
     }
   `;
@@ -121,6 +160,16 @@ const RobotSecret = () => {
     border: 2px solid rgba(252, 255, 44, 0.3);
     padding: 0.9rem;
     box-shadow: 0px 4px 40px rgba(250, 231, 0, 0.2);
+    @media (max-width: 767px) {
+      width: 50%;
+      flex-direction: column;
+      margin: 1rem;
+
+      &:after {
+        display: block;
+        padding-bottom: 100%;
+      }
+    }
   `;
 
   return (
@@ -128,7 +177,7 @@ const RobotSecret = () => {
       <Container className='p-0 pb-5' fluid>
         <Col md={{ span: 10, offset: 1 }} xs={11}>
           <CTATitle>
-            O SEGREDO DO NOSSO ROBÔ: <br/>INTELIGÊNCIA, AUTOMAÇÃO E SUPERVISÃO
+            O SEGREDO DO NOSSO ROBÔ: INTELIGÊNCIA, AUTOMAÇÃO E SUPERVISÃO
           </CTATitle>
         </Col>
         <Col md={{ span: 10, offset: 1 }} xs={11}>

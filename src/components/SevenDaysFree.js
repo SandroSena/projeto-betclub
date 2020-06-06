@@ -33,7 +33,17 @@ const SevenDaysFree = () => {
     text-transform: uppercase;
 
     @media (max-width: 767px) {
-      font-size: 1rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 26px;
+      /* or 108% */
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #ffffff;
     }
   `;
 
@@ -44,7 +54,16 @@ const SevenDaysFree = () => {
     color: #fafafa;
 
     @media (max-width: 767px) {
-      font-size: 0.8rem;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 150% */
+
+      text-align: center;
+
+      color: #ffffff;
     }
   `;
 
@@ -60,13 +79,21 @@ const SevenDaysFree = () => {
     <Background>
       <Container className='p-0 pt-5' fluid>
         <Wrapper>
-          <Col md={{ span: 7, offset: 1 }} xs={11} className='pt-5'>
+          <Col
+            md={{ span: 7, offset: 1 }}
+            xs={{ span: 10, offset: 1 }}
+            className='pt-5'
+          >
             <SevenDaysTitle>
               TESTE SEM COMPROMISSO
               <br /> POR 7 DIAS
             </SevenDaysTitle>
           </Col>
-          <Col md={{ span: 7, offset: 1 }} xs={11} className='pt-5'>
+          <Col
+            md={{ span: 7, offset: 1 }}
+            xs={{ span: 10, offset: 1 }}
+            className='pt-5'
+          >
             <SevenDaysText>
               Visando tirar todo o peso das suas costas e remover os obstáculos
               que poderiam te desencorajar de tentar aplicar o nosso método, nós

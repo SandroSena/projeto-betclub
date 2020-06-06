@@ -80,6 +80,8 @@ const Results = () => {
   `;
   return (
     <Container className='p-0 pt-5' fluid>
+      <div id='approval'/>
+
       <Background>
         <Col md={{ offset: 4, span: 4 }} className='pt-5'>
           <CTASuperTitle>QUEM JÁ FAZ PARTE DO CLUBE APROVA</CTASuperTitle>
