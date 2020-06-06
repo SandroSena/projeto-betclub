@@ -70,7 +70,7 @@ const Tips = () => {
     <Background>
       <Container className='p-0' fluid>
         <Col md={{ span: 10, offset: 1 }} xs={11}>
-          <TipsTitle>
+          <TipsTitle className='pb-5'>
             Receba dicas
             <br /> de apostas para:
           </TipsTitle>

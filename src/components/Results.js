@@ -6,8 +6,8 @@ import Carousel from '../components/Carousel';
 import lucro from '../images/lucro.png';
 import lucro2 from '../images/lucro2.png';
 import lucro3 from '../images/lucro3.png';
-import lucro4 from '../images/lucro2.png';
-import lucro5 from '../images/lucro3.png';
+import lucro4 from '../images/lucro4.png';
+import lucro5 from '../images/lucro5.png';
 
 const Results = () => {
   const Background = styled.div`

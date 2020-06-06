@@ -15,7 +15,7 @@ const RobotSecret = () => {
     width:100%;
     background-repeat: no-repeat;
     background-size: 100%;
-    margin-top:15rem;
+    margin-top:7rem;
     
     @media (max-width: 767px) {
       background-image:none;
@@ -128,7 +128,7 @@ const RobotSecret = () => {
       <Container className='p-0 pb-5' fluid>
         <Col md={{ span: 10, offset: 1 }} xs={11}>
           <CTATitle>
-            O SEGREDO DO NOSSO ROBÔ: INTELIGÊNCIA, AUTOMAÇÃO E SUPERVISÃO
+            O SEGREDO DO NOSSO ROBÔ: <br/>INTELIGÊNCIA, AUTOMAÇÃO E SUPERVISÃO
           </CTATitle>
         </Col>
         <Col md={{ span: 10, offset: 1 }} xs={11}>
@@ -155,7 +155,7 @@ const RobotSecret = () => {
             <SvgContainer>
               <SvgImg src={Automation} />
               <DataTextInfo>
-                <SvgTitle>Inteligência</SvgTitle>
+                <SvgTitle>Automação</SvgTitle>
                 <SVGText>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </SVGText>
@@ -164,7 +164,7 @@ const RobotSecret = () => {
             <SvgContainer>
               <SvgImg src={Supervision} />
               <DataTextInfo>
-                <SvgTitle>Inteligência</SvgTitle>
+                <SvgTitle>Supervisão</SvgTitle>
                 <SVGText>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </SVGText>

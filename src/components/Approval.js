@@ -51,7 +51,7 @@ const Results = () => {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 2.5rem;
+    padding-top: 4rem;
 
     @media (max-width: 767px) {
       padding: 2rem;
@@ -98,7 +98,7 @@ const Results = () => {
             itemsDisplayed={3}
           />
         </Row>
-        <WrapperButton>
+        <WrapperButton className='pb-5'>
           <Button>EU QUERO FAZER PARTE DO CLUB</Button>
         </WrapperButton>
       </Background>

@@ -68,7 +68,7 @@ const Founder = () => {
   `;
 
   return (
-    <Container className='pt-5 px-5' fluid>
+    <Container className='p-0 pt-5' fluid>
       <Background>
         <Col className='px-0' md={{ span: 10, offset: 1 }}>
           <Row>

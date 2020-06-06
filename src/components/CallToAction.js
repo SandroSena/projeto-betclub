@@ -78,7 +78,8 @@ const CallToAction = () => {
         <Col md={{ span: 6, offset: 1 }} xs={11}>
           <CTAText>
             <NoBreak>
-              Com apenas 15 minutos por dia invista na modalidade que mais cresce no mundo das
+              Com apenas 15 minutos por dia invista na modalidade que mais
+              cresce no mundo das
             </NoBreak>{' '}
             <br />
             apostas online.
