@@ -144,7 +144,7 @@ const Founder = () => {
           <RowContainer>
             <Col
               className='px-0 d-flex flex-column justify-content-around'
-              md={{ span: 5 }}
+              md={{ span: 4 }}
             >
               <FounderText>
                 Autor do livro best seller Invista em Futebol e fundador do
@@ -164,7 +164,7 @@ const Founder = () => {
             <Col
               className='d-flex justify-content-center'
               xs={12}
-              md={{ span: 6, offset: 1 }}
+              md={{ span: 7, offset: 1 }}
             >
               <FounderImg src={FounderPath} />
             </Col>

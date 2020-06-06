@@ -75,7 +75,9 @@ const AIAnalysis = () => {
       <Background>
         <Col xs={12} md={{ span: 6, offset: 1 }}>
           <TextContainer>
-            <CTATitle>Análises utilizando inteligência artificial</CTATitle>
+            <CTATitle className='pt-5'>
+              Análises utilizando inteligência artificial
+            </CTATitle>
             <CTAText>
               Deixe todo o trabalho pesado nas mãos de especialistas com mais de
               10 anos de experiência no mercado e mais de{' '}

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import BackgroundPath from '../images/Baron.png';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container } from 'react-bootstrap';
 
 const RegisterTodayOnClub = () => {
   const Background = styled.div`
@@ -103,7 +103,7 @@ const RegisterTodayOnClub = () => {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 46px;
     color: #fff;
     padding-left: 1rem;
@@ -119,6 +119,16 @@ const RegisterTodayOnClub = () => {
       text-align: center;
 
       color: #ffffff;
+    }
+  `;
+
+  const Wrapper = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    align-items: center;
+    @media (max-width: 767px) {
+      flex-flow: column wrap;
     }
   `;
 
@@ -150,22 +160,22 @@ const RegisterTodayOnClub = () => {
           xs={{ span: 10, offset: 1 }}
         >
           <ContainerText>
-            <Row className='d-flex w-100 flex-column align-items-center'>
+            <Wrapper className='pt-5'>
               <Number>1. </Number>
               <NumberText> CURSO INTRODUTÓRIO</NumberText>
-            </Row>
-            <Row className='pt-5 d-flex w-100 flex-column align-items-center'>
+            </Wrapper>
+            <Wrapper className='pt-5'>
               <Number>2. </Number>
               <NumberText> BÔNUS DE R$ 120,00 PARA COMEÇAR</NumberText>
-            </Row>
-            <Row className='pt-5 d-flex w-100 flex-column align-items-center'>
+            </Wrapper>
+            <Wrapper className='pt-5'>
               <Number>3. </Number>
               <NumberText> ACESSO ÀS ANÁLISES DA NICE</NumberText>
-            </Row>
-            <Row className='pt-5 d-flex w-100 flex-column align-items-center'>
+            </Wrapper>
+            <Wrapper className='pt-5'>
               <Number>4. </Number>
               <NumberText> SUPORTE ESPECIALIZADO</NumberText>
-            </Row>
+            </Wrapper>
           </ContainerText>
         </Col>
       </Container>

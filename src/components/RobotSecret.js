@@ -21,6 +21,7 @@ const RobotSecret = () => {
       background-image:none;
       background-color:#000;
       height: auto;
+      margin: 0 auto;
     }
   `;
 
