@@ -55,7 +55,7 @@ const RegisterTodayOnClub = () => {
 
     @media (max-width: 767px) {
       width: 20rem;
-      height: 60vh;
+      height: 50vh;
       padding: 0rem;
       padding-left: 2rem;
     }
@@ -87,6 +87,7 @@ const RegisterTodayOnClub = () => {
     @media (max-width: 767px) {
       padding: 0;
       font-size: 0.6rem;
+      margin-left: 1rem;
     }
   `;
 

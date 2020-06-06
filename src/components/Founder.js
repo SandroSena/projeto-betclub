@@ -45,7 +45,7 @@ const Founder = () => {
     font-size: 1.5rem;
     color: #fafafa;
     @media (max-width: 767px) {
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
   `;
   const FounderImg = styled.img`
@@ -67,11 +67,16 @@ const Founder = () => {
     padding: 1.5rem;
   `;
 
+  const RowContainer = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+  `;
+
   return (
     <Container className='p-0 pt-5' fluid>
       <Background>
-        <Col className='px-0' md={{ span: 10, offset: 1 }}>
-          <Row>
+        <Col className='' md={{ span: 10, offset: 1 }}>
+          <RowContainer>
             <FounderTitle>
               Conheça o idealizador <br />
               do betclub
@@ -83,8 +88,8 @@ const Founder = () => {
               8 anos, chegando a faturar até 30 mil reais por mês como Apostador
               Esportivo.
             </FounderText>
-          </Row>
-          <Row>
+          </RowContainer>
+          <RowContainer>
             <Col
               className='px-0 d-flex flex-column justify-content-around'
               md={{ span: 5 }}
@@ -107,7 +112,7 @@ const Founder = () => {
             <Col md={{ span: 6, offset: 1 }}>
               <FounderImg src={FounderPath} />
             </Col>
-          </Row>
+          </RowContainer>
         </Col>
       </Background>
       <LogosContainer>
