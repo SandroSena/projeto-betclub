@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 import BackgroundPath from '../images/Rectangle 119.png';
@@ -8,8 +8,19 @@ import Epoca from '../images/epoca.png';
 import Jp from '../images/jp.png';
 import R7 from '../images/r7.png';
 import RadioGlobo from '../images/radioglobo.png';
+import ModalEntrevistaCBN from '../components/ModalEntrevistaCBN';
+import ModalEntrevistaJP from '../components/ModalEntrevistaJP';
+import ModalEntrevistaRG from '../components/ModalEntrevistaRG';
+import ModalEntrevistaR7 from '../components/ModalEntrevistaR7';
+import ModalEntrevistaEpoca from '../components/ModalEntrevistaEpoca';
 
 const Founder = () => {
+  const [isModalOpenCBN, setIsModalOpenCBN] = useState(false);
+  const [isModalOpenJP, setIsModalOpenJP] = useState(false);
+  const [isModalOpenRG, setIsModalOpenRG] = useState(false);
+  const [isModalOpenR7, setIsModalOpenR7] = useState(false);
+  const [isModalOpenEpoca, setIsModalOpenEpoca] = useState(false);
+
   const Background = styled.div`
     display:flex;
     align-items:center;
@@ -71,7 +82,9 @@ const Founder = () => {
     position: relative;
   `;
 
-  const LogoImg = styled.img``;
+  const LogoImg = styled.img`
+    cursor: pointer;
+  `;
 
   const LogosContainer = styled.div`
     border-top: 2px solid rgba(252, 255, 44, 0.3);
@@ -93,6 +106,26 @@ const Founder = () => {
 
   return (
     <Container className='p-0 pt-5' fluid>
+      <ModalEntrevistaCBN
+        isModalOpenCBN={isModalOpenCBN}
+        onHide={() => setIsModalOpenCBN(false)}
+      />
+      <ModalEntrevistaJP
+        isModalOpenJP={isModalOpenJP}
+        onHide={() => setIsModalOpenJP(false)}
+      />
+      <ModalEntrevistaRG
+        isModalOpenRG={isModalOpenRG}
+        onHide={() => setIsModalOpenRG(false)}
+      />
+      <ModalEntrevistaR7
+        isModalOpenR7={isModalOpenR7}
+        onHide={() => setIsModalOpenR7(false)}
+      />
+      <ModalEntrevistaEpoca
+        isModalOpenEpoca={isModalOpenEpoca}
+        onHide={() => setIsModalOpenEpoca(false)}
+      />
       <Background>
         <Col className='' md={{ span: 10, offset: 1 }}>
           <RowContainer>
@@ -139,11 +172,11 @@ const Founder = () => {
         </Col>
       </Background>
       <LogosContainer>
-        <LogoImg src={CBN} />
-        <LogoImg src={Epoca} />
-        <LogoImg src={Jp} />
-        <LogoImg src={R7} />
-        <LogoImg src={RadioGlobo} />
+        <LogoImg src={CBN} onClick={() => setIsModalOpenCBN(true)} />
+        <LogoImg src={Epoca} onClick={() => setIsModalOpenEpoca(true)} />
+        <LogoImg src={Jp} onClick={() => setIsModalOpenJP(true)} />
+        <LogoImg src={R7} onClick={() => setIsModalOpenR7(true)} />
+        <LogoImg src={RadioGlobo} onClick={() => setIsModalOpenRG(true)} />
       </LogosContainer>
     </Container>
   );
