@@ -9,6 +9,7 @@ const Footer = () => {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     @media (max-width: 767px) {
       height: auto;
       flex-direction: column;
@@ -20,11 +21,11 @@ const Footer = () => {
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 27px;
     /* or 169% */
 
-    color: #ffffff;
+    color: #808080;
 
     @media (max-width: 767px) {
       font-size: 0.7rem;

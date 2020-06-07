@@ -7,7 +7,7 @@ import security from '../images/security.svg';
 const EsportsFuture = () => {
   const Background = styled.div`
     background-color: #000;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: row;
     align-items: center;

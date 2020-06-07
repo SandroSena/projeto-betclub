@@ -8,10 +8,9 @@ const SevenDaysFree = () => {
   const Background = styled.div`
     display:flex;
     background-image: url('${BackgroundPath}');
-    height: 100vh;
-    width:100%;
     background-repeat: no-repeat;
     background-size: 100%;
+    height: 85vh;
     
     @media (max-width: 767px) {
       background-image:none;
@@ -77,7 +76,7 @@ const SevenDaysFree = () => {
 
   return (
     <Background>
-      <Container className='p-0 pt-5' fluid>
+      <Container className='p-0' fluid>
         <Wrapper>
           <Col
             md={{ span: 7, offset: 1 }}

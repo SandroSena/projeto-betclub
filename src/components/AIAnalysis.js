@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import Cellphone from '../images/celular.png';
+import Cellphone from '../images/celular2.png';
 import { Col, Container } from 'react-bootstrap';
 
 const AIAnalysis = () => {
   const Background = styled.div`
     background-color: #000;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,9 +18,9 @@ const AIAnalysis = () => {
   `;
 
   const CellphoneImg = styled.img`
-    width: 483px;
-    height: 974px;
-    /* margin-top: -20rem; */
+    width: 413px;
+    height: 788px;
+    margin-top: -10rem;
 
     @media (max-width: 767px) {
       margin: auto;

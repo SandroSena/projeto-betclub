@@ -2,21 +2,25 @@ import React from 'react';
 import styled from 'styled-components';
 import Checkmark from '../images/checkmark.svg';
 import { Col, Container } from 'react-bootstrap';
-import Fortnite from '../images/s4-wallpaper.png';
+import Fortnite from '../images/fortnite.png';
 
 const Bonus = () => {
   const Background = styled.div`
     background-color: #000;
     display: flex;
     background-image: url('${Fortnite}');
-  background-size:100% 100%;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+    height: 110vh;
+    width:100%;
+    background-size: 100% 100%;
+    
     @media (max-width: 767px) {
       justify-content: center;
       background-repeat: no-repeat;
       background-size: contain;
+      height: auto;
     }
   `;
 
@@ -26,7 +30,6 @@ const Bonus = () => {
     font-size: 3rem;
     color: #fff !important;
     text-transform: uppercase;
-    margin-top: 5rem;
 
     @media (max-width: 767px) {
       font-family: Montserrat;
@@ -154,14 +157,15 @@ const Bonus = () => {
     flex-wrap: wrap;
   `;
   return (
-    <Container className='p-0 pb-5' fluid>
+    <Container className='p-0' fluid>
       <Background>
-        <Col md={{ offset: 1, span: 10 }}>
-          <CTASuperTitle>
-            IDEAL PARA QUEM ESTÁ COMEÇANDO E NÃO QUER FICAR PARA TRÁS
-          </CTASuperTitle>
-        </Col>
         <ContentWrapper>
+          <Col md={{ offset: 1, span: 10 }}>
+            <CTASuperTitle>
+              IDEAL PARA QUEM ESTÁ COMEÇANDO
+              <br /> E NÃO QUER FICAR PARA TRÁS
+            </CTASuperTitle>
+          </Col>
           <Col className='h-75' xs={12} md={{ span: 5, offset: 1 }}>
             <TextContainer>
               <CTASuperText>
@@ -226,7 +230,9 @@ const Bonus = () => {
                 <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 6 – Suporte</ClassTitle>
               </ClassItem>
-              <Button href='#info-container'>Adquira Agora</Button>
+              <div className='pt-5'>
+                <Button href='#info-container'>Adquira Agora</Button>
+              </div>
             </BonusContainer>
           </Col>
         </ContentWrapper>

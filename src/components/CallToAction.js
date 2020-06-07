@@ -10,9 +10,10 @@ const CallToAction = () => {
     align-items:center;
     background-image: url('${BackgroundPath}');
     height: 100vh;
-    width:100%;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center center;
+    /* background-attachment: fixed; */
 
     @media (max-width: 767px) {
     backGround-image: url('${BackgroundPathMobile}');
@@ -112,13 +113,18 @@ const CallToAction = () => {
           <Col md={{ span: 6, offset: 1 }} xs={12}>
             <CTAText>
               <NoBreak>
-                Com apenas 15 minutos por dia invista na modalidade que mais
-                cresce no mundo das
+                Com apenas 15 minutos por dia, invista na modalidade que mais
+                cresce no
+                <br /> mundo das
               </NoBreak>{' '}
               apostas online.
             </CTAText>
           </Col>
-          <Col className='d-flex justify-xs-content-center' md={{ span: 3, offset: 1 }} xs={12}>
+          <Col
+            className='d-flex justify-xs-content-center'
+            md={{ span: 3, offset: 1 }}
+            xs={12}
+          >
             <Button href='#info-container'>Adquira Já</Button>
           </Col>
         </Container>

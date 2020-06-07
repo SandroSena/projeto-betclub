@@ -32,7 +32,7 @@ const Founder = () => {
     flex-direction:column;
     align-items:flex-start;
     justify-content: center;
-    padding-top:10rem;
+    padding-top:7rem;
     height: auto;
     @media (max-width: 767px) {
       background-image:none;
@@ -62,7 +62,7 @@ const Founder = () => {
 
   const FounderText = styled.p`
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #fafafa;
     @media (max-width: 767px) {
       font-family: Montserrat;
@@ -127,9 +127,9 @@ const Founder = () => {
         onHide={() => setIsModalOpenEpoca(false)}
       />
       <Background>
-        <Col className='' md={{ span: 10, offset: 1 }}>
+        <Col md={{ span: 10, offset: 1 }}>
           <RowContainer>
-            <FounderTitle>
+            <FounderTitle className='pb-5'>
               Conheça o idealizador <br />
               do betclub
             </FounderTitle>
@@ -144,7 +144,7 @@ const Founder = () => {
           <RowContainer>
             <Col
               className='px-0 d-flex flex-column justify-content-around'
-              md={{ span: 4 }}
+              md={{ span: 5 }}
             >
               <FounderText>
                 Autor do livro best seller Invista em Futebol e fundador do
@@ -164,7 +164,7 @@ const Founder = () => {
             <Col
               className='d-flex justify-content-center'
               xs={12}
-              md={{ span: 7, offset: 1 }}
+              md={{ span: 7 }}
             >
               <FounderImg src={FounderPath} />
             </Col>

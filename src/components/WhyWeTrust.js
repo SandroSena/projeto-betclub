@@ -7,7 +7,6 @@ import perda from '../images/perda.svg';
 const WhyWeTrust = () => {
   const Background = styled.div`
     background-color: #000;
-    height: 100vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -102,7 +101,6 @@ const WhyWeTrust = () => {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
     @media (max-width: 767px) {
       flex-direction: column;
       align-items: center;
@@ -151,7 +149,6 @@ const WhyWeTrust = () => {
     flex-direction: column;
     justify-content: center;
     align-self: center;
-    width: 15%;
     padding: 2rem;
     @media (max-width: 767px) {
       width: auto;
@@ -176,7 +173,7 @@ const WhyWeTrust = () => {
 
   const Button = styled.button`
     width: 567px;
-    height: 100.38px;
+    height: 80px;
     background: #00c27b;
     border: 1px solid #00c27b;
     box-sizing: border-box;
@@ -205,7 +202,7 @@ const WhyWeTrust = () => {
       color: #ffffff;
     }
   `;
-  const SmallText = styled.span`
+  const SmallText = styled.p`
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -225,7 +222,7 @@ const WhyWeTrust = () => {
     }
   `;
   return (
-    <Container className='pt-5 d-flex flex-column align-items-center' fluid>
+    <Container className='d-flex flex-column align-items-center' fluid>
       <Background>
         <Col
           md={{ offset: 1, span: 5 }}
