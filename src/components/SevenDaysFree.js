@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import BackgroundPath from '../images/Rectangle 111.png';
-import { Col, Container } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import GermanPoliceImg from '../images/GermanPolice.png';
 
 const SevenDaysFree = () => {
@@ -15,6 +15,8 @@ const SevenDaysFree = () => {
     @media (max-width: 767px) {
       background-image:none;
       background-color:#000;
+    margin:  5rem 0;
+
       height: auto;
     }
   `;
@@ -22,6 +24,7 @@ const SevenDaysFree = () => {
   const Wrapper = styled.div`
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
   `;
 
   const SevenDaysTitle = styled.h3`
@@ -30,6 +33,7 @@ const SevenDaysFree = () => {
     font-size: 3rem;
     color: #fafafa !important;
     text-transform: uppercase;
+    margin-bottom: 3rem;
 
     @media (max-width: 767px) {
       font-family: Montserrat;
@@ -67,8 +71,9 @@ const SevenDaysFree = () => {
   `;
 
   const GermanPolice = styled.img`
-    width: 20%;
-
+    width: 90%;
+    display: block;
+    margin: auto 0;
     @media (max-width: 767px) {
       display: none;
     }
@@ -84,37 +89,32 @@ const SevenDaysFree = () => {
   return (
     <Background>
       <Container className='p-0' fluid>
-        <Wrapper>
+        <Row className='w-100'>
           <Col
-            md={{ span: 7, offset: 1 }}
-            xs={{ span: 10, offset: 1 }}
-            className='pt-5'
+            className='d-flex flex-column justify-content-center'
+            md={{ offset: 1, span: 6 }}
           >
             <SevenDaysTitle>
               TESTE SEM COMPROMISSO
               <br /> <Underline>POR</Underline> 7 DIAS
             </SevenDaysTitle>
-          </Col>
-          <Col
-            md={{ span: 7, offset: 1 }}
-            xs={{ span: 10, offset: 1 }}
-            className='pt-5'
-          >
             <SevenDaysText>
               Visando tirar todo o peso das suas costas e remover os obstáculos
               que poderiam te desencorajar de tentar aplicar o nosso método, nós
               optamos por incluir nessa oferta uma garantia incondicional de 7
               dias.
             </SevenDaysText>
-            <SevenDaysText className='pt-5'>
+            <SevenDaysText>
               Ou seja, se por qualquer motivo você não ficar 100% SATISFEITO com
               o Club dos Investidores, basta entrar em contato com a nossa
               equipe dentro de 7 dias que nós devolvemos o seu dinheiro.
             </SevenDaysText>
-            <SevenDaysText className='pt-5'>Simples e direto.</SevenDaysText>
+            <SevenDaysText>Simples e direto.</SevenDaysText>
           </Col>
-          <GermanPolice src={GermanPoliceImg} />
-        </Wrapper>
+          <Col md={{ span: 3, offset: 2 }}>
+            <GermanPolice src={GermanPoliceImg} />
+          </Col>
+        </Row>
       </Container>
     </Background>
   );

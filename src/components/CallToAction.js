@@ -10,7 +10,7 @@ const CallToAction = () => {
     align-items:center;
     background-image: url('${BackgroundPath}');
     height: 100vh;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;  
     background-size: cover;
     background-position: center center;
     /* background-attachment: fixed; */

@@ -12,6 +12,7 @@ import lucro5 from '../images/lucro5.png';
 const Results = () => {
   const Background = styled.div`
     background-color: #000;
+    margin-top: -8rem;
     height: 100vh;
     display: flex;
     background-image: url('${Reaper}');

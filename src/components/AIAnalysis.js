@@ -6,7 +6,7 @@ import { Col, Container } from 'react-bootstrap';
 const AIAnalysis = () => {
   const Background = styled.div`
     background-color: #000;
-    height: 80vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,10 +18,11 @@ const AIAnalysis = () => {
   `;
 
   const CellphoneImg = styled.img`
-    width: 328px;
-    height: 638px;
+    width: 279px;
+    height: 538px;
     margin-top: -10rem;
-
+    display: block;
+    margin: auto 0;
     @media (max-width: 767px) {
       margin: auto;
       width: 70%;
@@ -63,9 +64,7 @@ const AIAnalysis = () => {
       font-size: 16px;
       line-height: 24px;
       /* or 150% */
-
       text-align: center;
-
       color: #ffffff;
     }
   `;
@@ -73,7 +72,11 @@ const AIAnalysis = () => {
     <Container className='p-0' fluid>
       <div id='aIAnalysis' />
       <Background>
-        <Col xs={12} md={{ span: 6, offset: 1 }}>
+        <Col
+          className='d-flex flex-column justify-content-center h-100'
+          xs={12}
+          md={{ span: 5, offset: 1 }}
+        >
           <TextContainer>
             <CTATitle className='pt-5'>
               Análises utilizando inteligência artificial
@@ -92,7 +95,13 @@ const AIAnalysis = () => {
             </CTAText>
           </TextContainer>
         </Col>
-        <CellphoneImg src={Cellphone} />
+        <Col
+          className='d-flex justify-content-baseline h-100'
+          xs={12}
+          md={{ span: 5, offset: 1 }}
+        >
+          <CellphoneImg src={Cellphone} />
+        </Col>
       </Background>
     </Container>
   );
