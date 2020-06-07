@@ -16,7 +16,6 @@ const Navbar = () => {
     position: fixed;
     z-index: 2;
 
-
     @media (max-width: 767px) {
       display: none;
       padding: 0;
@@ -29,6 +28,7 @@ const Navbar = () => {
     z-index: 2;
 
     &:hover {
+      text-decoration: none;
       border-bottom: 4px solid rgba(250, 231, 0, 0.5);
       padding-bottom: 5px;
       border-radius: 10%;
