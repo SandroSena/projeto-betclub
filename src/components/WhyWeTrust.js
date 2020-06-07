@@ -228,9 +228,12 @@ const WhyWeTrust = () => {
     padding-bottom: 5px;
     border-radius: 10%;
     cursor: pointer;
+    @media (max-width: 767px) {
+      display: none;
+    }
   `;
   return (
-    <Container className='d-flex flex-column align-items-center' fluid>
+    <Container className='d-flex flex-column align-items-center pt-5' fluid>
       <Background>
         <Col
           md={{ offset: 1, span: 5 }}

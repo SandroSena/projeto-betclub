@@ -76,7 +76,7 @@ const FAQ = () => {
   `;
 
   const AnswerWrapper = styled.div`
-    display: ${props => (props.isOpen ? 'block' : 'none')};
+    display: ${(props) => (props.isOpen ? 'block' : 'none')};
     margin: 1rem 0;
     font-family: Montserrat;
     font-style: normal;
@@ -101,6 +101,9 @@ const FAQ = () => {
     padding-bottom: 5px;
     border-radius: 10%;
     cursor: pointer;
+    @media (max-width: 767px) {
+      display: none;
+    }
   `;
 
   const questionsData = [
@@ -244,7 +247,7 @@ const FAQ = () => {
             <Underline>Per</Underline>guntas Frequentes
           </CTASuperTitle>
           <QuestionsContainer className='pt-3'>
-            {questionsData.map(question => {
+            {questionsData.map((question) => {
               return (
                 <>
                   <QuestionWrapper onClick={question.handleClick}>
@@ -256,7 +259,7 @@ const FAQ = () => {
                     </Col>
                   </QuestionWrapper>
                   <AnswerWrapper isOpen={question.open}>
-                    {question.answer.map(answer => (
+                    {question.answer.map((answer) => (
                       <Answer>{answer}</Answer>
                     ))}
                   </AnswerWrapper>

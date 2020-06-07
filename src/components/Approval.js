@@ -27,7 +27,7 @@ const Results = () => {
   const CTASuperTitle = styled.h3`
     font-family: Montserrat;
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #fafafa !important;
     text-transform: uppercase;
     text-align: center;
@@ -84,6 +84,10 @@ const Results = () => {
     padding-bottom: 5px;
     border-radius: 10%;
     cursor: pointer;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   `;
   return (
     <Container className='p-0 pt-5' fluid>

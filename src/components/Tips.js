@@ -66,6 +66,17 @@ const Tips = () => {
     }
   `;
 
+  const Underline = styled.span`
+    text-decoration: none;
+    border-bottom: 6px solid #fae700;
+    padding-bottom: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  `;
+
   return (
     <Background>
       <div id='tips' />
@@ -74,7 +85,7 @@ const Tips = () => {
         <Col md={{ span: 10, offset: 1 }} xs={11}>
           <TipsTitle className='pb-5'>
             Receba dicas
-            <br /> de apostas para:
+            <br /> de apos<Underline>tas</Underline> para:
           </TipsTitle>
         </Col>
         <ContainerImgs>

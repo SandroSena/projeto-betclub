@@ -80,7 +80,7 @@ const CallToAction = () => {
     padding: 0.5rem;
     font-weight: bold;
     cursor: pointer;
-    width: 45%;
+    /* width: 45%; */
     text-align: center;
     white-space: nowrap;
 
@@ -147,7 +147,7 @@ const CallToAction = () => {
             xs={12}
           >
             <Button href='#info-container'>Adquira Já</Button>
-            <LoginButton href='#info-container'>Login</LoginButton>
+            {/* <LoginButton href='#info-container'>Login</LoginButton> */}
           </Col>
         </Container>
       </Background>

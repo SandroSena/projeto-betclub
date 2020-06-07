@@ -42,21 +42,21 @@ const Navbar = () => {
       <Col className='ml-5' md={1}>
         <Logo src={LogoPath} />
       </Col>
-      <Col className='d-flex direction-row' md={{ offset: 1, span: 8 }}>
+      <Col className='d-flex direction-row' md={{ offset: 1, span: 9 }}>
         <Col>
           <MenuItem href='#callToAction'>INÍCIO</MenuItem>
         </Col>
         <Col>
-          <MenuItem href='#aIAnalysis'>SOBRE</MenuItem>
-        </Col>
-        <Col>
-          <MenuItem href='#tips'>JOGOS</MenuItem>
-        </Col>
-        <Col>
-          <MenuItem href='#approval'>DEPOIMENTOS</MenuItem>
+          <MenuItem href='#aIAnalysis'>JOGOS</MenuItem>
         </Col>
         <Col md={3}>
-          <MenuItem href='#faq'>PERGUNTAS FREQUENTES</MenuItem>
+          <MenuItem href='#tips'>NOSSOS NUMÉROS</MenuItem>
+        </Col>
+        <Col>
+          <MenuItem className='mr-3' href='#approval'>DEPOIMENTOS</MenuItem>
+        </Col>
+        <Col md={3}>
+          <MenuItem className='ml-2'href='#faq'>PERGUNTAS FREQUENTES</MenuItem>
         </Col>
       </Col>
     </NavbarWrapper>

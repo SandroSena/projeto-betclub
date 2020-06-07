@@ -109,10 +109,13 @@ const Founder = () => {
     padding-bottom: 5px;
     border-radius: 10%;
     cursor: pointer;
+    @media (max-width: 767px) {
+      display: none;
+    }
   `;
 
   return (
-    <Container className='p-0 pt-5' fluid>
+    <Container className='p-0' fluid>
       <ModalEntrevistaCBN
         isModalOpenCBN={isModalOpenCBN}
         onHide={() => setIsModalOpenCBN(false)}

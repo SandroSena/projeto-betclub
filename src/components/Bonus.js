@@ -163,6 +163,9 @@ const Bonus = () => {
     padding-bottom: 5px;
     border-radius: 10%;
     cursor: pointer;
+    @media (max-width: 767px) {
+      display: none;
+    }
   `;
   return (
     <Container className='p-0' fluid>
@@ -176,7 +179,7 @@ const Bonus = () => {
           </Col>
           <Col className='h-75' xs={12} md={{ span: 5, offset: 1 }}>
             <TextContainer>
-              <CTASuperText>
+              <CTASuperText className='pt-5'>
                 Membros iniciantes nas Apostas Online ganharão um pacote de
                 boas-vindas com <strong>TUDO</strong> que precisam para começar
                 hoje mesmo. Por outro lado, se familiarizado com o Mercado,

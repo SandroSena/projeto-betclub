@@ -6,7 +6,7 @@ import { Col, Container } from 'react-bootstrap';
 const AIAnalysis = () => {
   const Background = styled.div`
     background-color: #000;
-    height: 60vh;
+    height: 75vh;
     display: flex;
     flex-direction: row;
     align-items: center;
