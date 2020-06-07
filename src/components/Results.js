@@ -47,13 +47,19 @@ const Results = () => {
   const ImgWrapper = styled.div`
     object-fit: scale-down;
   `;
-  
+  const Underline = styled.span`
+    text-decoration: none;
+    border-bottom: 6px solid #fae700;
+    padding-bottom: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+  `;
   return (
     <Container className='p-0 pt-5' fluid>
       <Background>
         <Col md={{ offset: 3, span: 6 }}>
           <CTASuperTitle className='pt-5'>
-            RESULTADOS DO CLUB NO MERCADO DE APOSTAS{' '}
+            RESULTADOS DO CLUB NO MERCADO<Underline> DE</Underline> APOSTAS{' '}
           </CTASuperTitle>
         </Col>
         <Row className='d-flex pt-5 justify-content-center w-100'>

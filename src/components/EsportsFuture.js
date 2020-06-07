@@ -79,7 +79,13 @@ const EsportsFuture = () => {
       display: none;
     }
   `;
-
+  const Underline = styled.span`
+    text-decoration: none;
+    border-bottom: 6px solid #fae700;
+    padding-bottom: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+  `;
   return (
     <Background>
       <Container className='p-0' fluid>
@@ -87,7 +93,7 @@ const EsportsFuture = () => {
           <Col md={{ span: 5, offset: 2 }} xs={{ span: 10, offset: 1 }}>
             <div className='mb-5 mt-5'>
               <EsportsFutureTitle>
-                E-SPORTS: O FUTURO DAS APOSTAS ONLINE
+                E-SPORTS: O FUTURO DAS APOS<Underline>TAS</Underline> ONLINE
               </EsportsFutureTitle>
               <EsportsFutureText>
                 Com mais de 90% dos campeonatos de Futebol cancelados, surgiu

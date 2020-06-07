@@ -173,13 +173,21 @@ const RobotSecret = () => {
     }
   `;
 
+  const Underline = styled.span`
+    text-decoration: none;
+    border-bottom: 6px solid #fae700;
+    padding-bottom: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+  `;
+
   return (
     <Background>
       <Container className='p-0 pb-5' fluid>
-        <Col md={{ span: 10, offset: 1 }} xs={11}>
+        <Col className='pb-5' md={{ span: 10, offset: 1 }} xs={11}>
           <CTATitle>
             O SEGREDO DO NOSSO ROBÔ:
-            <br /> INTELIGÊNCIA, AUTOMAÇÃO E SUPERVISÃO
+            <br /> <Underline>INT</Underline>ELIGÊNCIA, AUTOMAÇÃO E SUPERVISÃO
           </CTATitle>
         </Col>
         <Col md={{ span: 10, offset: 1 }} xs={11}>

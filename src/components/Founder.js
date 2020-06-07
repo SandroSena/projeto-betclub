@@ -103,6 +103,13 @@ const Founder = () => {
     display: flex;
     flex-flow: row wrap;
   `;
+  const Underline = styled.span`
+    text-decoration: none;
+    border-bottom: 6px solid #fae700;
+    padding-bottom: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+  `;
 
   return (
     <Container className='p-0 pt-5' fluid>
@@ -131,7 +138,7 @@ const Founder = () => {
           <RowContainer>
             <FounderTitle className='pb-5'>
               Conheça o idealizador <br />
-              do betclub
+              <Underline>do </Underline>betclub
             </FounderTitle>
             <FounderText>
               Juliano Fontes é o maior especialista em Apostas Esportivas do

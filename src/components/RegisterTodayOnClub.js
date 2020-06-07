@@ -132,6 +132,13 @@ const RegisterTodayOnClub = () => {
     }
   `;
 
+  const Underline = styled.span`
+    text-decoration: none;
+    border-bottom: 6px solid #fae700;
+    padding-bottom: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+  `;
   return (
     <Background>
       <Container className='p-0' fluid>
@@ -141,7 +148,8 @@ const RegisterTodayOnClub = () => {
           className='pt-5'
         >
           <RegisterTodayTitle>
-            INSCREVA-SE HOJE NO CLUB E GANHE BÔNUS EXCLUSIVOS
+            INSCREVA-SE HOJE NO CLUB E <Underline>GAN</Underline>HE BÔNUS
+            EXCLUSIVOS
           </RegisterTodayTitle>
         </Col>
         <Col

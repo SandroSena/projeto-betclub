@@ -78,13 +78,22 @@ const Results = () => {
       font-size: 0.8rem;
     }
   `;
+  const Underline = styled.span`
+    text-decoration: none;
+    border-bottom: 6px solid #fae700;
+    padding-bottom: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+  `;
   return (
     <Container className='p-0 pt-5' fluid>
-      <div id='approval'/>
+      <div id='approval' />
 
       <Background>
         <Col md={{ offset: 4, span: 4 }} className='pt-5'>
-          <CTASuperTitle>QUEM JÁ FAZ PARTE DO CLUBE APROVA</CTASuperTitle>
+          <CTASuperTitle>
+            QUEM JÁ FAZ PARTE DO CLU<Underline>BE </Underline>APROVA
+          </CTASuperTitle>
         </Col>
         <Row className='d-flex pt-5 justify-content-center w-100'>
           <Carousel

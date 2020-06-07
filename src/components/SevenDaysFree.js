@@ -73,6 +73,13 @@ const SevenDaysFree = () => {
       display: none;
     }
   `;
+  const Underline = styled.span`
+    text-decoration: none;
+    border-bottom: 6px solid #fae700;
+    padding-bottom: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+  `;
 
   return (
     <Background>
@@ -85,7 +92,7 @@ const SevenDaysFree = () => {
           >
             <SevenDaysTitle>
               TESTE SEM COMPROMISSO
-              <br /> POR 7 DIAS
+              <br /> <Underline>POR</Underline> 7 DIAS
             </SevenDaysTitle>
           </Col>
           <Col

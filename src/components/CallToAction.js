@@ -80,6 +80,27 @@ const CallToAction = () => {
     padding: 0.5rem;
     font-weight: bold;
     cursor: pointer;
+    width: 45%;
+    text-align: center;
+    white-space: nowrap;
+
+    @media (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  `;
+
+  const LoginButton = styled.a`
+    background-color: rgb(250, 231, 0);
+    color: rgba(1, 1, 1, 1) !important;
+    border: 3px solid yellow;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 45%;
+    text-align: center;
+    white-space: nowrap;
 
     @media (max-width: 767px) {
       margin-left: auto;
@@ -121,11 +142,12 @@ const CallToAction = () => {
             </CTAText>
           </Col>
           <Col
-            className='d-flex justify-xs-content-center'
-            md={{ span: 3, offset: 1 }}
+            className='d-flex justify-content-between justify-xs-content-center'
+            md={{ span: 2, offset: 1 }}
             xs={12}
           >
             <Button href='#info-container'>Adquira Já</Button>
+            <LoginButton href='#info-container'>Login</LoginButton>
           </Col>
         </Container>
       </Background>

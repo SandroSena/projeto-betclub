@@ -156,6 +156,14 @@ const Bonus = () => {
     align-items: flex-start;
     flex-wrap: wrap;
   `;
+
+  const Underline = styled.span`
+    text-decoration: none;
+    border-bottom: 6px solid #fae700;
+    padding-bottom: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+  `;
   return (
     <Container className='p-0' fluid>
       <Background>
@@ -163,7 +171,7 @@ const Bonus = () => {
           <Col md={{ offset: 1, span: 10 }}>
             <CTASuperTitle>
               IDEAL PARA QUEM ESTÁ COMEÇANDO
-              <br /> E NÃO QUER FICAR PARA TRÁS
+              <br /> <Underline>E N</Underline>ÃO QUER FICAR PARA TRÁS
             </CTASuperTitle>
           </Col>
           <Col className='h-75' xs={12} md={{ span: 5, offset: 1 }}>
@@ -200,7 +208,9 @@ const Bonus = () => {
           </Col>
           <Col xs={12} md={{ span: 5 }}>
             <BonusContainer>
-              <CTATitle className='pb-5'>BÔNUS: CURSO INTRODUTÓRIO</CTATitle>
+              <CTATitle className='pb-5'>
+                <Underline>BÔNUS</Underline>: CURSO INTRODUTÓRIO
+              </CTATitle>
               <CTAText>
                 40 rápidos minutos que vão te permitir entender os conceitos
                 chaves do negócio, além de pontos importantes para garantir seu

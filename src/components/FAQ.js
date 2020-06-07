@@ -95,6 +95,13 @@ const FAQ = () => {
 
     color: #ffffff;
   `;
+  const Underline = styled.span`
+    text-decoration: none;
+    border-bottom: 6px solid #fae700;
+    padding-bottom: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+  `;
 
   const questionsData = [
     {
@@ -233,7 +240,9 @@ const FAQ = () => {
 
       <Background>
         <Col md={{ offset: 1, span: 11 }} className='pt-5'>
-          <CTASuperTitle className='pb-5'>Perguntas Frequentes</CTASuperTitle>
+          <CTASuperTitle className='pb-5'>
+            <Underline>Per</Underline>guntas Frequentes
+          </CTASuperTitle>
           <QuestionsContainer className='pt-3'>
             {questionsData.map(question => {
               return (

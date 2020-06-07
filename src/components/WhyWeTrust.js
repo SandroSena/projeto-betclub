@@ -150,6 +150,7 @@ const WhyWeTrust = () => {
     justify-content: center;
     align-self: center;
     padding: 2rem;
+    width: 25%;
     @media (max-width: 767px) {
       width: auto;
     }
@@ -221,6 +222,13 @@ const WhyWeTrust = () => {
       white-space: pre-wrap;
     }
   `;
+  const Underline = styled.span`
+    text-decoration: none;
+    border-bottom: 6px solid #fae700;
+    padding-bottom: 5px;
+    border-radius: 10%;
+    cursor: pointer;
+  `;
   return (
     <Container className='d-flex flex-column align-items-center' fluid>
       <Background>
@@ -228,7 +236,9 @@ const WhyWeTrust = () => {
           md={{ offset: 1, span: 5 }}
           className='h-75 p-1 d-flex flex-column align-items-center justify-content-between'
         >
-          <WhyWeTrustTitle>POR QUE CONFIAMOS NA NICE...</WhyWeTrustTitle>
+          <WhyWeTrustTitle>
+            POR QUE CONFIAMOS <Underline>NA</Underline> NICE...
+          </WhyWeTrustTitle>
           <ContainerTextImgs>
             <SvgImg src={perda} />
             <WhyWeTrustText>
