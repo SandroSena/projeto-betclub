@@ -30,7 +30,6 @@ const Navbar = () => {
     &:hover {
       text-decoration: none;
       border-bottom: 4px solid rgba(250, 231, 0, 0.5);
-      padding-bottom: 5px;
       border-radius: 10%;
       cursor: pointer;
     }

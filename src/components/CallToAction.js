@@ -64,7 +64,7 @@ const CallToAction = () => {
     }
   `;
 
-  const Button = styled.a`
+  const LoginButton = styled.a`
     background-color: transparent;
     color: rgb(250, 231, 0) !important;
     border: 3px solid yellow;
@@ -82,7 +82,7 @@ const CallToAction = () => {
     }
   `;
 
-  const LoginButton = styled.a`
+  const Button = styled.a`
     background-color: rgb(250, 231, 0);
     color: rgba(1, 1, 1, 1) !important;
     border: 3px solid yellow;

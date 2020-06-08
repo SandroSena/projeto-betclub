@@ -18,7 +18,6 @@ const RegisterTodayOnClub = () => {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
-
     }
   `;
 
@@ -35,11 +34,7 @@ const RegisterTodayOnClub = () => {
       font-weight: 900;
       font-size: 20px;
       line-height: 26px;
-      /* or 130% */
-
       text-align: center;
-
-      color: #ffffff;
     }
   `;
 
@@ -55,11 +50,7 @@ const RegisterTodayOnClub = () => {
       font-weight: 500;
       font-size: 16px;
       line-height: 22px;
-      /* or 137% */
-
       text-align: center;
-
-      color: #ffffff;
     }
   `;
 
@@ -76,8 +67,7 @@ const RegisterTodayOnClub = () => {
     @media (max-width: 767px) {
       width: auto;
       height: auto;
-      padding: 0rem !important;
-      padding-left: 2rem;
+      padding: 1rem;
     }
   `;
 
@@ -96,7 +86,6 @@ const RegisterTodayOnClub = () => {
       font-weight: bold;
       font-size: 40px;
       line-height: 32px;
-      /* identical to box height, or 80% */
     }
   `;
 
@@ -113,13 +102,9 @@ const RegisterTodayOnClub = () => {
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
-      font-size: 20px;
+      font-size: 11px;
       line-height: 46px;
-      /* identical to box height, or 232% */
-
       text-align: center;
-
-      color: #ffffff;
     }
   `;
 
@@ -128,9 +113,6 @@ const RegisterTodayOnClub = () => {
     flex-flow: row wrap;
     width: 100%;
     align-items: center;
-    @media (max-width: 767px) {
-      flex-flow: column wrap;
-    }
   `;
 
   const Underline = styled.span`

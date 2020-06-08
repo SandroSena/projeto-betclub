@@ -115,6 +115,10 @@ const Bonus = () => {
   const ClassTitle = styled.span`
     margin-left: 1rem;
     color: white !important;
+
+    @media (max-width: 767px) {
+      font-size: 10px;
+    }
   `;
 
   const ClassItem = styled.div`
