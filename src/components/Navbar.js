@@ -53,10 +53,10 @@ const Navbar = () => {
           <MenuItem href='#tips'>RESULTADOS</MenuItem>
         </Col>
         <Col>
-          <MenuItem className='mr-3' href='#approval'>DEPOIMENTOS</MenuItem>
+          <MenuItem href='#approval'>DEPOIMENTOS</MenuItem>
         </Col>
         <Col>
-          <MenuItem className='ml-2'href='#faq'>FAQ</MenuItem>
+          <MenuItem href='#faq'>FAQ</MenuItem>
         </Col>
       </Col>
     </NavbarWrapper>
