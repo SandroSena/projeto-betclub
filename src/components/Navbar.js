@@ -36,6 +36,13 @@ const Navbar = () => {
     }
   `;
 
+  const ItemsWrapper = styled.div`
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  `;
+
   const Logo = styled.img``;
   return (
     <NavbarWrapper>
@@ -43,21 +50,13 @@ const Navbar = () => {
         <Logo src={LogoPath} />
       </Col>
       <Col className='d-flex direction-row' md={{ offset: 1, span: 9 }}>
-        <Col>
+        <ItemsWrapper>
           <MenuItem href='#callToAction'>INÍCIO</MenuItem>
-        </Col>
-        <Col>
           <MenuItem href='#aIAnalysis'>JOGOS</MenuItem>
-        </Col>
-        <Col>
           <MenuItem href='#tips'>RESULTADOS</MenuItem>
-        </Col>
-        <Col>
           <MenuItem href='#approval'>DEPOIMENTOS</MenuItem>
-        </Col>
-        <Col>
           <MenuItem href='#faq'>FAQ</MenuItem>
-        </Col>
+        </ItemsWrapper>
       </Col>
     </NavbarWrapper>
   );

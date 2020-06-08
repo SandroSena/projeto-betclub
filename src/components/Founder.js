@@ -184,12 +184,24 @@ const Founder = () => {
         </Col>
       </Background>
       <LogosContainer>
-        <LogoImg src={CBN} onClick={() => setIsModalOpenCBN(true)} />
-        <LogoImg src={Epoca} onClick={() => setIsModalOpenEpoca(true)} />
-        <LogoImg src={Jp} onClick={() => setIsModalOpenJP(true)} />
-        <LogoImg src={R7} onClick={() => setIsModalOpenR7(true)} />
-        <LogoImg src={RadioGlobo} onClick={() => setIsModalOpenRG(true)} />
-        <LogoImg src={Valor} onClick={() => setIsModalOpenValor(true)} />
+        <Col xs={4}>
+          <LogoImg src={CBN} onClick={() => setIsModalOpenCBN(true)} />
+        </Col>
+        <Col xs={4}>
+          <LogoImg src={Epoca} onClick={() => setIsModalOpenEpoca(true)} />
+        </Col>
+        <Col xs={4}>
+          <LogoImg src={Jp} onClick={() => setIsModalOpenJP(true)} />
+        </Col>
+        <Col className='pt-3' xs={4}>
+          <LogoImg src={R7} onClick={() => setIsModalOpenR7(true)} />
+        </Col>
+        <Col className='pt-3' xs={4}>
+          <LogoImg src={RadioGlobo} onClick={() => setIsModalOpenRG(true)} />
+        </Col>
+        <Col className='pt-3' xs={4}>
+          <LogoImg src={Valor} onClick={() => setIsModalOpenValor(true)} />
+        </Col>
       </LogosContainer>
     </Container>
   );

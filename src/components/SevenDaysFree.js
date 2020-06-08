@@ -15,7 +15,7 @@ const SevenDaysFree = () => {
     @media (max-width: 767px) {
       background-image:none;
       background-color:#000;
-    margin:  5rem 0;
+      margin:  5rem 0;
 
       height: auto;
     }
