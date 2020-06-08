@@ -291,7 +291,7 @@ const WhyWeTrust = () => {
       </InfoContainer>
 
       <Button>
-        ADQUIRA POR APENAS R$ 49/MÊS
+        ASSINE POR APENAS R$ 49/MÊS
         <br />
         <SmallText>plano mensal, cancele quando quiser.</SmallText>
       </Button>

@@ -120,7 +120,7 @@ const CallToAction = () => {
             <CTATitle>
               <NoBreak>Lucre de R$ 1.000,00 a R$ 2.000,00</NoBreak>
               <NoBreak> POR MÊS COM A EXPLOSÃO DOS</NoBreak>
-              <NoBreak> E-SPORTS.</NoBreak>
+              <NoBreak> E-SPORTS</NoBreak>
             </CTATitle>
           </Col>
           <Col md={{ span: 6, offset: 1 }} xs={12}>
@@ -130,7 +130,7 @@ const CallToAction = () => {
                 cresce no
                 <br /> mundo das
               </NoBreak>{' '}
-              apostas online.
+              apostas online
             </CTAText>
           </Col>
           <Col

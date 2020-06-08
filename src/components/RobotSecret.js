@@ -196,7 +196,7 @@ const RobotSecret = () => {
               <DataTextInfo>
                 <SvgTitle>Inteligência</SvgTitle>
                 <SVGText>
-                  Aprendizado de forma ativa, ficando mais eficiente a cada 7
+                  A NICE aprende de forma ativa, ficando mais eficiente a cada 7
                   dias, potencializando os lucros.
                 </SVGText>
               </DataTextInfo>
@@ -206,8 +206,8 @@ const RobotSecret = () => {
               <DataTextInfo>
                 <SvgTitle>Automação</SvgTitle>
                 <SVGText>
-                  Análise de jogos 24h por dia, buscando as oportunidades mais
-                  lucrativas do mercado.
+                  Análise de jogos 24h por dia, 7 dias por semana, buscando as
+                  oportunidades mais lucrativas do mercado.
                 </SVGText>
               </DataTextInfo>
             </SvgContainer>

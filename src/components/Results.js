@@ -63,7 +63,7 @@ const Results = () => {
       <Background>
         <Col md={{ offset: 3, span: 6 }}>
           <CTASuperTitle className='pt-5'>
-            RESULTADOS DO CLUB NO MERCADO<Underline> DE</Underline> APOSTAS{' '}
+            RESULTADOS DO BETCLUB NO MERCADO<Underline> DE</Underline> APOSTAS{' '}
           </CTASuperTitle>
         </Col>
         <Row className='d-flex pt-5 justify-content-center w-100'>
