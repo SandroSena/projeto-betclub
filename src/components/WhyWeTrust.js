@@ -70,11 +70,7 @@ const WhyWeTrust = () => {
       font-weight: bold;
       font-size: 16px;
       line-height: 22px;
-      /* or 137% */
-
       text-align: center;
-
-      color: #ffffff;
     }
   `;
 
@@ -88,11 +84,7 @@ const WhyWeTrust = () => {
       font-weight: bold;
       font-size: 16px;
       line-height: 22px;
-      /* or 137% */
-
       text-align: center;
-
-      color: #ffffff;
     }
   `;
 
@@ -109,6 +101,10 @@ const WhyWeTrust = () => {
 
   const SvgImg = styled.img`
     margin-left: -2.5rem;
+
+    @media (max-width: 767px) {
+      margin: 0;
+    }
   `;
 
   const InfoContainer = styled.div`
@@ -230,7 +226,7 @@ const WhyWeTrust = () => {
     border-radius: 10%;
     cursor: pointer;
     @media (max-width: 767px) {
-      display: none;
+      border: none;
     }
   `;
   return (

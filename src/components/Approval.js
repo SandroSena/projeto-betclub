@@ -86,7 +86,7 @@ const Results = () => {
     cursor: pointer;
 
     @media (max-width: 767px) {
-      display: none;
+      border: none;
     }
   `;
   return (

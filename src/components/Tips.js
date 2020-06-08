@@ -73,7 +73,7 @@ const Tips = () => {
     border-radius: 10%;
     cursor: pointer;
     @media (max-width: 767px) {
-      display: none;
+      border: none;
     }
   `;
 

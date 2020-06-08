@@ -40,12 +40,12 @@ const RobotSecret = () => {
       font-family: Montserrat;
       font-style: normal;
       font-weight: 900;
-      font-size: 24px;
+      font-size: 21px;
       line-height: 26px;
       text-align: center;
       text-transform: uppercase;
       color: #fff;
-      padding-top: 1rem;
+      padding-top: 3rem;
     }
   `;
 
@@ -54,7 +54,6 @@ const RobotSecret = () => {
     font-weight: 800;
     font-size: 22px;
     line-height: 32px;
-    /* identical to box height, or 133% */
     text-transform: uppercase;
     color: #ffffff !important;
 
@@ -64,11 +63,8 @@ const RobotSecret = () => {
       font-weight: 800;
       font-size: 24px;
       line-height: 32px;
-      /* identical to box height, or 133% */
-
       text-align: center;
-
-      color: #ffffff;
+      color: #fff;
     }
   `;
 
@@ -93,11 +89,8 @@ const RobotSecret = () => {
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
-      /* or 150% */
-
       text-align: center;
-
-      color: #ffffff;
+      color: #fff;
     }
   `;
 
@@ -106,9 +99,7 @@ const RobotSecret = () => {
     font-weight: normal;
     font-size: 18px;
     line-height: 32px;
-    /* or 178% */
-
-    color: #ffffff;
+    color: #fff;
 
     @media (max-width: 767px) {
       font-family: Montserrat;
@@ -116,11 +107,8 @@ const RobotSecret = () => {
       font-weight: normal;
       font-size: 16px;
       line-height: 24px;
-      /* or 150% */
-
       text-align: center;
-
-      color: #ffffff;
+      color: #fff;
     }
   `;
 
@@ -178,7 +166,7 @@ const RobotSecret = () => {
     border-radius: 10%;
     cursor: pointer;
     @media (max-width: 767px) {
-      display: none;
+      border: none;
     }
   `;
 

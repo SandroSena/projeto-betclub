@@ -40,11 +40,7 @@ const Bonus = () => {
       font-weight: 900;
       font-size: 24px;
       line-height: 26px;
-      /* or 108% */
-
       text-align: center;
-
-      color: #ffffff;
     }
   `;
   const CTATitle = styled.h3`
@@ -58,13 +54,9 @@ const Bonus = () => {
       font-family: Montserrat;
       font-style: normal;
       font-weight: 900;
-      font-size: 20px;
+      font-size: 19px;
       line-height: 26px;
-      /* or 130% */
-
       text-align: center;
-
-      color: #ffffff;
     }
   `;
 
@@ -74,6 +66,7 @@ const Bonus = () => {
     flex-direction: column;
     justify-content: space-around;
   `;
+
   const CTASuperText = styled.p`
     font-family: Montserrat;
     font-style: normal;
@@ -87,13 +80,10 @@ const Bonus = () => {
       font-weight: 500;
       font-size: 16px;
       line-height: 22px;
-      /* or 137% */
-
       text-align: center;
-
-      color: #ffffff;
     }
   `;
+
   const CTAText = styled.p`
     font-family: Montserrat;
     font-size: 18px;
@@ -106,11 +96,7 @@ const Bonus = () => {
       font-weight: 500;
       font-size: 16px;
       line-height: 22px;
-      /* or 137% */
-
       text-align: center;
-
-      color: #ffffff;
     }
   `;
 
@@ -166,10 +152,12 @@ const Bonus = () => {
     padding-bottom: 5px;
     border-radius: 10%;
     cursor: pointer;
+
     @media (max-width: 767px) {
-      display: none;
+      border: none;
     }
   `;
+
   return (
     <Container className='p-0' fluid>
       <Background>
@@ -214,7 +202,7 @@ const Bonus = () => {
           </Col>
           <Col xs={12} md={{ span: 5 }}>
             <BonusContainer>
-              <CTATitle className='pb-5'>BÔNUS: CURSO INTRODUTÓRIO</CTATitle>
+              <CTATitle className='pb-3'>BÔNUS: CURSO INTRODUTÓRIO</CTATitle>
               <CTAText>
                 40 rápidos minutos que vão te permitir entender os conceitos
                 chaves do negócio, além de pontos importantes para garantir seu
@@ -244,7 +232,7 @@ const Bonus = () => {
                 <img src={Checkmark} alt='Checkmark' />
                 <ClassTitle>Aula 6 – Suporte</ClassTitle>
               </ClassItem>
-              <div className='pt-5'>
+              <div className='pt-4'>
                 <Button href='#info-container'>Adquira Agora</Button>
               </div>
             </BonusContainer>

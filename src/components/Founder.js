@@ -56,11 +56,7 @@ const Founder = () => {
       font-weight: 900;
       font-size: 24px;
       line-height: 26px;
-      /* or 108% */
-
       text-align: center;
-
-      color: #ffffff;
     }
   `;
 
@@ -74,13 +70,10 @@ const Founder = () => {
       font-weight: 500;
       font-size: 16px;
       line-height: 22px;
-      /* or 137% */
-
       text-align: center;
-
-      color: #ffffff;
     }
   `;
+
   const FounderImg = styled.img`
     width: 80%;
     position: relative;
@@ -113,8 +106,9 @@ const Founder = () => {
     padding-bottom: 5px;
     border-radius: 10%;
     cursor: pointer;
+
     @media (max-width: 767px) {
-      display: none;
+      border: none;
     }
   `;
 
@@ -147,7 +141,7 @@ const Founder = () => {
       <Background>
         <Col md={{ span: 10, offset: 1 }}>
           <RowContainer>
-            <FounderTitle className='pb-5'>
+            <FounderTitle className='pb-4'>
               Conheça o idealizador <br />
               <Underline>do </Underline>betclub
             </FounderTitle>

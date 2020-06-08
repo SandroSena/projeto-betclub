@@ -149,7 +149,7 @@ const RegisterTodayOnClub = () => {
         <Col
           md={{ span: 7, offset: 1 }}
           xs={{ span: 10, offset: 1 }}
-          className='pt-2'
+          className='pt-5'
         >
           <RegisterTodayTitle>
             INSCREVA-SE HOJE NO CLUB E <Underline>GAN</Underline>HE BÔNUS
@@ -159,7 +159,7 @@ const RegisterTodayOnClub = () => {
         <Col
           md={{ span: 7, offset: 1 }}
           xs={{ span: 10, offset: 1 }}
-          className='pt-5'
+          className='pt-4'
         >
           <RegisterTodayText>
             Siga os passos dos membros do Club, ao participar você receberá
