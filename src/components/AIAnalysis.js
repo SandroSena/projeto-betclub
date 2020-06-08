@@ -82,16 +82,13 @@ const AIAnalysis = () => {
               Análises utilizando inteligência artificial
             </CTATitle>
             <CTAText>
-              Deixe todo o trabalho pesado nas mãos de especialistas com mais de
-              10 anos de experiência no mercado e mais de{' '}
-              <strong>R$ 670.000,00</strong> em lucro nos últimos
-              <strong> 12 meses.</strong>
+              Deixe todo o trabalho pesado nas mãos da <strong>NICE</strong>, um programa de
+              <strong>INTELIGÊNCIA ARTIFICIAL</strong> altamente avançado que analisa TODOS os
+              jogos diariamente para selecionar e te enviar as <strong>MELHORES</strong>
+              oportunidades do mercado.
             </CTAText>
             <CTAText>
-              Se você tem disciplina para <strong>COPIAR E COLAR</strong> as
-              recomendações dos nossos analistas de forma consistente, logo você
-              será capaz de tirar seu sustento e realizar os seus sonhos através
-              deste negócio.
+            Você só precisa <strong>COPIAR E COLAR</strong> as nossas recomendações para conquistar suas metas financeiras através de apostas on-line focadas nos Esportes Eletrônicos.
             </CTAText>
           </TextContainer>
         </Col>

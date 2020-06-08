@@ -112,7 +112,7 @@ const FAQ = () => {
       question:
         'O que preciso entender sobre o mercado de apostas esportivas para seguir estas análises?',
       answer: [
-        'Entrando para o Club você receberá todo o pacote de treinamentos básicos para efetuar suas operações, mesmo que nunca tenha feito algo parecido. Para começar a lucrar a partir das análises, tudo o que você precisa é:',
+        'Entrando para o Betclub você receberá todo o pacote de treinamentos básicos para efetuar suas operações, mesmo que nunca tenha feito algo parecido. Para começar a lucrar a partir das análises, tudo o que você precisa é:',
 
         '1. Cadastrar-se no site recomendado',
         '2. Assistir o nosso mini-curso',

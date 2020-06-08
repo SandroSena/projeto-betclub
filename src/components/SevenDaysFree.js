@@ -103,7 +103,7 @@ const SevenDaysFree = () => {
             </SevenDaysText>
             <SevenDaysText>
               Ou seja, se por qualquer motivo você não ficar 100% SATISFEITO com
-              o Club dos Investidores, basta entrar em contato com a nossa
+              o Betclub dos Investidores, basta entrar em contato com a nossa
               equipe dentro de 7 dias que nós devolvemos o seu dinheiro.
             </SevenDaysText>
             <SevenDaysText>Simples e direto.</SevenDaysText>

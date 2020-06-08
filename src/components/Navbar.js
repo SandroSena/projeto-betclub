@@ -23,20 +23,35 @@ const Navbar = () => {
   `;
 
   const MenuItem = styled.a`
-    color: white !important;
+    color: #fff !important;
     font-weight: bold;
     z-index: 2;
+    padding-bottom: 4px;
 
     &:hover {
       text-decoration: none;
       border-bottom: 4px solid rgba(250, 231, 0, 0.5);
       border-radius: 10%;
       cursor: pointer;
+      padding-bottom: 0;
+    }
+  `;
+
+  const MenuItemYellow = styled.a`
+    color: rgb(250, 231, 0) !important;
+    font-weight: bold;
+    z-index: 2;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom: 4px solid #fff;
+      border-radius: 10%;
+      cursor: pointer;
     }
   `;
 
   const ItemsWrapper = styled.div`
-    width: 70%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -55,6 +70,7 @@ const Navbar = () => {
           <MenuItem href='#tips'>RESULTADOS</MenuItem>
           <MenuItem href='#approval'>DEPOIMENTOS</MenuItem>
           <MenuItem href='#faq'>FAQ</MenuItem>
+          <MenuItemYellow href='#'>ASSINAR</MenuItemYellow>
         </ItemsWrapper>
       </Col>
     </NavbarWrapper>

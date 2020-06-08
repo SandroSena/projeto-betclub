@@ -196,7 +196,8 @@ const RobotSecret = () => {
               <DataTextInfo>
                 <SvgTitle>Inteligência</SvgTitle>
                 <SVGText>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aprendizado de forma ativa, ficando mais eficiente a cada 7
+                  dias, potencializando os lucros.
                 </SVGText>
               </DataTextInfo>
             </SvgContainer>
@@ -205,7 +206,8 @@ const RobotSecret = () => {
               <DataTextInfo>
                 <SvgTitle>Automação</SvgTitle>
                 <SVGText>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Análise de jogos 24h por dia, buscando as oportunidades mais
+                  lucrativas do mercado.
                 </SVGText>
               </DataTextInfo>
             </SvgContainer>
@@ -214,7 +216,8 @@ const RobotSecret = () => {
               <DataTextInfo>
                 <SvgTitle>Supervisão</SvgTitle>
                 <SVGText>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Monitorado por Juliano Fontes, o apostador esportivo mais
+                  respeitado do Brasil.
                 </SVGText>
               </DataTextInfo>
             </SvgContainer>

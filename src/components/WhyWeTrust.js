@@ -270,12 +270,12 @@ const WhyWeTrust = () => {
       <InfoContainer>
         <div id='info-container' />
         <EachInfoContainer>
-          <DataInfo>65%</DataInfo>
+          <DataInfo>61%</DataInfo>
           <DataLabel>taxa de acerto</DataLabel>
         </EachInfoContainer>
         <EachInfoContainer>
-          <DataInfo>81%</DataInfo>
-          <DataLabel>lucro em abril 2020</DataLabel>
+          <DataInfo>26%</DataInfo>
+          <DataLabel>lucro em maio 2020</DataLabel>
         </EachInfoContainer>
         <EachInfoContainer>
           <DataInfo>24/7</DataInfo>
@@ -293,7 +293,7 @@ const WhyWeTrust = () => {
       <Button>
         ADQUIRA POR APENAS R$ 49/MÊS
         <br />
-        <SmallText>plano mensal cancele quando quiser</SmallText>
+        <SmallText>plano mensal, cancele quando quiser.</SmallText>
       </Button>
     </Container>
   );

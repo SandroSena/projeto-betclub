@@ -214,7 +214,7 @@ const Bonus = () => {
               </CTAText>
               <ClassItem>
                 <img src={Checkmark} alt='Checkmark' />
-                <ClassTitle>Aula 1 – Boas Vindas</ClassTitle>
+                <ClassTitle>Aula 1 – Boas-Vindas</ClassTitle>
               </ClassItem>
               <ClassItem>
                 <img src={Checkmark} alt='Checkmark' />
@@ -230,11 +230,15 @@ const Bonus = () => {
               </ClassItem>
               <ClassItem>
                 <img src={Checkmark} alt='Checkmark' />
-                <ClassTitle>Aula 5 – Dúvidas frequentes</ClassTitle>
+                <ClassTitle>Aula 5 – Notificações no seu celular</ClassTitle>
               </ClassItem>
               <ClassItem>
                 <img src={Checkmark} alt='Checkmark' />
-                <ClassTitle>Aula 6 – Suporte</ClassTitle>
+                <ClassTitle>Aula 6 – Dúvidas frequentes</ClassTitle>
+              </ClassItem>
+              <ClassItem>
+                <img src={Checkmark} alt='Checkmark' />
+                <ClassTitle>Aula 7 – Suporte</ClassTitle>
               </ClassItem>
               <div className='pt-4'>
                 <Button href='#info-container'>Adquira Agora</Button>

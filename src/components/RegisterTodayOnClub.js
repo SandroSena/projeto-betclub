@@ -134,7 +134,7 @@ const RegisterTodayOnClub = () => {
           className='pt-5'
         >
           <RegisterTodayTitle>
-            INSCREVA-SE HOJE NO CLUB E <Underline>GAN</Underline>HE BÔNUS
+            INSCREVA-SE HOJE NO BETCLUB E <Underline>GAN</Underline>HE BÔNUS
             EXCLUSIVOS
           </RegisterTodayTitle>
         </Col>

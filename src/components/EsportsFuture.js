@@ -23,11 +23,8 @@ const EsportsFuture = () => {
     font-weight: 900;
     font-size: 32px;
     line-height: 46px;
-    /* or 145% */
-
     text-transform: uppercase;
-
-    color: #ffffff;
+    color: #fff;
     text-align: left;
 
     @media (max-width: 767px) {
@@ -36,12 +33,7 @@ const EsportsFuture = () => {
       font-weight: 900;
       font-size: 24px;
       line-height: 26px;
-      /* or 108% */
-
       text-align: center;
-      text-transform: uppercase;
-
-      color: #ffffff;
     }
   `;
 
@@ -51,7 +43,7 @@ const EsportsFuture = () => {
     font-weight: 500;
     font-size: 18px;
     line-height: 32px;
-    color: #ffffff;
+    color: #fff;
 
     @media (max-width: 767px) {
       font-family: Montserrat;
@@ -60,7 +52,6 @@ const EsportsFuture = () => {
       font-size: 16px;
       line-height: 24px;
       text-align: center;
-      color: #ffffff;
       margin-bottom: 2.5rem;
     }
   `;
@@ -102,7 +93,7 @@ const EsportsFuture = () => {
                 Você mesmo fará seus investimentos, direto nas plataformas de
                 Apostas. Ninguém, além de você, tocará no seu dinheiro.{' '}
                 <strong>NÃO É NECESSÁRIO</strong> transferir qualquer quantia
-                por nós. Nosso trabalho é<strong>INDICAR</strong> as melhores
+                por nós. Nosso trabalho é <strong>INDICAR</strong> as melhores
                 oportunidades para você mesmo realizar suas operações.
               </EsportsFutureText>
             </div>
