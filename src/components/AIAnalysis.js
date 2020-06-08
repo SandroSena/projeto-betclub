@@ -18,8 +18,8 @@ const AIAnalysis = () => {
   `;
 
   const CellphoneImg = styled.img`
-    width: 279px;
-    height: 538px;
+    width: 343px;
+    height: 618px;
     margin-top: -10rem;
     display: block;
     margin: auto 0;

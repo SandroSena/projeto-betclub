@@ -49,14 +49,14 @@ const Navbar = () => {
         <Col>
           <MenuItem href='#aIAnalysis'>JOGOS</MenuItem>
         </Col>
-        <Col md={3}>
-          <MenuItem href='#tips'>NOSSOS NUMÉROS</MenuItem>
+        <Col>
+          <MenuItem href='#tips'>RESULTADOS</MenuItem>
         </Col>
         <Col>
           <MenuItem className='mr-3' href='#approval'>DEPOIMENTOS</MenuItem>
         </Col>
-        <Col md={3}>
-          <MenuItem className='ml-2'href='#faq'>PERGUNTAS FREQUENTES</MenuItem>
+        <Col>
+          <MenuItem className='ml-2'href='#faq'>FAQ</MenuItem>
         </Col>
       </Col>
     </NavbarWrapper>
