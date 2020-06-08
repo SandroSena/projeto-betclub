@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Container, Col } from 'react-bootstrap';
 import ganho from '../images/ganho.svg';
 import perda from '../images/perda.svg';
+import ModalCallToAction from '../components/ModalCallToAction';
 
 const WhyWeTrust = () => {
+  const [isModalOpenCallToAction, setIsModalOpenCallToAction] = useState(false);
+
   const Background = styled.div`
     background-color: #000;
     display: flex;
@@ -114,6 +117,7 @@ const WhyWeTrust = () => {
       box-shadow: none;
     }
   `;
+
   const DataInfo = styled.h3`
     color: #fcff2c;
     font-weight: bold;
@@ -126,9 +130,9 @@ const WhyWeTrust = () => {
       font-size: 80px;
       line-height: 32px;
       margin-bottom: 2rem;
-      /* identical to box height, or 40% */
     }
   `;
+
   const EachInfoContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -140,6 +144,7 @@ const WhyWeTrust = () => {
       width: auto;
     }
   `;
+
   const DataLabel = styled.span`
     text-transform: uppercase;
     font-weight: bold;
@@ -151,9 +156,6 @@ const WhyWeTrust = () => {
       font-weight: bold;
       font-size: 17px;
       line-height: 24px;
-      /* identical to box height, or 133% */
-
-      color: #ffffff;
     }
   `;
 
@@ -181,26 +183,20 @@ const WhyWeTrust = () => {
       font-size: 14px;
       line-height: 30px;
       height: 65px;
-      /* identical to box height, or 169% */
-
       text-align: center;
       text-transform: uppercase;
-
-      color: #ffffff;
+      color: #fff;
     }
   `;
+
   const SmallText = styled.p`
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 24px;
-
-    /* identical to box height, or 200% */
-
     text-align: center;
-
-    color: #ffffff;
+    color: #fff;
   `;
   const NoBreak = styled.span`
     white-space: nowrap;
@@ -220,6 +216,10 @@ const WhyWeTrust = () => {
   `;
   return (
     <Container className='d-flex flex-column align-items-center pt-5' fluid>
+      <ModalCallToAction
+        isModalOpenCallToAction={isModalOpenCallToAction}
+        onHide={() => setIsModalOpenCallToAction(false)}
+      />
       <Background>
         <Col
           md={{ offset: 1, span: 5 }}
@@ -290,7 +290,7 @@ const WhyWeTrust = () => {
         </EachInfoContainer>
       </InfoContainer>
 
-      <Button>
+      <Button onClick={() => setIsModalOpenCallToAction(true)}>
         ASSINE POR APENAS R$ 49/MÊS
         <br />
         <SmallText>plano mensal, cancele quando quiser.</SmallText>

@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import LogoPath from '../images/image 14.png';
 import { Col } from 'react-bootstrap';
+import ModalCallToAction from '../components/ModalCallToAction';
 
 const Navbar = () => {
+  const [isModalOpenCallToAction, setIsModalOpenCallToAction] = useState(false);
+
   const NavbarWrapper = styled.div`
     display: flex;
     flex-direction: row;
@@ -60,6 +63,10 @@ const Navbar = () => {
   const Logo = styled.img``;
   return (
     <NavbarWrapper>
+      <ModalCallToAction
+        isModalOpenCallToAction={isModalOpenCallToAction}
+        onHide={() => setIsModalOpenCallToAction(false)}
+      />
       <Col className='ml-5' md={1}>
         <Logo src={LogoPath} />
       </Col>
@@ -70,7 +77,9 @@ const Navbar = () => {
           <MenuItem href='#tips'>RESULTADOS</MenuItem>
           <MenuItem href='#approval'>DEPOIMENTOS</MenuItem>
           <MenuItem href='#faq'>FAQ</MenuItem>
-          <MenuItemYellow href='#'>ASSINAR</MenuItemYellow>
+          <MenuItemYellow onClick={() => setIsModalOpenCallToAction(true)}>
+            ASSINAR
+          </MenuItemYellow>
         </ItemsWrapper>
       </Col>
     </NavbarWrapper>

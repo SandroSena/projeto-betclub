@@ -4,6 +4,7 @@ import BackgroundPath from '../images/Group 531.png';
 import BackgroundPathMobile from '../images/KatarinaMobile.png';
 import { Col, Container } from 'react-bootstrap';
 import LogoPath from '../images/image 14.png';
+
 const CallToAction = () => {
   const Background = styled.div`
     display:flex;

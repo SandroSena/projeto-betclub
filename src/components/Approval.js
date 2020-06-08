@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Col, Container, Row } from 'react-bootstrap';
 import Carousel from '../components/Carousel';
@@ -8,8 +8,11 @@ import feedback3 from '../images/feedback3.png';
 import feedback4 from '../images/feedback4.png';
 import feedback5 from '../images/feedback5.png';
 import feedback6 from '../images/feedback6.png';
+import ModalCallToAction from '../components/ModalCallToAction';
 
 const Results = () => {
+  const [isModalOpenCallToAction, setIsModalOpenCallToAction] = useState(false);
+
   const Background = styled.div`
     background-color: #000;
     height: 130vh;
@@ -92,7 +95,10 @@ const Results = () => {
   return (
     <Container className='p-0 pt-5' fluid>
       <div id='approval' />
-
+      <ModalCallToAction
+        isModalOpenCallToAction={isModalOpenCallToAction}
+        onHide={() => setIsModalOpenCallToAction(false)}
+      />
       <Background>
         <Col md={{ offset: 4, span: 4 }} className='pt-5'>
           <CTASuperTitle>
@@ -114,7 +120,7 @@ const Results = () => {
           />
         </Row>
         <WrapperButton className='pb-5'>
-          <Button>EU QUERO FAZER PARTE DO CLUB</Button>
+          <Button onClick={() => setIsModalOpenCallToAction(true)}>EU QUERO FAZER PARTE DO CLUB</Button>
         </WrapperButton>
       </Background>
     </Container>
