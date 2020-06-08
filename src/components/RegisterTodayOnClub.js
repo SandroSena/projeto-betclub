@@ -15,8 +15,9 @@ const RegisterTodayOnClub = () => {
     
     @media (max-width: 767px) {
       height:auto;
-      background-image:none;
-      background-color:#000;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
 
     }
   `;
@@ -148,7 +149,7 @@ const RegisterTodayOnClub = () => {
         <Col
           md={{ span: 7, offset: 1 }}
           xs={{ span: 10, offset: 1 }}
-          className='pt-5'
+          className='pt-2'
         >
           <RegisterTodayTitle>
             INSCREVA-SE HOJE NO CLUB E <Underline>GAN</Underline>HE BÔNUS

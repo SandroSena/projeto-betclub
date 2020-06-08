@@ -164,7 +164,7 @@ const WhyWeTrust = () => {
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 17px;
       line-height: 24px;
       /* identical to box height, or 133% */
 
@@ -193,8 +193,9 @@ const WhyWeTrust = () => {
       width: 90%;
       font-style: normal;
       font-weight: 900;
-      font-size: 18px;
+      font-size: 14px;
       line-height: 30px;
+      height: 65px;
       /* identical to box height, or 169% */
 
       text-align: center;

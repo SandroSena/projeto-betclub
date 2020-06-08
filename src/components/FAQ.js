@@ -27,6 +27,7 @@ const FAQ = () => {
     @media (max-width: 767px) {
       justify-content: center;
       height: auto;
+      background-image: none;
     }
   `;
 

@@ -7,12 +7,14 @@ import CBN from '../images/cbn.png';
 import Epoca from '../images/epoca.png';
 import Jp from '../images/jp.png';
 import R7 from '../images/r7.png';
+import Valor from '../images/valor.png';
 import RadioGlobo from '../images/radioglobo.png';
 import ModalEntrevistaCBN from '../components/ModalEntrevistaCBN';
 import ModalEntrevistaJP from '../components/ModalEntrevistaJP';
 import ModalEntrevistaRG from '../components/ModalEntrevistaRG';
 import ModalEntrevistaR7 from '../components/ModalEntrevistaR7';
 import ModalEntrevistaEpoca from '../components/ModalEntrevistaEpoca';
+import ModalEntrevistaValor from '../components/ModalEntrevistaValor';
 
 const Founder = () => {
   const [isModalOpenCBN, setIsModalOpenCBN] = useState(false);
@@ -20,6 +22,7 @@ const Founder = () => {
   const [isModalOpenRG, setIsModalOpenRG] = useState(false);
   const [isModalOpenR7, setIsModalOpenR7] = useState(false);
   const [isModalOpenEpoca, setIsModalOpenEpoca] = useState(false);
+  const [isModalOpenValor, setIsModalOpenValor] = useState(false);
 
   const Background = styled.div`
     display:flex;
@@ -35,8 +38,9 @@ const Founder = () => {
     padding-top:7rem;
     height: auto;
     @media (max-width: 767px) {
-      background-image:none;
-      background-color:#000;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
       height:auto;
     }
   `;
@@ -136,6 +140,10 @@ const Founder = () => {
         isModalOpenEpoca={isModalOpenEpoca}
         onHide={() => setIsModalOpenEpoca(false)}
       />
+      <ModalEntrevistaValor
+        isModalOpenValor={isModalOpenValor}
+        onHide={() => setIsModalOpenValor(false)}
+      />
       <Background>
         <Col md={{ span: 10, offset: 1 }}>
           <RowContainer>
@@ -187,6 +195,7 @@ const Founder = () => {
         <LogoImg src={Jp} onClick={() => setIsModalOpenJP(true)} />
         <LogoImg src={R7} onClick={() => setIsModalOpenR7(true)} />
         <LogoImg src={RadioGlobo} onClick={() => setIsModalOpenRG(true)} />
+        <LogoImg src={Valor} onClick={() => setIsModalOpenValor(true)} />
       </LogosContainer>
     </Container>
   );

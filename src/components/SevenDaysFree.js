@@ -21,12 +21,6 @@ const SevenDaysFree = () => {
     }
   `;
 
-  const Wrapper = styled.div`
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-  `;
-
   const SevenDaysTitle = styled.h3`
     font-family: Montserrat;
     font-weight: 900;
@@ -92,7 +86,7 @@ const SevenDaysFree = () => {
   return (
     <Background>
       <Container className='p-0' fluid>
-        <Row className='w-100'>
+        <Row className='w-100 m-0'>
           <Col
             className='d-flex flex-column justify-content-center'
             md={{ offset: 1, span: 6 }}

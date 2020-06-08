@@ -21,6 +21,9 @@ const Bonus = () => {
       background-repeat: no-repeat;
       background-size: contain;
       height: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
     }
   `;
 
@@ -211,9 +214,7 @@ const Bonus = () => {
           </Col>
           <Col xs={12} md={{ span: 5 }}>
             <BonusContainer>
-              <CTATitle className='pb-5'>
-                <Underline>BÔNUS</Underline>: CURSO INTRODUTÓRIO
-              </CTATitle>
+              <CTATitle className='pb-5'>BÔNUS: CURSO INTRODUTÓRIO</CTATitle>
               <CTAText>
                 40 rápidos minutos que vão te permitir entender os conceitos
                 chaves do negócio, além de pontos importantes para garantir seu

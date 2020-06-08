@@ -42,12 +42,10 @@ const RobotSecret = () => {
       font-weight: 900;
       font-size: 24px;
       line-height: 26px;
-      /* or 108% */
-
       text-align: center;
       text-transform: uppercase;
-
-      color: #ffffff;
+      color: #fff;
+      padding-top: 1rem;
     }
   `;
 
@@ -187,13 +185,13 @@ const RobotSecret = () => {
   return (
     <Background>
       <Container className='p-0 pb-5' fluid>
-        <Col className='pb-5' md={{ span: 10, offset: 1 }} xs={11}>
+        <Col className='pb-5' md={{ span: 10, offset: 1 }} xs={12}>
           <CTATitle>
             O SEGREDO DO NOSSO ROBÔ:
             <br /> <Underline>INT</Underline>ELIGÊNCIA, AUTOMAÇÃO E SUPERVISÃO
           </CTATitle>
         </Col>
-        <Col md={{ span: 10, offset: 1 }} xs={11}>
+        <Col md={{ span: 10, offset: 1 }} xs={12}>
           <CTAText>
             A utilização de um programa avançado de Inteligência Artificial tem
             inúmeras vantagens sobre a análise humana. Inteligência, Automação e

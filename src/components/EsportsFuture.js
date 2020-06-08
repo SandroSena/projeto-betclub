@@ -51,8 +51,6 @@ const EsportsFuture = () => {
     font-weight: 500;
     font-size: 18px;
     line-height: 32px;
-    /* or 178% */
-
     color: #ffffff;
 
     @media (max-width: 767px) {
@@ -61,11 +59,9 @@ const EsportsFuture = () => {
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
-      /* or 150% */
-
       text-align: center;
-
       color: #ffffff;
+      margin-bottom: 2.5rem;
     }
   `;
 
@@ -98,7 +94,7 @@ const EsportsFuture = () => {
               </EsportsFutureText>
             </div>
 
-            <div className='pt-5'>
+            <div>
               <EsportsFutureTitle>
                 SEGURANÇA: NINGUÉM VAI TOCAR NO SEU DINHEIRO
               </EsportsFutureTitle>
@@ -111,7 +107,7 @@ const EsportsFuture = () => {
               </EsportsFutureText>
             </div>
           </Col>
-          <Col md={{ span: 2, offset: 1 }} xs={11}>
+          <Col md={{ span: 2, offset: 1 }} xs={12}>
             <SvgImg src={eSports} />
             <SvgImg src={security} />
           </Col>

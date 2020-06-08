@@ -33,7 +33,7 @@ const Tips = () => {
     text-align: center;
 
     @media (max-width: 767px) {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
   `;
 
@@ -82,7 +82,7 @@ const Tips = () => {
       <div id='tips' />
 
       <Container className='p-0' fluid>
-        <Col md={{ span: 10, offset: 1 }} xs={11}>
+        <Col md={{ span: 10, offset: 1 }} xs={12}>
           <TipsTitle className='pb-5'>
             Receba dicas
             <br /> de apos<Underline>tas</Underline> para:
