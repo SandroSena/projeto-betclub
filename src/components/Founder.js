@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Col, Row } from 'react-bootstrap';
+import { Container, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import BackgroundPath from '../images/Rectangle 119.png';
 import FounderPath from '../images/RectangleFounder.png';

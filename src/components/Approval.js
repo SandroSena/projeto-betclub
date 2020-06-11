@@ -45,10 +45,6 @@ const Results = () => {
     height: auto;
   `;
 
-  const ImgWrapper = styled.div`
-    object-fit: scale-down;
-  `;
-
   const WrapperButton = styled.div`
     display: flex;
     justify-content: center;
@@ -120,7 +116,9 @@ const Results = () => {
           />
         </Row>
         <WrapperButton className='pb-5'>
-          <Button onClick={() => setIsModalOpenCallToAction(true)}>EU QUERO FAZER PARTE DO CLUB</Button>
+          <Button onClick={() => setIsModalOpenCallToAction(true)}>
+            EU QUERO FAZER PARTE DO CLUB
+          </Button>
         </WrapperButton>
       </Background>
     </Container>

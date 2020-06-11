@@ -35,7 +35,7 @@ const Carousel = ({ time, carouselItems, itemsDisplayed }) => {
     size.width > 767
       ? setItemsToDisplay([...items.slice(0, itemsDisplayed)])
       : setItemsToDisplay([...items.slice(0, 1)]);
-  }, [items, itemsDisplayed]);
+  }, [items, itemsDisplayed, size]);
 
   useEffect(() => {
     const cleanup = setInterval(() => {

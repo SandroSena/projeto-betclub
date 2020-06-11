@@ -45,9 +45,6 @@ const Results = () => {
     height: auto;
   `;
 
-  const ImgWrapper = styled.div`
-    object-fit: scale-down;
-  `;
   const Underline = styled.span`
     text-decoration: none;
     border-bottom: 6px solid #fae700;
