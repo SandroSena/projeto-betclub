@@ -41,7 +41,7 @@ const CallToAction = () => {
       font-family: Montserrat;
       font-style: normal;
       font-weight: 900;
-      font-size: 23px;
+      font-size: 25px;
       line-height: 26px;
       text-align: center;
       padding: 80px 0 20px 0;
@@ -141,7 +141,7 @@ const CallToAction = () => {
             md={{ span: 3, offset: 1 }}
             xs={12}
           >
-            <Button href="#info-container">Adquira Já</Button>
+            <Button href="#info-container">Assine Já</Button>
             <LoginButton
               href="https://betclubesports.club.hotmart.com/login"
               target="_blank"

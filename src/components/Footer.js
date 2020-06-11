@@ -23,10 +23,7 @@ const Footer = () => {
     font-weight: normal;
     font-size: 12px;
     line-height: 27px;
-    /* or 169% */
-
     color: #808080;
-
     @media (max-width: 767px) {
       font-size: 0.7rem;
     }
@@ -37,11 +34,15 @@ const Footer = () => {
     height: 100%;
     justify-content: center;
   `;
-  const Logo = styled.img``;
+  const Logo = styled.img`
+    @media (max-width: 767px) {
+      width: 6rem;
+    }
+  `;
 
   return (
     <FooterWrapper>
-      <Col className='ml-3' md={1}>
+      <Col className='d-flex flex-column align-items-center' md={1}>
         <Logo src={LogoPath} />
       </Col>
       <Col className='h-100' xs={12} md={{ offset: 1, span: 8 }}>

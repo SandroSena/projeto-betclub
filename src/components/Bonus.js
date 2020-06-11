@@ -241,7 +241,7 @@ const Bonus = () => {
                 <ClassTitle>Aula 7 – Suporte</ClassTitle>
               </ClassItem>
               <div className='pt-4'>
-                <Button href='#info-container'>Adquira Agora</Button>
+                <Button href='#info-container'>Assine Já</Button>
               </div>
             </BonusContainer>
           </Col>
