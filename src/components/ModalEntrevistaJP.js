@@ -1,6 +1,6 @@
-import React from 'react';
-import { Modal } from 'react-bootstrap';
-import styled from 'styled-components';
+import React from "react";
+import { Modal, Button } from "react-bootstrap";
+import styled from "styled-components";
 
 const ModalEntrevistaJP = ({ onHide, isModalOpenJP }) => {
   const ModalTitle = styled.h3`
@@ -12,8 +12,8 @@ const ModalEntrevistaJP = ({ onHide, isModalOpenJP }) => {
     <Modal
       show={isModalOpenJP}
       onHide={onHide}
-      size='lg'
-      aria-labelledby='contained-modal-title-vcenter'
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
       centered
     >
       <Modal.Header closeButton>
@@ -59,7 +59,11 @@ const ModalEntrevistaJP = ({ onHide, isModalOpenJP }) => {
         tornar um investidor, mas a recomendação é que o aprendiz goste muito de
         futebol.
       </Modal.Body>
-      <Modal.Footer></Modal.Footer>
+      <Modal.Footer>
+        <Button className="close" variant="" onClick={onHide}>
+          <span aria-hidden="true">×</span>
+        </Button>
+      </Modal.Footer>
     </Modal>
   );
 };

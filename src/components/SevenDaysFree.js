@@ -10,13 +10,13 @@ const SevenDaysFree = () => {
     background-image: url('${BackgroundPath}');
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 85vh;
+    height: 95vh;
+    padding-top: 2rem;
     
     @media (max-width: 767px) {
       background-image:none;
       background-color:#000;
       margin:  5rem 0;
-
       height: auto;
     }
   `;

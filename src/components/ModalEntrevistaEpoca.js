@@ -1,7 +1,7 @@
-import React from 'react';
-import { Modal } from 'react-bootstrap';
-import styled from 'styled-components';
-import EpocaEntrevista from '../images/epocaEntrevista.png';
+import React from "react";
+import { Modal, Button } from "react-bootstrap";
+import styled from "styled-components";
+import EpocaEntrevista from "../images/epocaEntrevista.png";
 
 const ModalEntrevistaEpoca = ({ onHide, isModalOpenEpoca }) => {
   const EntrevistaImg = styled.img`
@@ -12,8 +12,8 @@ const ModalEntrevistaEpoca = ({ onHide, isModalOpenEpoca }) => {
     <Modal
       show={isModalOpenEpoca}
       onHide={onHide}
-      size='lg'
-      aria-labelledby='contained-modal-title-vcenter'
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
       centered
     >
       <Modal.Header closeButton>
@@ -22,7 +22,11 @@ const ModalEntrevistaEpoca = ({ onHide, isModalOpenEpoca }) => {
       <Modal.Body>
         <EntrevistaImg src={EpocaEntrevista} />
       </Modal.Body>
-      <Modal.Footer></Modal.Footer>
+      <Modal.Footer>
+        <Button className="close" variant="" onClick={onHide}>
+          <span aria-hidden="true">×</span>
+        </Button>
+      </Modal.Footer>
     </Modal>
   );
 };

@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import BackgroundPath from '../images/Group 532.png';
-import { Container, Col } from 'react-bootstrap';
-import csgo from '../images/ccsgo.png';
-import dota2 from '../images/dota2.png';
-import lol from '../images/lol.png';
-import overwatch from '../images/overwatch.png';
+import React from "react";
+import styled from "styled-components";
+import BackgroundPath from "../images/Group 532.png";
+import { Container, Col } from "react-bootstrap";
+import csgo from "../images/ccsgo.png";
+import dota2 from "../images/dota2.png";
+import lol from "../images/lol.png";
+import overwatch from "../images/overwatch.png";
 
 const Tips = () => {
   const Background = styled.div`
@@ -18,9 +18,10 @@ const Tips = () => {
     background-size: 100% 100%;
 
     @media (max-width: 767px) {
-      background-image:none;
-      background-color:#000;
       height: auto;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
     }
   `;
 
@@ -79,11 +80,11 @@ const Tips = () => {
 
   return (
     <Background>
-      <div id='tips' />
+      <div id="tips" />
 
-      <Container className='p-0' fluid>
+      <Container className="p-0" fluid>
         <Col md={{ span: 10, offset: 1 }} xs={12}>
-          <TipsTitle className='pb-5'>
+          <TipsTitle className="pb-5">
             Receba dicas
             <br /> de apos<Underline>tas</Underline> para:
           </TipsTitle>

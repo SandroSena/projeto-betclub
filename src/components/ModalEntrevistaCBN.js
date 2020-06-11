@@ -1,6 +1,6 @@
-import React from 'react';
-import { Modal } from 'react-bootstrap';
-import styled from 'styled-components';
+import React from "react";
+import { Modal, Button } from "react-bootstrap";
+import styled from "styled-components";
 
 const ModalEntrevistaCBN = ({ onHide, isModalOpenCBN }) => {
   const ModalTitle = styled.h3`
@@ -12,8 +12,8 @@ const ModalEntrevistaCBN = ({ onHide, isModalOpenCBN }) => {
     <Modal
       show={isModalOpenCBN}
       onHide={onHide}
-      size='lg'
-      aria-labelledby='contained-modal-title-vcenter'
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
       centered
     >
       <Modal.Header closeButton>
@@ -55,7 +55,11 @@ const ModalEntrevistaCBN = ({ onHide, isModalOpenCBN }) => {
         e oportunidades de realizar bons negócios em campeonatos nacionais e
         internacionais.
       </Modal.Body>
-      <Modal.Footer></Modal.Footer>
+      <Modal.Footer>
+        <Button className="close" variant="" onClick={onHide}>
+          <span aria-hidden="true">×</span>
+        </Button>
+      </Modal.Footer>
     </Modal>
   );
 };

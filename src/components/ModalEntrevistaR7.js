@@ -1,7 +1,7 @@
-import React from 'react';
-import { Modal } from 'react-bootstrap';
-import styled from 'styled-components';
-import R7Entrevista from '../images/r7Entrevista.png';
+import React from "react";
+import { Modal, Button } from "react-bootstrap";
+import styled from "styled-components";
+import R7Entrevista from "../images/r7Entrevista.png";
 
 const ModalEntrevistaR7 = ({ onHide, isModalOpenR7 }) => {
   const EntrevistaImg = styled.img`
@@ -12,8 +12,8 @@ const ModalEntrevistaR7 = ({ onHide, isModalOpenR7 }) => {
     <Modal
       show={isModalOpenR7}
       onHide={onHide}
-      size='lg'
-      aria-labelledby='contained-modal-title-vcenter'
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
       centered
     >
       <Modal.Header closeButton>
@@ -22,7 +22,11 @@ const ModalEntrevistaR7 = ({ onHide, isModalOpenR7 }) => {
       <Modal.Body>
         <EntrevistaImg src={R7Entrevista} />
       </Modal.Body>
-      <Modal.Footer></Modal.Footer>
+      <Modal.Footer>
+        <Button className="close" variant="" onClick={onHide}>
+          <span aria-hidden="true">×</span>
+        </Button>
+      </Modal.Footer>
     </Modal>
   );
 };

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Modal } from 'react-bootstrap';
-import styled from 'styled-components';
-import ValorEntrevista from '../images/valorEntrevista.png';
+import React from "react";
+import { Modal, Button } from "react-bootstrap";
+import styled from "styled-components";
+import ValorEntrevista from "../images/valorEntrevista.png";
 
 const ModalEntrevistaValor = ({ onHide, isModalOpenValor }) => {
   const EntrevistaImg = styled.img`
@@ -12,8 +12,8 @@ const ModalEntrevistaValor = ({ onHide, isModalOpenValor }) => {
     <Modal
       show={isModalOpenValor}
       onHide={onHide}
-      size='lg'
-      aria-labelledby='contained-modal-title-vcenter'
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
       centered
     >
       <Modal.Header closeButton>
@@ -22,7 +22,11 @@ const ModalEntrevistaValor = ({ onHide, isModalOpenValor }) => {
       <Modal.Body>
         <EntrevistaImg src={ValorEntrevista} />
       </Modal.Body>
-      <Modal.Footer></Modal.Footer>
+      <Modal.Footer>
+        <Button className="close" variant="" onClick={onHide}>
+          <span aria-hidden="true">×</span>
+        </Button>
+      </Modal.Footer>
     </Modal>
   );
 };

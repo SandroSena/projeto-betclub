@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import BackgroundPath from '../images/ModalBG.png';
-import { Col, Container, Row, Modal, Form } from 'react-bootstrap';
-import LogoPath from '../images/LogoModal.png';
+import React, { useState } from "react";
+import styled from "styled-components";
+import BackgroundPath from "../images/ModalBG.png";
+import { Col, Container, Row, Modal, Form } from "react-bootstrap";
+import LogoPath from "../images/LogoModal.png";
 
 const Background = styled.div`
     display:flex;
@@ -113,30 +113,30 @@ const ButtonClose = styled.button`
 `;
 const ModalCallToAction = ({ onHide, isModalOpenCallToAction }) => {
   const [inputs, setInputs] = useState({
-    firstname: '',
-    email: '',
-    phone: '',
-    'field[2]': '', // coupon
+    firstname: "",
+    email: "",
+    phone: "",
+    "field[2]": "", // coupon
   });
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     event.persist();
     const { name, value } = event.target;
 
-    setInputs(inputs => ({
+    setInputs((inputs) => ({
       ...inputs,
       [name]: value,
     }));
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.target);
 
-    fetch('https://julianofontes.activehosted.com/proc.php', {
-      method: 'POST',
+    fetch("https://julianofontes.activehosted.com/proc.php", {
+      method: "POST",
       body: data,
-      mode: 'no-cors',
+      mode: "no-cors",
     });
   };
 
@@ -144,65 +144,66 @@ const ModalCallToAction = ({ onHide, isModalOpenCallToAction }) => {
     <Modal
       show={isModalOpenCallToAction}
       onHide={onHide}
-      size='xl'
-      aria-labelledby='contained-modal-title-vcenter'
+      size="xl"
+      aria-labelledby="contained-modal-title-vcenter"
       centered
     >
       <Background>
         <Modal.Body>
-          <Container className='p-0' fluid>
-            <Row className='w-100'>
+          <Container className="p-0" fluid>
+            <Row className="w-100">
               <WrapperButtonClose>
                 <ButtonClose onClick={onHide}>X</ButtonClose>
               </WrapperButtonClose>
-              <Col md={{ span: 5, offset: 1 }} xs={12}>
-                <LogoImg src={LogoPath} />
-              </Col>
               <Col>
                 <FormWrapper>
-                  <Form onSubmit={handleSubmit}>
-                    <input type='hidden' name='u' value='21' />
-                    <input type='hidden' name='f' value='21' />
-                    <input type='hidden' name='s' />
-                    <input type='hidden' name='c' value='0' />
-                    <input type='hidden' name='m' value='0' />
-                    <input type='hidden' name='act' value='sub' />
-                    <input type='hidden' name='v' value='2' />
+                  <Form onSubmit={handleSubmit} className="formAdquira">
+                    <input type="hidden" name="u" value="21" />
+                    <input type="hidden" name="f" value="21" />
+                    <input type="hidden" name="s" />
+                    <input type="hidden" name="c" value="0" />
+                    <input type="hidden" name="m" value="0" />
+                    <input type="hidden" name="act" value="sub" />
+                    <input type="hidden" name="v" value="2" />
                     <FormTitle>
                       <Underline>PREEN</Underline>CHA OS CAMPOS ABAIXO:
                     </FormTitle>
+                    <br></br>
                     <Input
-                      type='text'
-                      name='firstname'
-                      placeholder='Digite seu primeiro nome*'
+                      type="text"
+                      name="firstname"
+                      placeholder="Digite seu primeiro nome"
                       value={inputs.firstname}
-                      onChange={e => handleInputChange(e)}
+                      onChange={(e) => handleInputChange(e)}
                       required
                     ></Input>
+                    <br></br>
                     <Input
-                      type='text'
-                      placeholder='E-mail*'
-                      name='email'
+                      type="text"
+                      placeholder="E-mail"
+                      name="email"
                       value={inputs.email}
-                      onChange={e => handleInputChange(e)}
+                      onChange={(e) => handleInputChange(e)}
                       required
                     ></Input>
+                    <br></br>
                     <Input
-                      type='text'
-                      placeholder='Número do Whatsapp'
-                      name='phone'
+                      type="text"
+                      placeholder="Whatsapp (Opcional)"
+                      name="phone"
                       value={inputs.phone}
-                      onChange={e => handleInputChange(e)}
+                      onChange={(e) => handleInputChange(e)}
                     ></Input>
+                    <br></br>
                     <Input
-                      type='text'
-                      name='field[2]'
-                      placeholder='Cupom de desconto'
-                      value={inputs['field[2]']}
-                      onChange={e => handleInputChange(e)}
+                      type="text"
+                      name="field[2]"
+                      placeholder="Cupom (Opcional)"
+                      value={inputs["field[2]"]}
+                      onChange={(e) => handleInputChange(e)}
                     ></Input>
-                    <Text>*Campos obrigatórios</Text>
-                    <Button type='submit'>ENVIAR</Button>
+                    <br></br>
+                    <Button type="submit">ENVIAR</Button>
                   </Form>
                 </FormWrapper>
               </Col>

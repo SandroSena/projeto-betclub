@@ -97,7 +97,7 @@ const Results = () => {
       />
       <Background>
         <Col md={{ offset: 4, span: 4 }} className='pt-5'>
-          <CTASuperTitle>
+          <CTASuperTitle className='pt-5'>
             QUEM JÁ FAZ PARTE DO CLU<Underline>BE </Underline>APROVA
           </CTASuperTitle>
         </Col>

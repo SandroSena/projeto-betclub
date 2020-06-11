@@ -1,6 +1,6 @@
-import React from 'react';
-import { Modal } from 'react-bootstrap';
-import styled from 'styled-components';
+import React from "react";
+import { Modal, Button } from "react-bootstrap";
+import styled from "styled-components";
 
 const ModalEntrevistaRG = ({ onHide, isModalOpenRG }) => {
   const ModalTitle = styled.h3`
@@ -12,8 +12,8 @@ const ModalEntrevistaRG = ({ onHide, isModalOpenRG }) => {
     <Modal
       show={isModalOpenRG}
       onHide={onHide}
-      size='lg'
-      aria-labelledby='contained-modal-title-vcenter'
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
       centered
     >
       <Modal.Header closeButton>
@@ -24,7 +24,7 @@ const ModalEntrevistaRG = ({ onHide, isModalOpenRG }) => {
       </ModalTitle>
       <Modal.Body>
         Em entrevista para a Rádio Globo, Juliano Fontes, idealizador do site
-        <a href='www.investimentofutebol.com'> www.investimentofutebol.com</a>,
+        <a href="www.investimentofutebol.com"> www.investimentofutebol.com</a>,
         explicou o que é o trader esportivo – modalidade de investimento que
         mistura mercado de ações com aposta esportiva on-line. Mas o que isso
         significa?
@@ -57,7 +57,11 @@ const ModalEntrevistaRG = ({ onHide, isModalOpenRG }) => {
         desejam se aprimorar na modalidade, Juliano Fontes pode ser contatado
         pelo site www.investimentofutebol.com.
       </Modal.Body>
-      <Modal.Footer></Modal.Footer>
+      <Modal.Footer>
+        <Button className="close" variant="" onClick={onHide}>
+          <span aria-hidden="true">×</span>
+        </Button>
+      </Modal.Footer>
     </Modal>
   );
 };

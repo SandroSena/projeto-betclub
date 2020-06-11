@@ -6,7 +6,7 @@ import { Col, Container } from 'react-bootstrap';
 const AIAnalysis = () => {
   const Background = styled.div`
     background-color: #000;
-    height: 75vh;
+    height: 105vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -43,11 +43,7 @@ const AIAnalysis = () => {
       font-weight: 900;
       font-size: 24px;
       line-height: 26px;
-      /* or 108% */
-
       text-align: center;
-
-      color: #ffffff;
     }
   `;
 
@@ -63,9 +59,7 @@ const AIAnalysis = () => {
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
-      /* or 150% */
       text-align: center;
-      color: #ffffff;
     }
   `;
   return (
