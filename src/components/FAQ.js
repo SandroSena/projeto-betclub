@@ -22,8 +22,9 @@ const FAQ = () => {
     flex-direction: row;
     flex-wrap: wrap;
     background-image: url('${BackgroundPath}');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-repeat: no-repeat;  
+    background-size: cover;
+    background-position: center center;
     @media (max-width: 767px) {
       justify-content: center;
       height: auto;
@@ -77,7 +78,7 @@ const FAQ = () => {
   `;
 
   const AnswerWrapper = styled.div`
-    display: ${(props) => (props.isOpen ? 'block' : 'none')};
+    display: ${props => (props.isOpen ? 'block' : 'none')};
     margin: 1rem 0;
     font-family: Montserrat;
     font-style: normal;
@@ -248,7 +249,7 @@ const FAQ = () => {
             <Underline>Per</Underline>guntas Frequentes
           </CTASuperTitle>
           <QuestionsContainer className='pt-3'>
-            {questionsData.map((question) => {
+            {questionsData.map(question => {
               return (
                 <>
                   <QuestionWrapper onClick={question.handleClick}>
@@ -260,7 +261,7 @@ const FAQ = () => {
                     </Col>
                   </QuestionWrapper>
                   <AnswerWrapper isOpen={question.open}>
-                    {question.answer.map((answer) => (
+                    {question.answer.map(answer => (
                       <Answer>{answer}</Answer>
                     ))}
                   </AnswerWrapper>
