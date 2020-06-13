@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Container, Col } from 'react-bootstrap';
 import ganho from '../images/ganho.svg';
 import perda from '../images/perda.svg';
+
 import ModalCallToAction from '../components/ModalCallToAction';
 
 const WhyWeTrust = () => {
@@ -212,6 +213,10 @@ const WhyWeTrust = () => {
     @media (max-width: 767px) {
       border: none;
     }
+  `;
+  const ImgBolinha = styled.img`
+    width: 11px;
+    height: 11px;
   `;
   return (
     <Container className='d-flex flex-column align-items-center pt-5' fluid>
