@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
-import { Container, Col } from 'react-bootstrap';
-import styled from 'styled-components';
-import BackgroundPath from '../images/Rectangle 119.png';
-import FounderPath from '../images/RectangleFounder.png';
-import CBN from '../images/cbn.png';
-import Epoca from '../images/epoca.png';
-import Jp from '../images/jp.png';
-import R7 from '../images/r7.png';
-import Valor from '../images/valor.png';
-import RadioGlobo from '../images/radioglobo.png';
-import ModalEntrevistaCBN from '../components/ModalEntrevistaCBN';
-import ModalEntrevistaJP from '../components/ModalEntrevistaJP';
-import ModalEntrevistaRG from '../components/ModalEntrevistaRG';
-import ModalEntrevistaR7 from '../components/ModalEntrevistaR7';
-import ModalEntrevistaEpoca from '../components/ModalEntrevistaEpoca';
-import ModalEntrevistaValor from '../components/ModalEntrevistaValor';
+import React, { useState } from "react";
+import { Container, Col } from "react-bootstrap";
+import styled from "styled-components";
+import BackgroundPath from "../images/Rectangle 119.png";
+import FounderPath from "../images/RectangleFounder.png";
+import CBN from "../images/cbn.png";
+import Epoca from "../images/epoca.png";
+import Jp from "../images/jp.png";
+import R7 from "../images/r7.png";
+import Valor from "../images/valor.png";
+import RadioGlobo from "../images/radioglobo.png";
+import ModalEntrevistaCBN from "../components/ModalEntrevistaCBN";
+import ModalEntrevistaJP from "../components/ModalEntrevistaJP";
+import ModalEntrevistaRG from "../components/ModalEntrevistaRG";
+import ModalEntrevistaR7 from "../components/ModalEntrevistaR7";
+import ModalEntrevistaEpoca from "../components/ModalEntrevistaEpoca";
+import ModalEntrevistaValor from "../components/ModalEntrevistaValor";
+import FlexColumn from "./flex/FlexColumn";
+import FlexRow from "./flex/FlexRow";
 
 const Founder = () => {
   const [isModalOpenCBN, setIsModalOpenCBN] = useState(false);
@@ -35,13 +37,15 @@ const Founder = () => {
     flex-direction:column;
     align-items:flex-start;
     justify-content: center;
-    padding-top:7rem;
-    height: auto;
+    padding:7rem;
+    padding-top: 10rem;
     @media (max-width: 767px) {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
       height:auto;
+      padding: 1rem;
+      padding-top: 7rem;
     }
   `;
 
@@ -74,9 +78,16 @@ const Founder = () => {
     }
   `;
 
-  const FounderImg = styled.img`
-    width: 80%;
+  const FounderImg = styled.div`
+    width: 40%;
+    height: 585px;
     position: relative;
+    background: url(${(props) => props.src}) no-repeat;
+    background-size: contain;
+    @media (max-width: 767px) {
+      width: unset;
+      height: 347px;
+    }
   `;
 
   const LogoImg = styled.img`
@@ -116,8 +127,15 @@ const Founder = () => {
     }
   `;
 
+  const ReponsiveFlexColumn = styled(FlexColumn)`
+    width: 50%;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  `;
+
   return (
-    <Container className='p-0' fluid>
+    <Container className="p-0" fluid>
       <ModalEntrevistaCBN
         isModalOpenCBN={isModalOpenCBN}
         onHide={() => setIsModalOpenCBN(false)}
@@ -143,9 +161,9 @@ const Founder = () => {
         onHide={() => setIsModalOpenValor(false)}
       />
       <Background>
-        <Col md={{ span: 10, offset: 1 }}>
+        <FlexColumn>
           <RowContainer>
-            <FounderTitle className='pb-4'>
+            <FounderTitle className="pb-4">
               Conheça o idealizador <br />
               <Underline>do </Underline>betclub
             </FounderTitle>
@@ -157,11 +175,8 @@ const Founder = () => {
               Esportivo.
             </FounderText>
           </RowContainer>
-          <RowContainer>
-            <Col
-              className='px-0 d-flex flex-column justify-content-around'
-              md={{ span: 5 }}
-            >
+          <FlexRow>
+            <ReponsiveFlexColumn>
               <FounderText>
                 Autor do livro best seller Invista em Futebol e fundador do
                 maior portal de estatísticas de futebol do Brasil, o
@@ -176,34 +191,28 @@ const Founder = () => {
                 investidor em casas de apostas como FantasticWin e Betmotion.
                 Além disso, foi o maior investidor da Betfair no mundo em 2014.
               </FounderText>
-            </Col>
-            <Col
-              className='d-flex justify-content-center'
-              xs={12}
-              md={{ span: 7 }}
-            >
-              <FounderImg src={FounderPath} />
-            </Col>
-          </RowContainer>
-        </Col>
+            </ReponsiveFlexColumn>
+            <FounderImg src={FounderPath} />
+          </FlexRow>
+        </FlexColumn>
       </Background>
       <LogosContainer>
-        <Col className='d-flex justify-content-center' md={2} xs={4}>
+        <Col className="d-flex justify-content-center" md={2} xs={4}>
           <LogoImg src={CBN} onClick={() => setIsModalOpenCBN(true)} />
         </Col>
-        <Col className='d-flex justify-content-center' md={2} xs={4}>
+        <Col className="d-flex justify-content-center" md={2} xs={4}>
           <LogoImg src={Epoca} onClick={() => setIsModalOpenEpoca(true)} />
         </Col>
-        <Col className='d-flex justify-content-center' md={2} xs={4}>
+        <Col className="d-flex justify-content-center" md={2} xs={4}>
           <LogoImg src={Jp} onClick={() => setIsModalOpenJP(true)} />
         </Col>
-        <Col className='d-flex justify-content-center' md={2} xs={4}>
+        <Col className="d-flex justify-content-center" md={2} xs={4}>
           <LogoImg src={R7} onClick={() => setIsModalOpenR7(true)} />
         </Col>
-        <Col className=' d-flex justify-content-center' md={2} xs={4}>
+        <Col className=" d-flex justify-content-center" md={2} xs={4}>
           <LogoImg src={RadioGlobo} onClick={() => setIsModalOpenRG(true)} />
         </Col>
-        <Col className='d-flex justify-content-center' md={2} xs={4}>
+        <Col className="d-flex justify-content-center" md={2} xs={4}>
           <LogoImg src={Valor} onClick={() => setIsModalOpenValor(true)} />
         </Col>
       </LogosContainer>
