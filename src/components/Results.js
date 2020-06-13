@@ -2,7 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Col, Container, Row } from 'react-bootstrap';
 import Reaper from '../images/Reaper.png';
-import Carousel from '../components/Carousel';
+import Carousel, { consts } from 'react-elastic-carousel';
+import Left from '../images/left.png';
+import Right from '../images/right.png';
+import Bolinha from '../images/bolinha.png';
 import lucro from '../images/lucro.png';
 import lucro2 from '../images/lucro2.png';
 import lucro3 from '../images/lucro3.png';
@@ -55,6 +58,46 @@ const Results = () => {
       border: none;
     }
   `;
+  const Arrow = styled.img`
+    cursor: pointer;
+    @media (max-width: 767px) {
+      width: 12px;
+      height: 19px;
+    }
+  `;
+  const ArrowButton = styled.button`
+    border: none;
+    background-color: transparent;
+  `;
+  const ImgBolinha = styled.img`
+    width: 11px;
+    height: 11px;
+    margin: 4px;
+    cursor: pointer;
+  `;
+  const ImgBolinhaAmarela = styled.img`
+    width: 11px;
+    height: 11px;
+    background: #fae700;
+    box-shadow: 0px 0px 20px rgba(250, 231, 0, 0.5);
+    border-radius: 50%;
+    margin: 4px;
+  `;
+  const BolinhaContainer = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 6rem;
+  `;
+  const myArrow = ({ type, onClick, isEdge }) => {
+    const pointer =
+      type === consts.PREV ? <Arrow src={Left} /> : <Arrow src={Right} />;
+    return (
+      <ArrowButton onClick={onClick} disabled={isEdge}>
+        {pointer}
+      </ArrowButton>
+    );
+  };
   return (
     <Container className='p-0 pt-5' fluid>
       <Background>
@@ -63,19 +106,42 @@ const Results = () => {
             RESULTADOS DO BETCLUB NO MERCADO<Underline> DE</Underline> APOSTAS{' '}
           </CTASuperTitle>
         </Col>
-        <Row className='d-flex pt-5 justify-content-center w-100'>
-          <Carousel
-            carouselItems={[
-              <GainImg src={lucro} />,
-              <GainImg src={lucro2} />,
-              <GainImg src={lucro3} />,
-              <GainImg src={lucro4} />,
-              <GainImg src={lucro5} />,
-            ]}
-            time={999999}
-            itemsDisplayed={3}
-          />
-        </Row>
+        <Carousel
+          renderArrow={myArrow}
+          breakPoints={[
+            { width: 1, itemsToShow: 1 },
+            { width: 550, itemsToShow: 3, itemsToScroll: 3 },
+            { width: 850, itemsToShow: 3, itemsToScroll: 3 },
+            { width: 1150, itemsToShow: 3, itemsToScroll: 3 },
+            { width: 1450, itemsToShow: 3, itemsToScroll: 3 },
+            { width: 1750, itemsToShow: 3, itemsToScroll: 3 },
+          ]}
+          renderPagination={({ pages, activePage, onClick }) => {
+            return (
+              <BolinhaContainer direction='row'>
+                {pages.map(page => {
+                  const isActivePage = activePage === page;
+                  return !isActivePage ? (
+                    <ImgBolinha
+                      src={Bolinha}
+                      key={page}
+                      onClick={() => onClick(page)}
+                      active={isActivePage}
+                    />
+                  ) : (
+                    <ImgBolinhaAmarela />
+                  );
+                })}
+              </BolinhaContainer>
+            );
+          }}
+        >
+          <GainImg src={lucro} />
+          <GainImg src={lucro2} />
+          <GainImg src={lucro3} />
+          <GainImg src={lucro4} />
+          <GainImg src={lucro5} />
+        </Carousel>
       </Background>
     </Container>
   );

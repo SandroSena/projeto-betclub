@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Col, Container, Row } from 'react-bootstrap';
-import Carousel from '../components/Carousel';
+import Carousel, { consts } from 'react-elastic-carousel';
+import Left from '../images/left.png';
+import Right from '../images/right.png';
+import Bolinha from '../images/bolinha.png';
 import feedback1 from '../images/feedback1.png';
 import feedback2 from '../images/feedback2.png';
 import feedback3 from '../images/feedback3.png';
@@ -88,6 +91,47 @@ const Results = () => {
       border: none;
     }
   `;
+
+  const Arrow = styled.img`
+    cursor: pointer;
+    @media (max-width: 767px) {
+      width: 12px;
+      height: 19px;
+    }
+  `;
+  const ArrowButton = styled.button`
+    border: none;
+    background-color: transparent;
+  `;
+  const ImgBolinha = styled.img`
+    width: 11px;
+    height: 11px;
+    margin: 4px;
+    cursor: pointer;
+  `;
+  const ImgBolinhaAmarela = styled.img`
+    width: 11px;
+    height: 11px;
+    background: #fae700;
+    box-shadow: 0px 0px 20px rgba(250, 231, 0, 0.5);
+    border-radius: 50%;
+    margin: 4px;
+  `;
+  const BolinhaContainer = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 6rem;
+  `;
+  const myArrow = ({ type, onClick, isEdge }) => {
+    const pointer =
+      type === consts.PREV ? <Arrow src={Left} /> : <Arrow src={Right} />;
+    return (
+      <ArrowButton onClick={onClick} disabled={isEdge}>
+        {pointer}
+      </ArrowButton>
+    );
+  };
   return (
     <Container className='p-0 pt-5' fluid>
       <div id='approval' />
@@ -101,20 +145,43 @@ const Results = () => {
             QUEM JÁ FAZ PARTE DO CLU<Underline>BE </Underline>APROVA
           </CTASuperTitle>
         </Col>
-        <Row className='d-flex pt-5 justify-content-center w-100'>
-          <Carousel
-            carouselItems={[
-              <GainImg src={feedback1} />,
-              <GainImg src={feedback2} />,
-              <GainImg src={feedback3} />,
-              <GainImg src={feedback4} />,
-              <GainImg src={feedback5} />,
-              <GainImg src={feedback6} />,
-            ]}
-            time={999999}
-            itemsDisplayed={3}
-          />
-        </Row>
+        <Carousel
+          renderArrow={myArrow}
+          breakPoints={[
+            { width: 1, itemsToShow: 1 },
+            { width: 550, itemsToShow: 3, itemsToScroll: 3 },
+            { width: 850, itemsToShow: 3, itemsToScroll: 3 },
+            { width: 1150, itemsToShow: 3, itemsToScroll: 3 },
+            { width: 1450, itemsToShow: 3, itemsToScroll: 3 },
+            { width: 1750, itemsToShow: 3, itemsToScroll: 3 },
+          ]}
+          renderPagination={({ pages, activePage, onClick }) => {
+            return (
+              <BolinhaContainer direction='row'>
+                {pages.map(page => {
+                  const isActivePage = activePage === page;
+                  return !isActivePage ? (
+                    <ImgBolinha
+                      src={Bolinha}
+                      key={page}
+                      onClick={() => onClick(page)}
+                      active={isActivePage}
+                    />
+                  ) : (
+                    <ImgBolinhaAmarela />
+                  );
+                })}
+              </BolinhaContainer>
+            );
+          }}
+        >
+          <GainImg src={feedback1} />
+          <GainImg src={feedback2} />
+          <GainImg src={feedback3} />
+          <GainImg src={feedback4} />
+          <GainImg src={feedback5} />
+          <GainImg src={feedback6} />
+        </Carousel>
         <WrapperButton className='pb-5'>
           <Button onClick={() => setIsModalOpenCallToAction(true)}>
             EU QUERO FAZER PARTE DO BETCLUB
