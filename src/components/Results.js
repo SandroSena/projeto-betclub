@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container } from 'react-bootstrap';
 import Reaper from '../images/Reaper.png';
 import Carousel, { consts } from 'react-elastic-carousel';
 import Left from '../images/left.png';
@@ -107,6 +107,7 @@ const Results = () => {
           </CTASuperTitle>
         </Col>
         <Carousel
+          style={{ minHeight: 'auto' }}
           renderArrow={myArrow}
           breakPoints={[
             { width: 1, itemsToShow: 1 },
@@ -119,7 +120,7 @@ const Results = () => {
           renderPagination={({ pages, activePage, onClick }) => {
             return (
               <BolinhaContainer direction='row'>
-                {pages.map(page => {
+                {pages.map((page) => {
                   const isActivePage = activePage === page;
                   return !isActivePage ? (
                     <ImgBolinha

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import BackgroundPath from "../images/ModalBG.png";
-import { Col, Container, Row, Modal, Form } from "react-bootstrap";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import BackgroundPath from '../images/ModalBG.png';
+import { Col, Container, Row, Modal, Form } from 'react-bootstrap';
 
 const Background = styled.div`
     display:flex;
@@ -30,10 +30,6 @@ const FormWrapper = styled.div`
   align-items: left;
   border: 1px solid rgba(252, 255, 44, 0.55);
   padding: 2rem;
-
-  @media (max-width: 767px) {
-    width: 90vw;
-  }
 `;
 
 const FormTitle = styled.h3`
@@ -47,6 +43,10 @@ const FormTitle = styled.h3`
   @media (max-width: 767px) {
     font-size: 15px;
   }
+
+  @media screen and (device-aspect-ratio: 40/71) {
+      font-size: 13px;
+    }
 `;
 
 const Input = styled.input`
@@ -60,12 +60,6 @@ const Input = styled.input`
   @media (max-width: 767px) {
     width: 230px;
   }
-`;
-
-const Text = styled.p`
-  font-size: 14px;
-  line-height: 46px;
-  color: rgba(255, 255, 255, 0.5);
 `;
 
 const Button = styled.button`
@@ -110,10 +104,10 @@ const ButtonClose = styled.button`
 `;
 const ModalCallToAction = ({ onHide, isModalOpenCallToAction }) => {
   const [inputs, setInputs] = useState({
-    firstname: "",
-    email: "",
-    phone: "",
-    "field[2]": "", // coupon
+    firstname: '',
+    email: '',
+    phone: '',
+    'field[2]': '', // coupon
   });
 
   const handleInputChange = (event) => {
@@ -130,10 +124,10 @@ const ModalCallToAction = ({ onHide, isModalOpenCallToAction }) => {
     event.preventDefault();
     const data = new FormData(event.target);
 
-    fetch("https://julianofontes.activehosted.com/proc.php", {
-      method: "POST",
+    fetch('https://julianofontes.activehosted.com/proc.php', {
+      method: 'POST',
       body: data,
-      mode: "no-cors",
+      mode: 'no-cors',
     });
   };
 
@@ -141,66 +135,66 @@ const ModalCallToAction = ({ onHide, isModalOpenCallToAction }) => {
     <Modal
       show={isModalOpenCallToAction}
       onHide={onHide}
-      size="xl"
-      aria-labelledby="contained-modal-title-vcenter"
+      size='xl'
+      aria-labelledby='contained-modal-title-vcenter'
       centered
     >
       <Background>
-        <Modal.Body>
-          <Container className="p-0" fluid>
-            <Row className="w-100">
-              <WrapperButtonClose>
-                <ButtonClose onClick={onHide}>X</ButtonClose>
-              </WrapperButtonClose>
-              <Col>
+        <Modal.Body className='p-0'>
+          <Container className='p-0' fluid>
+            <Row className='w-100 m-0'>
+              <Col className='p-0'>
                 <FormWrapper>
-                  <Form onSubmit={handleSubmit} className="formAdquira">
-                    <input type="hidden" name="u" value="21" />
-                    <input type="hidden" name="f" value="21" />
-                    <input type="hidden" name="s" />
-                    <input type="hidden" name="c" value="0" />
-                    <input type="hidden" name="m" value="0" />
-                    <input type="hidden" name="act" value="sub" />
-                    <input type="hidden" name="v" value="2" />
+                  <WrapperButtonClose>
+                    <ButtonClose onClick={onHide}>X</ButtonClose>
+                  </WrapperButtonClose>
+                  <Form onSubmit={handleSubmit} className='formAdquira'>
+                    <input type='hidden' name='u' value='21' />
+                    <input type='hidden' name='f' value='21' />
+                    <input type='hidden' name='s' />
+                    <input type='hidden' name='c' value='0' />
+                    <input type='hidden' name='m' value='0' />
+                    <input type='hidden' name='act' value='sub' />
+                    <input type='hidden' name='v' value='2' />
                     <FormTitle>
                       <Underline>PREEN</Underline>CHA OS CAMPOS ABAIXO:
                     </FormTitle>
                     <br></br>
                     <Input
-                      type="text"
-                      name="firstname"
-                      placeholder="Digite seu primeiro nome"
+                      type='text'
+                      name='firstname'
+                      placeholder='Digite seu primeiro nome'
                       value={inputs.firstname}
                       onChange={(e) => handleInputChange(e)}
                       required
                     ></Input>
                     <br></br>
                     <Input
-                      type="text"
-                      placeholder="E-mail"
-                      name="email"
+                      type='text'
+                      placeholder='E-mail'
+                      name='email'
                       value={inputs.email}
                       onChange={(e) => handleInputChange(e)}
                       required
                     ></Input>
                     <br></br>
                     <Input
-                      type="text"
-                      placeholder="Whatsapp (Opcional)"
-                      name="phone"
+                      type='text'
+                      placeholder='Whatsapp (Opcional)'
+                      name='phone'
                       value={inputs.phone}
                       onChange={(e) => handleInputChange(e)}
                     ></Input>
                     <br></br>
                     <Input
-                      type="text"
-                      name="field[2]"
-                      placeholder="Cupom (Opcional)"
-                      value={inputs["field[2]"]}
+                      type='text'
+                      name='field[2]'
+                      placeholder='Cupom (Opcional)'
+                      value={inputs['field[2]']}
                       onChange={(e) => handleInputChange(e)}
                     ></Input>
                     <br></br>
-                    <Button type="submit">ENVIAR</Button>
+                    <Button type='submit'>ENVIAR</Button>
                   </Form>
                 </FormWrapper>
               </Col>

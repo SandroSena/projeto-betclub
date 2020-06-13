@@ -81,7 +81,7 @@ const Carousel = ({ time, carouselItems, itemsDisplayed }) => {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    width: 6rem;
+    width: 8rem;
   `;
 
   const ImgBolinha = styled.img`

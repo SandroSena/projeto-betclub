@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import { Container, Col } from "react-bootstrap";
-import styled from "styled-components";
-import BackgroundPath from "../images/Rectangle 119.png";
-import FounderPath from "../images/RectangleFounder.png";
-import CBN from "../images/cbn.png";
-import Epoca from "../images/epoca.png";
-import Jp from "../images/jp.png";
-import R7 from "../images/r7.png";
-import Valor from "../images/valor.png";
-import RadioGlobo from "../images/radioglobo.png";
-import ModalEntrevistaCBN from "../components/ModalEntrevistaCBN";
-import ModalEntrevistaJP from "../components/ModalEntrevistaJP";
-import ModalEntrevistaRG from "../components/ModalEntrevistaRG";
-import ModalEntrevistaR7 from "../components/ModalEntrevistaR7";
-import ModalEntrevistaEpoca from "../components/ModalEntrevistaEpoca";
-import ModalEntrevistaValor from "../components/ModalEntrevistaValor";
-import FlexColumn from "./flex/FlexColumn";
-import FlexRow from "./flex/FlexRow";
+import React, { useState } from 'react';
+import { Container, Col } from 'react-bootstrap';
+import styled from 'styled-components';
+import BackgroundPath from '../images/Rectangle 119.png';
+import FounderPath from '../images/RectangleFounder.png';
+import CBN from '../images/cbn.png';
+import Epoca from '../images/epoca.png';
+import Jp from '../images/jp.png';
+import R7 from '../images/r7.png';
+import Valor from '../images/valor.png';
+import RadioGlobo from '../images/radioglobo.png';
+import ModalEntrevistaCBN from '../components/ModalEntrevistaCBN';
+import ModalEntrevistaJP from '../components/ModalEntrevistaJP';
+import ModalEntrevistaRG from '../components/ModalEntrevistaRG';
+import ModalEntrevistaR7 from '../components/ModalEntrevistaR7';
+import ModalEntrevistaEpoca from '../components/ModalEntrevistaEpoca';
+import ModalEntrevistaValor from '../components/ModalEntrevistaValor';
+import FlexColumn from './flex/FlexColumn';
+import FlexRow from './flex/FlexRow';
 
 const Founder = () => {
   const [isModalOpenCBN, setIsModalOpenCBN] = useState(false);
@@ -37,8 +37,9 @@ const Founder = () => {
     flex-direction:column;
     align-items:flex-start;
     justify-content: center;
-    padding:7rem;
+    padding:0 7rem;
     padding-top: 10rem;
+
     @media (max-width: 767px) {
       background-repeat: no-repeat;
       background-size: cover;
@@ -135,7 +136,7 @@ const Founder = () => {
   `;
 
   return (
-    <Container className="p-0" fluid>
+    <Container className='p-0' fluid>
       <ModalEntrevistaCBN
         isModalOpenCBN={isModalOpenCBN}
         onHide={() => setIsModalOpenCBN(false)}
@@ -163,7 +164,7 @@ const Founder = () => {
       <Background>
         <FlexColumn>
           <RowContainer>
-            <FounderTitle className="pb-4">
+            <FounderTitle className='pb-4'>
               Conheça o idealizador <br />
               <Underline>do </Underline>betclub
             </FounderTitle>
@@ -197,22 +198,22 @@ const Founder = () => {
         </FlexColumn>
       </Background>
       <LogosContainer>
-        <Col className="d-flex justify-content-center" md={2} xs={4}>
+        <Col className='d-flex justify-content-center' md={2} xs={4}>
           <LogoImg src={CBN} onClick={() => setIsModalOpenCBN(true)} />
         </Col>
-        <Col className="d-flex justify-content-center" md={2} xs={4}>
+        <Col className='d-flex justify-content-center' md={2} xs={4}>
           <LogoImg src={Epoca} onClick={() => setIsModalOpenEpoca(true)} />
         </Col>
-        <Col className="d-flex justify-content-center" md={2} xs={4}>
+        <Col className='d-flex justify-content-center' md={2} xs={4}>
           <LogoImg src={Jp} onClick={() => setIsModalOpenJP(true)} />
         </Col>
-        <Col className="d-flex justify-content-center" md={2} xs={4}>
+        <Col className='d-flex justify-content-center' md={2} xs={4}>
           <LogoImg src={R7} onClick={() => setIsModalOpenR7(true)} />
         </Col>
-        <Col className=" d-flex justify-content-center" md={2} xs={4}>
+        <Col className=' d-flex justify-content-center' md={2} xs={4}>
           <LogoImg src={RadioGlobo} onClick={() => setIsModalOpenRG(true)} />
         </Col>
-        <Col className="d-flex justify-content-center" md={2} xs={4}>
+        <Col className='d-flex justify-content-center' md={2} xs={4}>
           <LogoImg src={Valor} onClick={() => setIsModalOpenValor(true)} />
         </Col>
       </LogosContainer>

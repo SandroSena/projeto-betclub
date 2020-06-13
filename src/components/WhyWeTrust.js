@@ -216,10 +216,7 @@ const WhyWeTrust = () => {
       border: none;
     }
   `;
-  const ImgBolinha = styled.img`
-    width: 11px;
-    height: 11px;
-  `;
+  
   return (
     <Container className='d-flex flex-column align-items-center pt-5' fluid>
       <ModalCallToAction

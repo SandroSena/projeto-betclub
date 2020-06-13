@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import BackgroundPath from "../images/Group 531.png";
-import BackgroundPathMobile from "../images/KatarinaMobile.png";
-import LogoPath from "../images/image 14.png";
-import ModalCallToAction from "../components/ModalCallToAction";
-import FlexColumn from "./flex/FlexColumn";
-import FlexRow from "./flex/FlexRow";
-import Money from "./Money";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import BackgroundPath from '../images/Group 531.png';
+import BackgroundPathMobile from '../images/KatarinaMobile.png';
+import LogoPath from '../images/image 14.png';
+import ModalCallToAction from '../components/ModalCallToAction';
+import FlexColumn from './flex/FlexColumn';
+import FlexRow from './flex/FlexRow';
+import Money from './Money';
 
 const CallToAction = () => {
   const [isModalOpenCallToAction, setIsModalOpenCallToAction] = useState(false);
@@ -136,7 +136,7 @@ const CallToAction = () => {
   `;
 
   return (
-    <Background id="callToAction">
+    <Background id='callToAction'>
       <ModalCallToAction
         isModalOpenCallToAction={isModalOpenCallToAction}
         onHide={() => setIsModalOpenCallToAction(false)}
@@ -145,8 +145,8 @@ const CallToAction = () => {
       <FlexColumn>
         <FlexColumn>
           <CTATitle>
-            <span style={{ display: "block" }}>
-              Lucre de <Money value="1.000,00" /> a <Money value="2.000,00" />{" "}
+            <span style={{ display: 'block' }}>
+              Lucre de <Money value='1.000,00' /> a <Money value='2.000,00' />{' '}
             </span>
             <span>POR MÊS COM A EXPLOSÃO DOS</span>
           </CTATitle>
@@ -156,11 +156,8 @@ const CallToAction = () => {
         </FlexColumn>
         <FlexColumn>
           <CTAText>
-            <NoBreak>
-              Com apenas 15 minutos por dia, invista na modalidade que mais
-              cresce no mundo das
-            </NoBreak>{" "}
-            apostas online
+            Com apenas 15 minutos por dia, invista na modalidade que mais cresce
+            <br/>no mundo das apostas online
           </CTAText>
         </FlexColumn>
       </FlexColumn>
@@ -173,8 +170,8 @@ const CallToAction = () => {
         </Button>
         <LoginButton
           style={{ width: 125 }}
-          href="https://betclubesports.club.hotmart.com/login"
-          target="_blank"
+          href='https://betclubesports.club.hotmart.com/login'
+          target='_blank'
         >
           Login
         </LoginButton>

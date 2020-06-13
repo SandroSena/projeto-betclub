@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container } from 'react-bootstrap';
 import Carousel, { consts } from 'react-elastic-carousel';
 import Left from '../images/left.png';
 import Right from '../images/right.png';
@@ -121,7 +121,7 @@ const Results = () => {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 6rem;
+    width: 8rem;
   `;
   const myArrow = ({ type, onClick, isEdge }) => {
     const pointer =
@@ -146,6 +146,7 @@ const Results = () => {
           </CTASuperTitle>
         </Col>
         <Carousel
+          style={{ minHeight: 'auto' }}
           renderArrow={myArrow}
           breakPoints={[
             { width: 1, itemsToShow: 1 },
@@ -158,7 +159,7 @@ const Results = () => {
           renderPagination={({ pages, activePage, onClick }) => {
             return (
               <BolinhaContainer direction='row'>
-                {pages.map(page => {
+                {pages.map((page) => {
                   const isActivePage = activePage === page;
                   return !isActivePage ? (
                     <ImgBolinha
