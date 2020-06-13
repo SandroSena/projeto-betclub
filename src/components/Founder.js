@@ -83,6 +83,7 @@ const Founder = () => {
     cursor: pointer;
     @media (max-width: 767px) {
       margin: 0.4rem;
+      width: 3rem;
     }
   `;
 

@@ -74,7 +74,7 @@ const Navbar = () => {
         <ItemsWrapper>
           <MenuItem href='#callToAction'>INÍCIO</MenuItem>
           <MenuItem href='#aIAnalysis'>JOGOS</MenuItem>
-          <MenuItem href='#tips'>RESULTADOS</MenuItem>
+          <MenuItem href='#results'>RESULTADOS</MenuItem>
           <MenuItem href='#approval'>DEPOIMENTOS</MenuItem>
           <MenuItem href='#faq'>FAQ</MenuItem>
           <MenuItemYellow onClick={() => setIsModalOpenCallToAction(true)}>

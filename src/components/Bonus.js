@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Checkmark from '../images/checkmark.svg';
 import { Col, Container } from 'react-bootstrap';
 import Fortnite from '../images/fortnite.png';
+import ModalCallToAction from '../components/ModalCallToAction';
 
 const Bonus = () => {
+  const [isModalOpenCallToAction, setIsModalOpenCallToAction] = useState(false);
+
   const Background = styled.div`
     background-color: #000;
     display: flex;
@@ -128,14 +131,18 @@ const Bonus = () => {
       margin: 0.5rem;
     }
   `;
+
   const Button = styled.a`
-    background-color: transparent;
-    color: rgb(250, 231, 0) !important;
+    background-color: rgb(250, 231, 0);
+    color: rgba(1, 1, 1, 1) !important;
     border: 3px solid yellow;
     text-transform: uppercase;
     padding: 0.5rem;
     font-weight: bold;
     cursor: pointer;
+    width: 45%;
+    text-align: center;
+    white-space: nowrap;
 
     @media (max-width: 767px) {
       margin-left: auto;
@@ -164,6 +171,10 @@ const Bonus = () => {
 
   return (
     <Container className='p-0' fluid>
+      <ModalCallToAction
+        isModalOpenCallToAction={isModalOpenCallToAction}
+        onHide={() => setIsModalOpenCallToAction(false)}
+      />
       <Background>
         <ContentWrapper>
           <Col md={{ offset: 1, span: 10 }}>
@@ -241,7 +252,9 @@ const Bonus = () => {
                 <ClassTitle>Aula 7 – Suporte</ClassTitle>
               </ClassItem>
               <div className='pt-4'>
-                <Button href='#info-container'>Assine Já</Button>
+                <Button onClick={() => setIsModalOpenCallToAction(true)}>
+                  Assine Já
+                </Button>
               </div>
             </BonusContainer>
           </Col>

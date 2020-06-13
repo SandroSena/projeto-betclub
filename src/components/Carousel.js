@@ -28,10 +28,6 @@ const Carousel = ({ time, carouselItems, itemsDisplayed }) => {
   };
 
   useEffect(() => {
-    console.log(
-      'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-    );
-    console.log(size);
     size.width > 767
       ? setItemsToDisplay([...items.slice(0, itemsDisplayed)])
       : setItemsToDisplay([...items.slice(0, 1)]);

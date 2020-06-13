@@ -64,7 +64,6 @@ const AIAnalysis = () => {
   `;
   return (
     <Container className='p-0' fluid>
-      <div id='aIAnalysis' />
       <Background>
         <Col
           className='d-flex flex-column justify-content-center h-100'

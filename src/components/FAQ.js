@@ -4,7 +4,7 @@ import { Col, Container } from 'react-bootstrap';
 import BackgroundPath from '../images/Rectangle 121.png';
 
 const FAQ = () => {
-  const [questionOpen1, setQuestionOpen1] = useState(true);
+  const [questionOpen1, setQuestionOpen1] = useState(false);
   const [questionOpen2, setQuestionOpen2] = useState(false);
   const [questionOpen3, setQuestionOpen3] = useState(false);
   const [questionOpen4, setQuestionOpen4] = useState(false);

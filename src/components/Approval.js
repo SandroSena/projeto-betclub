@@ -66,7 +66,7 @@ const Results = () => {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 900;
-    font-size: 27px;
+    font-size: 25px;
     line-height: 46px;
     text-transform: uppercase;
     color: #ffffff;
@@ -117,7 +117,7 @@ const Results = () => {
         </Row>
         <WrapperButton className='pb-5'>
           <Button onClick={() => setIsModalOpenCallToAction(true)}>
-            EU QUERO FAZER PARTE DO CLUB
+            EU QUERO FAZER PARTE DO BETCLUB
           </Button>
         </WrapperButton>
       </Background>

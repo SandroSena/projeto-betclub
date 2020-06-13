@@ -1,11 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import BackgroundPath from "../images/Group 531.png";
-import BackgroundPathMobile from "../images/KatarinaMobile.png";
-import { Col, Container } from "react-bootstrap";
-import LogoPath from "../images/image 14.png";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import BackgroundPath from '../images/Group 531.png';
+import BackgroundPathMobile from '../images/KatarinaMobile.png';
+import { Col, Container } from 'react-bootstrap';
+import LogoPath from '../images/image 14.png';
+import ModalCallToAction from '../components/ModalCallToAction';
 
 const CallToAction = () => {
+  const [isModalOpenCallToAction, setIsModalOpenCallToAction] = useState(false);
+
   const Background = styled.div`
     display:flex;
     align-items:center;
@@ -115,9 +118,13 @@ const CallToAction = () => {
 
   return (
     <>
-      <div id="callToAction" />
+      <div id='callToAction' />
       <Background>
-        <Container className="p-0" fluid>
+        <ModalCallToAction
+          isModalOpenCallToAction={isModalOpenCallToAction}
+          onHide={() => setIsModalOpenCallToAction(false)}
+        />
+        <Container className='p-0' fluid>
           <LogoImg src={LogoPath} />
           <Col md={{ span: 8, offset: 1 }} xs={12}>
             <CTATitle>
@@ -132,19 +139,19 @@ const CallToAction = () => {
                 Com apenas 15 minutos por dia, invista na modalidade que mais
                 cresce no
                 <br /> mundo das
-              </NoBreak>{" "}
+              </NoBreak>{' '}
               apostas online
             </CTAText>
           </Col>
           <Col
-            className="d-flex justify-content-between justify-xs-content-center"
+            className='d-flex justify-content-between justify-xs-content-center'
             md={{ span: 3, offset: 1 }}
             xs={12}
           >
-            <Button href="#info-container">Assine Já</Button>
+            <Button onClick={() => setIsModalOpenCallToAction(true)}>Assine Já</Button>
             <LoginButton
-              href="https://betclubesports.club.hotmart.com/login"
-              target="_blank"
+              href='https://betclubesports.club.hotmart.com/login'
+              target='_blank'
             >
               Login
             </LoginButton>

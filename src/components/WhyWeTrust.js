@@ -222,6 +222,7 @@ const WhyWeTrust = () => {
       />
       <Background>
         <Col
+          id='results'
           md={{ offset: 1, span: 5 }}
           className='h-75 p-1 d-flex flex-column align-items-center justify-content-between'
         >
@@ -268,7 +269,6 @@ const WhyWeTrust = () => {
         </Col>
       </Background>
       <InfoContainer>
-        <div id='info-container' />
         <EachInfoContainer>
           <DataInfo>61%</DataInfo>
           <DataLabel>taxa de acerto</DataLabel>
