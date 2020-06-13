@@ -182,7 +182,6 @@ const WhyWeTrust = () => {
       font-weight: 900;
       font-size: 14px;
       line-height: 30px;
-      height: 65px;
       text-align: center;
       text-transform: uppercase;
       color: #fff;
