@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CountUp from 'react-countup';
 import styled from 'styled-components';
 import { Container, Col } from 'react-bootstrap';
 import ganho from '../images/ganho.svg';
@@ -270,22 +271,24 @@ const WhyWeTrust = () => {
       </Background>
       <InfoContainer>
         <EachInfoContainer>
-          <DataInfo>61%</DataInfo>
+          <DataInfo>
+            <CountUp end={61} duration={2} />%
+          </DataInfo>
           <DataLabel>taxa de acerto</DataLabel>
         </EachInfoContainer>
         <EachInfoContainer>
-          <DataInfo>26%</DataInfo>
+          <DataInfo><CountUp end={26} duration={2} />%</DataInfo>
           <DataLabel>lucro em maio 2020</DataLabel>
         </EachInfoContainer>
         <EachInfoContainer>
-          <DataInfo>24/7</DataInfo>
+          <DataInfo><CountUp end={24} duration={2} />/7</DataInfo>
           <DataLabel>
             <NoBreak>análises 24 horas por</NoBreak>
             <NoBreak> dia, 7 dias por semana</NoBreak>
           </DataLabel>
         </EachInfoContainer>
         <EachInfoContainer>
-          <DataInfo>2355</DataInfo>
+          <DataInfo><CountUp end={2355} duration={2} /></DataInfo>
           <DataLabel>jogos analisados</DataLabel>
         </EachInfoContainer>
       </InfoContainer>
