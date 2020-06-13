@@ -80,7 +80,7 @@ const Founder = () => {
   `;
 
   const FounderImg = styled.div`
-    width: 40%;
+    width: 50%;
     height: 585px;
     position: relative;
     background: url(${(props) => props.src}) no-repeat;
