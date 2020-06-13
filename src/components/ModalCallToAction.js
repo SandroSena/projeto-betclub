@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import BackgroundPath from "../images/ModalBG.png";
 import { Col, Container, Row, Modal, Form } from "react-bootstrap";
-import LogoPath from "../images/LogoModal.png";
 
 const Background = styled.div`
     display:flex;
@@ -22,8 +21,6 @@ const Background = styled.div`
       background-position: center center;
     }
   `;
-
-const LogoImg = styled.img``;
 
 const FormWrapper = styled.div`
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
