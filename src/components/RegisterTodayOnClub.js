@@ -102,9 +102,17 @@ const RegisterTodayOnClub = () => {
       font-family: Montserrat;
       font-style: normal;
       font-weight: bold;
-      font-size: 11px;
+      font-size: 10px;
       line-height: 46px;
       text-align: center;
+    }
+
+    @media screen and (device-aspect-ratio: 40/71) {
+      font-size: 9px;
+    }
+
+    @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+      font-size: 10px;
     }
   `;
 
