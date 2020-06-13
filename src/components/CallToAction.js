@@ -1,27 +1,34 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import BackgroundPath from '../images/Group 531.png';
-import BackgroundPathMobile from '../images/KatarinaMobile.png';
-import { Col, Container } from 'react-bootstrap';
-import LogoPath from '../images/image 14.png';
-import ModalCallToAction from '../components/ModalCallToAction';
+import React, { useState } from "react";
+import styled from "styled-components";
+import BackgroundPath from "../images/Group 531.png";
+import BackgroundPathMobile from "../images/KatarinaMobile.png";
+import LogoPath from "../images/image 14.png";
+import ModalCallToAction from "../components/ModalCallToAction";
+import FlexColumn from "./flex/FlexColumn";
+import FlexRow from "./flex/FlexRow";
+import Money from "./Money";
 
 const CallToAction = () => {
   const [isModalOpenCallToAction, setIsModalOpenCallToAction] = useState(false);
 
   const Background = styled.div`
     display:flex;
-    align-items:center;
+    flex-direction: column;
+    justify-content: center;
     background-image: url('${BackgroundPath}');
     height: 100vh;
-    background-repeat: no-repeat;  
+    max-height: 100vh;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    padding-left: 80px;
     /* background-attachment: fixed; */
 
     @media (max-width: 767px) {
-    backGround-image: url('${BackgroundPathMobile}');
+      padding: 20px;
+      backGround-image: url('${BackgroundPathMobile}');
       background-color:#000;
+      justify-content: space-between;
     }
   `;
 
@@ -39,6 +46,8 @@ const CallToAction = () => {
     line-height: 65px;
     color: #fff !important;
     text-transform: uppercase;
+    word-break: keep-all;
+    padding: 0;
 
     @media (max-width: 767px) {
       font-family: Montserrat;
@@ -47,7 +56,7 @@ const CallToAction = () => {
       font-size: 25px;
       line-height: 26px;
       text-align: center;
-      padding: 80px 0 20px 0;
+      /* padding: 80px 0 20px 0; */
     }
   `;
 
@@ -66,7 +75,7 @@ const CallToAction = () => {
       font-size: 16px;
       line-height: 22px;
       text-align: center;
-      padding-bottom: 80px;
+      /* padding-bottom: 80px; */
     }
   `;
 
@@ -116,49 +125,61 @@ const CallToAction = () => {
     }
   `;
 
+  const FlexRowColumn = styled(FlexRow)`
+    align-self: flex-start;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    @media (min-height: 569px) and (max-height: 812px) {
+      padding-bottom: 40px;
+    }
+  `;
+
   return (
-    <>
-      <div id='callToAction' />
-      <Background>
-        <ModalCallToAction
-          isModalOpenCallToAction={isModalOpenCallToAction}
-          onHide={() => setIsModalOpenCallToAction(false)}
-        />
-        <Container className='p-0' fluid>
-          <LogoImg src={LogoPath} />
-          <Col md={{ span: 8, offset: 1 }} xs={12}>
-            <CTATitle>
-              <NoBreak>Lucre de R$ 1.000,00 a R$ 2.000,00</NoBreak>
-              <NoBreak> POR MÊS COM A EXPLOSÃO DOS</NoBreak>
-              <NoBreak> E-SPORTS</NoBreak>
-            </CTATitle>
-          </Col>
-          <Col md={{ span: 6, offset: 1 }} xs={12}>
-            <CTAText>
-              <NoBreak>
-                Com apenas 15 minutos por dia, invista na modalidade que mais
-                cresce no
-                <br /> mundo das
-              </NoBreak>{' '}
-              apostas online
-            </CTAText>
-          </Col>
-          <Col
-            className='d-flex justify-content-between justify-xs-content-center'
-            md={{ span: 3, offset: 1 }}
-            xs={12}
-          >
-            <Button onClick={() => setIsModalOpenCallToAction(true)}>Assine Já</Button>
-            <LoginButton
-              href='https://betclubesports.club.hotmart.com/login'
-              target='_blank'
-            >
-              Login
-            </LoginButton>
-          </Col>
-        </Container>
-      </Background>
-    </>
+    <Background id="callToAction">
+      <ModalCallToAction
+        isModalOpenCallToAction={isModalOpenCallToAction}
+        onHide={() => setIsModalOpenCallToAction(false)}
+      />
+      <LogoImg src={LogoPath} />
+      <FlexColumn>
+        <FlexColumn>
+          <CTATitle>
+            <span style={{ display: "block" }}>
+              Lucre de <Money value="1.000,00" /> a <Money value="2.000,00" />{" "}
+            </span>
+            <span>POR MÊS COM A EXPLOSÃO DOS</span>
+          </CTATitle>
+          <CTATitle>
+            <NoBreak>E-SPORTS</NoBreak>
+          </CTATitle>
+        </FlexColumn>
+        <FlexColumn>
+          <CTAText>
+            <NoBreak>
+              Com apenas 15 minutos por dia, invista na modalidade que mais
+              cresce no mundo das
+            </NoBreak>{" "}
+            apostas online
+          </CTAText>
+        </FlexColumn>
+      </FlexColumn>
+      <FlexRowColumn disableMobileColumn alignItems>
+        <Button
+          onClick={() => setIsModalOpenCallToAction(true)}
+          style={{ width: 125, marginRight: 20 }}
+        >
+          Assine Já
+        </Button>
+        <LoginButton
+          style={{ width: 125 }}
+          href="https://betclubesports.club.hotmart.com/login"
+          target="_blank"
+        >
+          Login
+        </LoginButton>
+      </FlexRowColumn>
+    </Background>
   );
 };
 
