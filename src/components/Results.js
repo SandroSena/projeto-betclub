@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { Col, Container } from 'react-bootstrap';
 import Reaper from '../images/Reaper.png';
@@ -14,6 +14,7 @@ import lucro5 from '../images/lucro5.png';
 
 const Results = () => {
   const carouselRef = useRef();
+
   const onNextStart = (currentItem, nextItem) => {
     if (currentItem.index === nextItem.index) {
       // we hit the last item, go to first item
@@ -31,7 +32,7 @@ const Results = () => {
   const Background = styled.div`
     background-color: #000;
     margin-top: -8rem;
-    height: 100vh;
+    height: 120vh;
     display: flex;
     background-image: url('${Reaper}');
     background-size: 100% 100%;
@@ -104,10 +105,15 @@ const Results = () => {
     justify-content: center;
     width: 6rem;
   `;
+  const goto = () => {
+    carouselRef.current.goTo(0);
+  };
   const myArrow = ({ type, onClick, isEdge }) => {
     const pointer =
       type === consts.PREV ? <Arrow src={Left} /> : <Arrow src={Right} />;
+
     return <ArrowButton onClick={onClick}>{pointer}</ArrowButton>;
+
   };
   const items = [
     <GainImg src={lucro} />,
@@ -126,8 +132,10 @@ const Results = () => {
         </Col>
         <Carousel
           ref={carouselRef}
+
           onPrevStart={onPrevStart}
           onNextStart={onNextStart}
+
           style={{ minHeight: 'auto' }}
           renderArrow={myArrow}
           breakPoints={[

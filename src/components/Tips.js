@@ -12,7 +12,7 @@ const Tips = () => {
     display:flex;
     align-items:center;
     background-image: url('${BackgroundPath}');
-    height: 100vh;
+    height: 110vh;
     width:100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
