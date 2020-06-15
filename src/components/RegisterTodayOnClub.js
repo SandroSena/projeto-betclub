@@ -7,7 +7,7 @@ const RegisterTodayOnClub = () => {
   const Background = styled.div`
     display:flex;
     align-items:center;
-    height:100vh;
+    height:110vh;
     background-image: url('${BackgroundPath}');
     width:100%;
     background-repeat: no-repeat;

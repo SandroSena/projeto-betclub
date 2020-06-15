@@ -157,13 +157,15 @@ const CallToAction = () => {
         <FlexColumn>
           <CTAText>
             Com apenas 15 minutos por dia, invista na modalidade que mais cresce
-            <br/>no mundo das apostas online
+            <br />
+            no mundo das apostas online
           </CTAText>
         </FlexColumn>
       </FlexColumn>
       <FlexRowColumn disableMobileColumn alignItems>
         <Button
-          onClick={() => setIsModalOpenCallToAction(true)}
+          href='https://pay.hotmart.com/K29025661H?off=8csq4if9&hideBillet=1&checkoutMode=0'
+          target='_blank'
           style={{ width: 125, marginRight: 20 }}
         >
           Assine Já

@@ -11,7 +11,7 @@ const RobotSecret = () => {
     display:flex;
     align-items:center;
     background-image: url('${BackgroundPath}');
-    height: 100vh;
+    height: 110vh;
     width:100%;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -23,6 +23,9 @@ const RobotSecret = () => {
       height: auto;
       margin: 0 auto;
     }
+    /* @media screen and (max-width: 1366px) and (max-height: 768px) {
+      height: 110vh;
+    } */
   `;
 
   const CTATitle = styled.h3`

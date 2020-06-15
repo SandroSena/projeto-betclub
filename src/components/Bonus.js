@@ -15,7 +15,7 @@ const Bonus = () => {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    height: 110vh;
+    height: 130vh;
     width:100%;
     background-size: 100% 100%;
     
@@ -252,7 +252,10 @@ const Bonus = () => {
                 <ClassTitle>Aula 7 – Suporte</ClassTitle>
               </ClassItem>
               <div className='pt-4'>
-                <Button onClick={() => setIsModalOpenCallToAction(true)}>
+                <Button
+                  href='https://pay.hotmart.com/K29025661H?off=8csq4if9&hideBillet=1&checkoutMode=0'
+                  target='_blank'
+                >
                   Assine Já
                 </Button>
               </div>

@@ -77,7 +77,10 @@ const Navbar = () => {
           <MenuItem href='#results'>RESULTADOS</MenuItem>
           <MenuItem href='#approval'>DEPOIMENTOS</MenuItem>
           <MenuItem href='#faq'>FAQ</MenuItem>
-          <MenuItemYellow onClick={() => setIsModalOpenCallToAction(true)}>
+          <MenuItemYellow
+            href='https://pay.hotmart.com/K29025661H?off=8csq4if9&hideBillet=1&checkoutMode=0'
+            target='_blank'
+          >
             ASSINAR
           </MenuItemYellow>
         </ItemsWrapper>

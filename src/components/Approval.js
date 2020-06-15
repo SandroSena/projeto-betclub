@@ -18,7 +18,7 @@ const Results = () => {
 
   const Background = styled.div`
     background-color: #000;
-    height: 130vh;
+    height: 150vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -184,9 +184,12 @@ const Results = () => {
           <GainImg src={feedback6} />
         </Carousel>
         <WrapperButton className='pb-5'>
-          <Button onClick={() => setIsModalOpenCallToAction(true)}>
-            EU QUERO FAZER PARTE DO BETCLUB
-          </Button>
+          <a
+            href='https://pay.hotmart.com/K29025661H?off=8csq4if9&hideBillet=1&checkoutMode=0'
+            target='_blank'
+          >
+            <Button>EU QUERO FAZER PARTE DO BETCLUB</Button>
+          </a>
         </WrapperButton>
       </Background>
     </Container>

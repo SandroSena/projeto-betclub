@@ -359,12 +359,16 @@ const WhyWeTrust = () => {
           <DataLabel>jogos analisados</DataLabel>
         </EachInfoContainer>
       </InfoContainer>
-
-      <Button onClick={() => setIsModalOpenCallToAction(true)}>
-        ASSINE POR APENAS R$ 49/MÊS
-        <br />
-        <SmallText>plano mensal, cancele quando quiser.</SmallText>
-      </Button>
+      <a
+        href='https://pay.hotmart.com/K29025661H?off=8csq4if9&hideBillet=1&checkoutMode=0'
+        target='_blank'
+      >
+        <Button>
+          ASSINE POR APENAS R$ 49/MÊS
+          <br />
+          <SmallText>plano mensal, cancele quando quiser.</SmallText>
+        </Button>
+      </a>
     </Container>
   );
 };
