@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import styled from 'styled-components';
@@ -10,7 +10,11 @@ import ModalCallToAction from '../components/ModalCallToAction';
 
 const WhyWeTrust = () => {
   const [isModalOpenCallToAction, setIsModalOpenCallToAction] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
+  useEffect(() => {
+    console.log(isVisible);
+  }, [isVisible]);
   const Background = styled.div`
     background-color: #000;
     display: flex;
@@ -216,7 +220,7 @@ const WhyWeTrust = () => {
       border: none;
     }
   `;
-  
+
   return (
     <Container className='d-flex flex-column align-items-center pt-5' fluid>
       <ModalCallToAction
@@ -274,45 +278,57 @@ const WhyWeTrust = () => {
       <InfoContainer>
         <EachInfoContainer>
           <DataInfo>
-            <CountUp end={61} redraw={true}>
-              {({ countUpRef, start }) => {
-                return (
-                  <VisibilitySensor onChange={start} delayedCall>
-                    <span ref={countUpRef} />
-                  </VisibilitySensor>
-                );
-              }}
-            </CountUp>
+            {isVisible ? (
+              <span>61</span>
+            ) : (
+              <CountUp onEnd={() => setIsVisible(true)} end={61}>
+                {({ countUpRef, start }) => {
+                  return (
+                    <VisibilitySensor onChange={start} delayedCall>
+                      <span ref={countUpRef} />
+                    </VisibilitySensor>
+                  );
+                }}
+              </CountUp>
+            )}
             %
           </DataInfo>
           <DataLabel>taxa de acerto</DataLabel>
         </EachInfoContainer>
         <EachInfoContainer>
           <DataInfo>
-            <CountUp end={26} redraw={true}>
-              {({ countUpRef, start }) => {
-                return (
-                  <VisibilitySensor onChange={start} delayedCall>
-                    <span ref={countUpRef} />
-                  </VisibilitySensor>
-                );
-              }}
-            </CountUp>
+            {isVisible ? (
+              <span>26</span>
+            ) : (
+              <CountUp onEnd={() => setIsVisible(true)} end={26}>
+                {({ countUpRef, start }) => {
+                  return (
+                    <VisibilitySensor onChange={start} delayedCall>
+                      <span ref={countUpRef} />
+                    </VisibilitySensor>
+                  );
+                }}
+              </CountUp>
+            )}
             %
           </DataInfo>
           <DataLabel>lucro em maio 2020</DataLabel>
         </EachInfoContainer>
         <EachInfoContainer>
           <DataInfo>
-            <CountUp end={24} redraw={true}>
-              {({ countUpRef, start }) => {
-                return (
-                  <VisibilitySensor onChange={start} delayedCall>
-                    <span ref={countUpRef} />
-                  </VisibilitySensor>
-                );
-              }}
-            </CountUp>
+          {isVisible ? (
+              <span>24</span>
+            ) : (
+              <CountUp onEnd={() => setIsVisible(true)} end={24}>
+                {({ countUpRef,start }) => {
+                  return (
+                    <VisibilitySensor onChange={start} delayedCall>
+                      <span ref={countUpRef} />
+                    </VisibilitySensor>
+                  );
+                }}
+              </CountUp>
+            )}
             /7
           </DataInfo>
           <DataLabel>
@@ -322,15 +338,19 @@ const WhyWeTrust = () => {
         </EachInfoContainer>
         <EachInfoContainer>
           <DataInfo>
-            <CountUp end={2355} redraw={true}>
-              {({ countUpRef, start }) => {
-                return (
-                  <VisibilitySensor onChange={start} delayedCall>
-                    <span ref={countUpRef} />
-                  </VisibilitySensor>
-                );
-              }}
-            </CountUp>
+          {isVisible ? (
+              <span>2355</span>
+            ) : (
+              <CountUp onEnd={() => setIsVisible(true)} end={2355}>
+                {({ countUpRef,start }) => {
+                  return (
+                    <VisibilitySensor onChange={start} delayedCall>
+                      <span ref={countUpRef} />
+                    </VisibilitySensor>
+                  );
+                }}
+              </CountUp>
+            )}
           </DataInfo>
           <DataLabel>jogos analisados</DataLabel>
         </EachInfoContainer>
