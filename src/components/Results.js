@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { Col, Container } from 'react-bootstrap';
 import Reaper from '../images/Reaper.png';
@@ -13,6 +13,7 @@ import lucro4 from '../images/lucro4.png';
 import lucro5 from '../images/lucro5.png';
 
 const Results = () => {
+  const carouselRef = useRef();
   const Background = styled.div`
     background-color: #000;
     margin-top: -8rem;
@@ -89,13 +90,14 @@ const Results = () => {
     justify-content: center;
     width: 6rem;
   `;
+  const goto = () => {
+    carouselRef.current.goTo(0);
+  };
   const myArrow = ({ type, onClick, isEdge }) => {
     const pointer =
       type === consts.PREV ? <Arrow src={Left} /> : <Arrow src={Right} />;
     return (
-      <ArrowButton onClick={onClick} disabled={isEdge}>
-        {pointer}
-      </ArrowButton>
+      <ArrowButton onClick={isEdge ? goto : onClick}>{pointer}</ArrowButton>
     );
   };
   return (
@@ -107,6 +109,7 @@ const Results = () => {
           </CTASuperTitle>
         </Col>
         <Carousel
+          ref={carouselRef}
           style={{ minHeight: 'auto' }}
           renderArrow={myArrow}
           breakPoints={[
