@@ -12,10 +12,6 @@ const FAQ = () => {
   const [questionOpen6, setQuestionOpen6] = useState(false);
   const [questionOpen7, setQuestionOpen7] = useState(false);
 
-  useEffect(() => {
-    console.log(questionOpen1);
-  }, [questionOpen1]);
-
   const Background = styled.div`
     background-color: #000;
     display: flex;

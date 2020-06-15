@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
+import { useIsVisible } from '../hooks/useIsVisible';
 import styled from 'styled-components';
 import { Container, Col } from 'react-bootstrap';
 import ganho from '../images/ganho.svg';
@@ -10,11 +10,11 @@ import ModalCallToAction from '../components/ModalCallToAction';
 
 const WhyWeTrust = () => {
   const [isModalOpenCallToAction, setIsModalOpenCallToAction] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const RollRef = useRef();
+  const visible = useIsVisible({ element: RollRef });
+  const [alreadyVisible, setAlreadyVisible] = useState(false);
+  const [ended, setEnded] = useState(false);
 
-  useEffect(() => {
-    console.log(isVisible);
-  }, [isVisible]);
   const Background = styled.div`
     background-color: #000;
     display: flex;
@@ -275,21 +275,22 @@ const WhyWeTrust = () => {
           </WhyWeTrustText>
         </Col>
       </Background>
-      <InfoContainer>
+      <InfoContainer ref={RollRef}>
         <EachInfoContainer>
           <DataInfo>
-            {isVisible ? (
+            {visible && !alreadyVisible ? (
+              <CountUp
+                onEnd={() => {
+                  setAlreadyVisible(true);
+                  setEnded(true);
+                }}
+                start={0}
+                end={61}
+              />
+            ) : ended ? (
               <span>61</span>
             ) : (
-              <CountUp onEnd={() => setIsVisible(true)} end={61}>
-                {({ countUpRef, start }) => {
-                  return (
-                    <VisibilitySensor onChange={start} delayedCall>
-                      <span ref={countUpRef} />
-                    </VisibilitySensor>
-                  );
-                }}
-              </CountUp>
+              <span>0</span>
             )}
             %
           </DataInfo>
@@ -297,18 +298,19 @@ const WhyWeTrust = () => {
         </EachInfoContainer>
         <EachInfoContainer>
           <DataInfo>
-            {isVisible ? (
+            {visible && !alreadyVisible ? (
+              <CountUp
+                onEnd={() => {
+                  setAlreadyVisible(true);
+                  setEnded(true);
+                }}
+                start={0}
+                end={26}
+              />
+            ) : ended ? (
               <span>26</span>
             ) : (
-              <CountUp onEnd={() => setIsVisible(true)} end={26}>
-                {({ countUpRef, start }) => {
-                  return (
-                    <VisibilitySensor onChange={start} delayedCall>
-                      <span ref={countUpRef} />
-                    </VisibilitySensor>
-                  );
-                }}
-              </CountUp>
+              <span>0</span>
             )}
             %
           </DataInfo>
@@ -316,18 +318,19 @@ const WhyWeTrust = () => {
         </EachInfoContainer>
         <EachInfoContainer>
           <DataInfo>
-          {isVisible ? (
+            {visible && !alreadyVisible ? (
+              <CountUp
+                onEnd={() => {
+                  setAlreadyVisible(true);
+                  setEnded(true);
+                }}
+                start={0}
+                end={24}
+              />
+            ) : ended ? (
               <span>24</span>
             ) : (
-              <CountUp onEnd={() => setIsVisible(true)} end={24}>
-                {({ countUpRef,start }) => {
-                  return (
-                    <VisibilitySensor onChange={start} delayedCall>
-                      <span ref={countUpRef} />
-                    </VisibilitySensor>
-                  );
-                }}
-              </CountUp>
+              <span>0</span>
             )}
             /7
           </DataInfo>
@@ -338,18 +341,19 @@ const WhyWeTrust = () => {
         </EachInfoContainer>
         <EachInfoContainer>
           <DataInfo>
-          {isVisible ? (
+            {visible && !alreadyVisible ? (
+              <CountUp
+                onEnd={() => {
+                  setAlreadyVisible(true);
+                  setEnded(true);
+                }}
+                start={0}
+                end={2355}
+              />
+            ) : ended ? (
               <span>2355</span>
             ) : (
-              <CountUp onEnd={() => setIsVisible(true)} end={2355}>
-                {({ countUpRef,start }) => {
-                  return (
-                    <VisibilitySensor onChange={start} delayedCall>
-                      <span ref={countUpRef} />
-                    </VisibilitySensor>
-                  );
-                }}
-              </CountUp>
+              <span>0</span>
             )}
           </DataInfo>
           <DataLabel>jogos analisados</DataLabel>
