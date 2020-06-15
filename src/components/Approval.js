@@ -18,7 +18,7 @@ const Results = () => {
 
   const Background = styled.div`
     background-color: #000;
-    height: 130vh;
+    height: 150vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

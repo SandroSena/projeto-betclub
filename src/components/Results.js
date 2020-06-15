@@ -16,7 +16,7 @@ const Results = () => {
   const Background = styled.div`
     background-color: #000;
     margin-top: -8rem;
-    height: 100vh;
+    height: 120vh;
     display: flex;
     background-image: url('${Reaper}');
     background-size: 100% 100%;

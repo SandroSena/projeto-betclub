@@ -15,7 +15,7 @@ const Bonus = () => {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    height: 110vh;
+    height: 130vh;
     width:100%;
     background-size: 100% 100%;
     
