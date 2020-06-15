@@ -14,6 +14,21 @@ import lucro5 from '../images/lucro5.png';
 
 const Results = () => {
   const carouselRef = useRef();
+
+  const onNextStart = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      // we hit the last item, go to first item
+      carouselRef.current.goTo(0);
+    }
+  };
+
+  const onPrevStart = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      // we hit the first item, go to last item
+      carouselRef.current.goTo(items.length);
+    }
+  };
+
   const Background = styled.div`
     background-color: #000;
     margin-top: -8rem;
@@ -96,10 +111,17 @@ const Results = () => {
   const myArrow = ({ type, onClick, isEdge }) => {
     const pointer =
       type === consts.PREV ? <Arrow src={Left} /> : <Arrow src={Right} />;
-    return (
-      <ArrowButton onClick={isEdge ? goto : onClick}>{pointer}</ArrowButton>
-    );
+
+    return <ArrowButton onClick={onClick}>{pointer}</ArrowButton>;
+
   };
+  const items = [
+    <GainImg src={lucro} />,
+    <GainImg src={lucro2} />,
+    <GainImg src={lucro3} />,
+    <GainImg src={lucro4} />,
+    <GainImg src={lucro5} />,
+  ];
   return (
     <Container className='p-0 pt-5' fluid>
       <Background>
@@ -110,6 +132,10 @@ const Results = () => {
         </Col>
         <Carousel
           ref={carouselRef}
+
+          onPrevStart={onPrevStart}
+          onNextStart={onNextStart}
+
           style={{ minHeight: 'auto' }}
           renderArrow={myArrow}
           breakPoints={[
@@ -123,7 +149,7 @@ const Results = () => {
           renderPagination={({ pages, activePage, onClick }) => {
             return (
               <BolinhaContainer direction='row'>
-                {pages.map((page) => {
+                {pages.map(page => {
                   const isActivePage = activePage === page;
                   return !isActivePage ? (
                     <ImgBolinha
@@ -140,11 +166,7 @@ const Results = () => {
             );
           }}
         >
-          <GainImg src={lucro} />
-          <GainImg src={lucro2} />
-          <GainImg src={lucro3} />
-          <GainImg src={lucro4} />
-          <GainImg src={lucro5} />
+          {items}
         </Carousel>
       </Background>
     </Container>
