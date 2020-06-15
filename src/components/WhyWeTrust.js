@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import CountUp from 'react-countup';
 import { useIsVisible } from '../hooks/useIsVisible';
 import styled from 'styled-components';
@@ -362,6 +362,7 @@ const WhyWeTrust = () => {
       <a
         href='https://pay.hotmart.com/K29025661H?off=8csq4if9&hideBillet=1&checkoutMode=0'
         target='_blank'
+        rel="noopener noreferrer"
       >
         <Button>
           ASSINE POR APENAS R$ 49/MÊS

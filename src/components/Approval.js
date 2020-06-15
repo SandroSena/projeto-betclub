@@ -187,6 +187,7 @@ const Results = () => {
           <a
             href='https://pay.hotmart.com/K29025661H?off=8csq4if9&hideBillet=1&checkoutMode=0'
             target='_blank'
+            rel="noopener noreferrer"
           >
             <Button>EU QUERO FAZER PARTE DO BETCLUB</Button>
           </a>
