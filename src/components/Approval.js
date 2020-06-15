@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { Col, Container } from 'react-bootstrap';
 import Carousel, { consts } from 'react-elastic-carousel';
@@ -15,7 +15,7 @@ import ModalCallToAction from '../components/ModalCallToAction';
 
 const Results = () => {
   const [isModalOpenCallToAction, setIsModalOpenCallToAction] = useState(false);
-
+  const carouselRef = useRef();
   const Background = styled.div`
     background-color: #000;
     height: 150vh;
@@ -123,13 +123,14 @@ const Results = () => {
     justify-content: center;
     width: 8rem;
   `;
+  const goto = () => {
+    carouselRef.current.goTo(0);
+  };
   const myArrow = ({ type, onClick, isEdge }) => {
     const pointer =
       type === consts.PREV ? <Arrow src={Left} /> : <Arrow src={Right} />;
     return (
-      <ArrowButton onClick={onClick} disabled={isEdge}>
-        {pointer}
-      </ArrowButton>
+      <ArrowButton onClick={isEdge ? goto : onClick}>{pointer}</ArrowButton>
     );
   };
   return (
@@ -146,6 +147,7 @@ const Results = () => {
           </CTASuperTitle>
         </Col>
         <Carousel
+          ref={carouselRef}
           style={{ minHeight: 'auto' }}
           renderArrow={myArrow}
           breakPoints={[
@@ -159,7 +161,7 @@ const Results = () => {
           renderPagination={({ pages, activePage, onClick }) => {
             return (
               <BolinhaContainer direction='row'>
-                {pages.map((page) => {
+                {pages.map(page => {
                   const isActivePage = activePage === page;
                   return !isActivePage ? (
                     <ImgBolinha
