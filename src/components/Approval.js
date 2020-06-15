@@ -123,15 +123,31 @@ const Results = () => {
     justify-content: center;
     width: 8rem;
   `;
-  const goto = () => {
-    carouselRef.current.goTo(0);
-  };
+  const items = [
+    <GainImg src={feedback1} />,
+    <GainImg src={feedback2} />,
+    <GainImg src={feedback3} />,
+    <GainImg src={feedback4} />,
+    <GainImg src={feedback5} />,
+    <GainImg src={feedback6} />,
+  ];
   const myArrow = ({ type, onClick, isEdge }) => {
     const pointer =
       type === consts.PREV ? <Arrow src={Left} /> : <Arrow src={Right} />;
-    return (
-      <ArrowButton onClick={isEdge ? goto : onClick}>{pointer}</ArrowButton>
-    );
+    return <ArrowButton onClick={onClick}>{pointer}</ArrowButton>;
+  };
+  const onNextStart = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      // we hit the last item, go to first item
+      carouselRef.current.goTo(0);
+    }
+  };
+
+  const onPrevStart = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      // we hit the first item, go to last item
+      carouselRef.current.goTo(items.length);
+    }
   };
   return (
     <Container className='p-0 pt-5' fluid>
@@ -148,6 +164,8 @@ const Results = () => {
         </Col>
         <Carousel
           ref={carouselRef}
+          onPrevStart={onPrevStart}
+          onNextStart={onNextStart}
           style={{ minHeight: 'auto' }}
           renderArrow={myArrow}
           breakPoints={[
@@ -178,12 +196,7 @@ const Results = () => {
             );
           }}
         >
-          <GainImg src={feedback1} />
-          <GainImg src={feedback2} />
-          <GainImg src={feedback3} />
-          <GainImg src={feedback4} />
-          <GainImg src={feedback5} />
-          <GainImg src={feedback6} />
+          {items}
         </Carousel>
         <WrapperButton className='pb-5'>
           <Button onClick={() => setIsModalOpenCallToAction(true)}>
