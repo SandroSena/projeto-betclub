@@ -1,9 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import CallToAction from './components/CallToAction';
-import { createGlobalStyle } from 'styled-components';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap';
 import AIAnalysis from './components/AIAnalysis';
 import RobotSecret from './components/RobotSecret';
 import Tips from './components/Tips';
@@ -17,7 +14,11 @@ import Results from './components/Results';
 import Approval from './components/Approval';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
-
+import { createGlobalStyle } from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './Routes';
 const App = () => {
   const GlobalStyle = createGlobalStyle`
   body {
@@ -29,22 +30,9 @@ const App = () => {
   return (
     <>
       <Container className='p-0' fluid>
-        <GlobalStyle />
-        <Navbar />
-        <CallToAction />
-        <AIAnalysis />
-        <RobotSecret />
-        <Tips />
-        <EsportsFuture />
-        <Bonus />
-        <WhyWeTrust />
-        <Founder />
-        <RegisterTodayOnClub />
-        <SevenDaysFree />
-        <Results />
-        <Approval />
-        <FAQ />
-        <Footer />
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
       </Container>
     </>
   );
