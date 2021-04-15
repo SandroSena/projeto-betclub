@@ -4,7 +4,7 @@ import MainPage from './pages/MainPage';
 const Routes = () => {
   return (
     <Switch>
-      <Route path='/sd' exact component={MainPage} />
+      <Route path='/' exact component={MainPage} />
     </Switch>
   );
 };

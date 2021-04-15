@@ -16,6 +16,7 @@ import Footer from '../components/Footer';
 import { Container } from 'react-bootstrap';
 import { createGlobalStyle } from 'styled-components';
 import AIAnalysis from '../components/AIAnalysis';
+
 const MainPage = () => {
   const GlobalStyle = createGlobalStyle`
   body {
