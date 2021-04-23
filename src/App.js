@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
 import { BrowserRouter } from 'react-router-dom';
 import Routes from './Routes';
+
 const App = () => {
   const GlobalStyle = createGlobalStyle`
   body {
